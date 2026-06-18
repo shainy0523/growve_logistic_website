@@ -1,0 +1,46 @@
+import type { Metadata, Viewport } from 'next'
+import { Nunito_Sans, Playfair_Display } from 'next/font/google'
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
+import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
+import MuiThemeProvider from '@/utils/providers/MuiThemeProvider'
+import './globals.css'
+
+const nunitoSans = Nunito_Sans({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '800'],
+  variable: '--font-primary',
+  display: 'swap',
+})
+
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
+  variable: '--font-serif',
+  display: 'swap',
+})
+
+export const metadata: Metadata = {
+  title: { default: 'Growve Logistics — Smarter logistics for modern businesses', template: '%s | Growve Logistics' },
+  description:
+    'Automate courier selection, recover failed deliveries, and track every order in real time — all from a single logistics platform built for growing e-commerce brands in India.',
+  icons: { icon: '/favicon.ico' },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang='en' suppressHydrationWarning className={`${nunitoSans.variable} ${playfairDisplay.variable}`}>
+      <body suppressHydrationWarning>
+        <InitColorSchemeScript attribute='data-mui-color-scheme' defaultMode='light' />
+        <AppRouterCacheProvider>
+          <MuiThemeProvider>{children}</MuiThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
+    </html>
+  )
+}
