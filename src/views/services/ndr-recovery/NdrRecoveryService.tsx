@@ -6,6 +6,7 @@ import AIRecoverySection from './AIRecoverySection'
 import NdrOnePlatformSection from './NdrOnePlatformSection'
 import Image from 'next/image'
 import RecoverSection from './RecoverSection'
+import AutomationSection from './AutomationSection'
 
 const NdrRecoveryAutomationView = () => {
     return (
@@ -107,11 +108,14 @@ const NdrRecoveryAutomationView = () => {
                     </Box>
                 </Box>
             </Box>
+            <Box className='bg-[#000000]'>
+                <NDRImpactSection />
+            </Box>
             <Box>
                 <RecoverSection/>
             </Box>
-            <Box className='bg-[#000000]'>
-                <NDRImpactSection />
+            <Box>
+                <AutomationSection/>
             </Box>
             <Box>
                 <AIRecoverySection />
