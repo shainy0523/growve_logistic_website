@@ -62,22 +62,22 @@ function MobileMetrics() {
             src='/images/logo.png'
             width={30}
             height={30}
-            alt='logo'/>
-            <Typography sx={{ fontWeight: 800, fontSize: '0.8125rem', color: 'var(--text-strong)' }}>{title}</Typography>
-            <Box
-              sx={{
-                width: 22,
-                height: 22,
-                borderRadius: '6px',
-                backgroundColor: 'var(--surface-muted)',
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'var(--text-strong)',
-              }}
-            >
-              <Icon icon='mdi:plus' fontSize={12} />
-            </Box>
+            alt='logo' />
+          <Typography sx={{ fontWeight: 800, fontSize: '0.8125rem', color: 'var(--text-strong)' }}>{title}</Typography>
+          <Box
+            sx={{
+              width: 22,
+              height: 22,
+              borderRadius: '6px',
+              backgroundColor: 'var(--surface-muted)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: 'var(--text-strong)',
+            }}
+          >
+            <Icon icon='mdi:plus' fontSize={12} />
+          </Box>
         </Box>
 
         <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 1 }}>
@@ -94,7 +94,7 @@ function MobileMetrics() {
                 gap: 0.375,
               }}
             >
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5}}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
                 <Box
                   sx={{
                     width: 14,
@@ -200,7 +200,20 @@ export default function AdvantageSection() {
                 {card.description}
               </Typography>
               <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flex: 1 }}>
-                {i === 0 ? <NDRBreakdownCard /> : <MobileMetrics />}
+                {i === 0 ? <NDRBreakdownCard /> : (
+                  <Image
+                    src="/images/mobile.svg"
+                    alt="Growve Dashboard"
+                    width={300}
+                    height={400}
+                    style={{
+                      paddingTop:'1rem',
+                      width: '300px',
+                      height: 'auto',
+                      objectFit: 'contain',
+                    }}
+                  />
+                )}
               </Box>
             </Box>
           ))}

@@ -57,7 +57,7 @@ function CenterCard() {
         <Image
           src="/images/footer-logo.png"
           width={125}
-          height={46}
+          height={40}
           alt="Growve"
         />
       </Box>
@@ -139,7 +139,7 @@ export default function EverythingSection() {
   )
 }
 
-function FeatureCard({ title, description }: { title: string; description: string }) {
+export function FeatureCard({ title, description }: { title: string; description: string }) {
   return (
     <Box
       sx={{

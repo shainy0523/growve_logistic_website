@@ -361,6 +361,22 @@
     height: calc(var(--spacing) * 9);
   }
 
+  .h-100 {
+    height: calc(var(--spacing) * 100);
+  }
+
+  .h-150 {
+    height: calc(var(--spacing) * 150);
+  }
+
+  .h-300 {
+    height: calc(var(--spacing) * 300);
+  }
+
+  .h-3150 {
+    height: calc(var(--spacing) * 3150);
+  }
+
   .h-\[3\.5px\] {
     height: 3.5px;
   }
@@ -601,6 +617,10 @@
     gap: calc(var(--spacing) * 12);
   }
 
+  .gap-15 {
+    gap: calc(var(--spacing) * 15);
+  }
+
   .gap-\[3px\] {
     gap: 3px;
   }
@@ -702,6 +722,10 @@
     .border-black\/10 {
       border-color: color-mix(in oklab, var(--color-black) 10%, transparent);
     }
+  }
+
+  .bg-\[\#000000\] {
+    background-color: #000;
   }
 
   .bg-\[\#28C76F\] {
@@ -1005,8 +1029,20 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 48rem) {
     .md\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 
@@ -1019,6 +1055,18 @@
   @media (min-width: 64rem) {
     .lg\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .xl\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .xl\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 }
