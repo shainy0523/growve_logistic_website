@@ -23,7 +23,7 @@ function TruckVisual() {
     sx={{
       position: 'absolute',
       bottom: -20,
-      left: 120,
+      left: 180,
       width: 460,
       zIndex: 1
     }}
@@ -45,7 +45,7 @@ function TruckVisual() {
   <Box
     sx={{
       position: 'absolute',
-      right: 80,
+      right: 20,
       top: 5,
       zIndex: 10,
       opacity: 0.15,

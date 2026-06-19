@@ -182,11 +182,13 @@ export const PLATFORM = {
   cards: [
     {
       title: 'Connect marketplaces & stores in minutes.',
+      image:'/images/phone-image.png',
       description: 'Automatically sync orders, inventory updates, and shipment activity across all connected sales channels.',
       preview: 'mobile',
     },
     {
       title: 'Manage every order from one workspace.',
+      image:'/images/image-4.png',
       description: 'Create shipments, monitor statuses, coordinate fulfillment, and keep operations moving from a single dashboard.',
       preview: 'laptop',
     },

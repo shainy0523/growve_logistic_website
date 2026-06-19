@@ -28,7 +28,7 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   const eyebrowColor = variant === 'dark' ? 'rgba(255,255,255,0.55)' : 'var(--text-subtitle)'
   const titleColor = variant === 'dark' ? 'var(--text-on-dark)' : 'var(--text-strong)'
-  const accentColor = variant === 'dark' ? 'rgba(255,255,255,0.35)' : '#B5B0BC'
+  const accentColor = variant === 'dark' ? '#9191A8' : '#B5B0BC'
   const subtitleColor = variant === 'dark' ? 'var(--text-on-dark-muted)' : 'var(--text-secondary)'
   // const formattedTitle =
   // title.length > 25
@@ -84,7 +84,7 @@ export default function SectionHeading({
           sx={{
             mt: 3,
             color: subtitleColor,
-            maxWidth: 500,
+            maxWidth: 600,
             lineHeight:1.5,
             mx: align === 'center' ? 'auto' : 0,
           }}
