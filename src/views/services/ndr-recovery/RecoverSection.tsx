@@ -55,7 +55,11 @@ const RecoverSection = () => {
                         <Box
                             key={step.title}
                             sx={{
-                                borderRadius: '12px',
+                                borderRadius: {
+                                    xs: '19px',
+                                    sm: '20px',
+                                    md: '15px',
+                                },
                                 overflow: 'hidden',
                                 display: 'flex',
                                 flexDirection: 'column',
@@ -67,7 +71,11 @@ const RecoverSection = () => {
                                 sx={{
                                     position: 'relative',
                                     width: '100%',
-                                    aspectRatio: '377 / 313',
+                                    aspectRatio: {
+                                        xs: '376 / 312',
+                                        sm: '376 / 360',
+                                        md: '376 / 313',
+                                    },
                                     overflow: 'hidden',
                                 }}
                             >

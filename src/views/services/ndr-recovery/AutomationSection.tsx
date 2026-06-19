@@ -63,8 +63,8 @@ export default function AutomationSection() {
                     sx={{
                         bgcolor: '#F5F5F6',
                         border: '1px solid #EAEAEC',
-                        borderRadius: 3,
-                        p: 4,
+                        borderRadius: 1,
+                        p: 2,
                         overflow: 'hidden',
                         mt: 5,
                     }}
@@ -100,100 +100,13 @@ export default function AutomationSection() {
                         </Box>
 
                         {/* Rule Builder UI */}
-                        {/* <Paper
-                            elevation={0}
-                            sx={{
-                                bgcolor: '#fff',
-                                borderRadius: 3,
-                                p: 3,
-                            }}
-                        >
-                            <Typography
-                                variant="body2"
-                                sx={{
-                                    color: '#808390',
-                                    mb: 3,
-                                }}
-                            >
-                                Rule Builder
-                            </Typography>
-
-                            <Stack spacing={3}>
-                                {ruleSteps.map((item, index) => (
-                                    <Box key={index}>
-                                        <Box className="flex gap-4">
-                                            <Box
-                                                sx={{
-                                                    width: 36,
-                                                    height: 36,
-                                                    bgcolor: '#FBC942',
-                                                    borderRadius: '50%',
-                                                    display: 'flex',
-                                                    alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                }}
-                                            >
-                                                <SettingsIcon
-                                                    sx={{
-                                                        fontSize: 18,
-                                                        color: '#fff',
-                                                    }}
-                                                />
-                                            </Box>
-
-                                            <Box className='flex-1'>
-                                                <Typography
-                                                    sx={{
-                                                        fontSize: 12,
-                                                        color: '#6D6B77',
-                                                    }}
-                                                >
-                                                    {item.title}
-                                                </Typography>
-
-                                                <Box className="flex flex-wrap items-center gap-2 mt-1">
-                                                    <Typography
-                                                        sx={{
-                                                            fontWeight: 700,
-                                                        }}
-                                                    >
-                                                        {item.value}
-                                                    </Typography>
-
-                                                    {item.badge && (
-                                                        <Chip
-                                                            label={item.badge}
-                                                            size="small"
-                                                            sx={{
-                                                                bgcolor: '#FEF6E1',
-                                                            }}
-                                                        />
-                                                    )}
-
-                                                    {item.badges?.map(tag => (
-                                                        <Chip
-                                                            key={tag}
-                                                            label={tag}
-                                                            size="small"
-                                                        />
-                                                    ))}
-                                                </Box>
-                                            </Box>
-                                        </Box>
-
-                                        {index !== ruleSteps.length - 1 && (
-                                            <Divider sx={{ mt: 3 }} />
-                                        )}
-                                    </Box>
-                                ))}
-                            </Stack>
-                        </Paper> */}
                         <Box
                             sx={{
                                 width: '100%',
                                 display: 'flex',
                                 justifyContent: 'center',
-                                pt:5,
+                                pt: 5,
+                                pb:2,
                             }}
                         >
                             <Box
@@ -228,84 +141,71 @@ export default function AutomationSection() {
                         sx={{
                             bgcolor: '#F5F5F6',
                             border: '1px solid #EAEAEC',
-                            borderRadius: 3,
-                            p: 4,
+                            borderRadius: 1,
+                            overflow: 'hidden',
                         }}
                     >
-                        <Typography
-                            variant="h5"
+                        {/* Content */}
+                        <Box sx={{ p: 2 }}>
+                            <Typography
+                                variant="h5"
+                                sx={{
+                                    fontWeight: 600,
+                                    mb: 1,
+                                    color: '#000',
+                                }}
+                            >
+                                Reach customers where they are
+                            </Typography>
+
+                            <Typography
+                                sx={{
+                                    color: '#6D6B77',
+                                    mb: 4,
+                                    fontSize: 13,
+                                }}
+                            >
+                                WhatsApp first, with SMS and IVR fallback —
+                                in the customer's language.
+                            </Typography>
+                        </Box>
+
+                        {/* Full-width Image */}
+                        <Box
                             sx={{
-                                fontWeight: 600,
-                                mb: 1,
-                                color: '#000000'
+                                position: 'relative',
+                                width: '100%',
+                                height: 240,
+                                overflow: 'hidden',
                             }}
                         >
-                            Reach customers where they are
-                        </Typography>
-
-                        <Typography
-                            sx={{
-                                color: '#6D6B77',
-                                mb: 4,
-                                fontSize:13,
-                            }}
-                        >
-                            WhatsApp first, with SMS and IVR fallback —
-                            in the customer's language.
-                        </Typography>
-
-                        <Stack spacing={2}>
-                            {[
-                                {
-                                    icon: <WhatsAppIcon />,
-                                    name: 'WhatsApp',
-                                    status: 'Delivered',
-                                },
-                                {
-                                    icon: <SmsIcon />,
-                                    name: 'SMS',
-                                    status: 'Opened',
-                                },
-                                {
-                                    icon: <CallIcon />,
-                                    name: 'IVR Call',
-                                    status: 'Critical',
-                                },
-                            ].map(item => (
-                                <Paper
-                                    key={item.name}
-                                    elevation={0}
-                                    sx={{
-                                        p: 2,
-                                        borderRadius: 2,
-                                    }}
-                                >
-                                    <Box className="flex justify-between items-center">
-                                        <Box className="flex items-center gap-3">
-                                            {item.icon}
-                                            <Typography sx={{ fontWeight: 700 }}>
-                                                {item.name}
-                                            </Typography>
-                                        </Box>
-
-                                        <Chip
-                                            size="small"
-                                            label={item.status}
-                                        />
-                                    </Box>
-                                </Paper>
-                            ))}
-                        </Stack>
+                            <Box
+                                component="img"
+                                src="/images/automation_icons.svg"
+                                alt="automation"
+                                sx={{
+                                    position: 'absolute',
+                                    left: '50%',
+                                    top: 20,
+                                    transform: 'translateX(-50%)',
+                                    width: '110%',
+                                    minWidth: 900,
+                                    height: 'auto',
+                                }}
+                            />
+                        </Box>
                     </Paper>
 
                     {/* Team Card */}
                     <Paper
                         elevation={0}
                         sx={{
+                            position: 'relative',
+                            overflow: 'hidden',
                             bgcolor: '#F5F5F6',
                             border: '1px solid #EAEAEC',
-                            borderRadius: 3,
-                            p: 4,
+                            borderRadius: 1,
+                            p: 2,
                         }}
                     >
                         <Typography
@@ -323,45 +223,36 @@ export default function AutomationSection() {
                             sx={{
                                 color: '#6D6B77',
                                 mb: 4,
-                                fontSize:13,
+                                fontSize: 13,
                             }}
                         >
                             Hand any order to an agent, request a callback,
                             or pause automation without losing context.
                         </Typography>
-
-                        <Paper
-                            elevation={0}
+                        <Box
                             sx={{
-                                p: 2,
-                                borderRadius: 3,
-                                bgcolor: '#fff',
+                                width: '100%',
+                                position: 'relative',
+
+                                height: 240,
+                                pt: 5,
                             }}
                         >
-                            <Typography
+                            <Box
+                                component="img"
+                                src="/images/automation_order.svg"
+                                alt="automation"
                                 sx={{
-                                    fontWeight: 700,
-                                    mb: 1,
+                                    position: 'absolute',
+                                    right: '-3rem',
+                                    top: '10%',
+                                    width: '100%',
+                                    maxWidth: '600px',
+                                    height: 'auto',
+                                    display: 'block',
                                 }}
-                            >
-                                #GRV-51002
-                            </Typography>
-
-                            <Typography
-                                sx={{
-                                    color: '#6D6B77',
-                                    mb: 2,
-                                }}
-                            >
-                                Customer Unavailable
-                            </Typography>
-
-                            <Chip
-                                label="Re-Attempting"
-                                size="small"
-                                color="warning"
                             />
-                        </Paper>
+                        </Box>
                     </Paper>
                 </Box>
             </Box>
