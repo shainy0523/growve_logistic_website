@@ -38,7 +38,7 @@ export default function FaqSection() {
           <Typography
             component="h2"
             sx={{
-              fontFamily: '"Dai Banna SIL", serif',
+              fontFamily: '"var(--font-dai-banna)", serif',
               fontSize: {
                 xs: '36px',
                 md: '48px'

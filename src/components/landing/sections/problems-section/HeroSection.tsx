@@ -96,7 +96,7 @@ export default function HeroSection() {
           component='h1'
           sx={{
             textAlign: 'center',
-            fontFamily: 'Dai Banna SIL, sans-serif',
+            fontFamily: 'var(--font-dai-banna), sans-serif',
             fontWeight: 500,
             fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.5rem', lg: '5rem' },
             lineHeight: 1.05,

@@ -75,7 +75,7 @@ function CenterCard() {
           <Typography
             sx={{
               color: '#FFF',
-              fontFamily: '"Dai Banna SIL", serif',
+              fontFamily: '"var(--font-dai-banna)", serif',
               fontSize: '22px',
               fontWeight: 500,
               lineHeight: 1.2,

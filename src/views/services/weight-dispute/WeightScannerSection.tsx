@@ -122,7 +122,7 @@ export default function WeightScannerSection() {
                                 </Typography>
                                 <Typography
                                     sx={{
-                                        fontFamily: 'Dai Banna SIL',
+                                        fontFamily: 'var(--font-dai-banna)',
                                         fontSize: 22,
                                         fontWeight: 500,
                                         color: '#000',

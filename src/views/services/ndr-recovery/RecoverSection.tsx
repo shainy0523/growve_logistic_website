@@ -102,7 +102,7 @@ const RecoverSection = () => {
                             >
                                 <Typography
                                     sx={{
-                                        fontFamily: 'Dai Banna SIL',
+                                        fontFamily: 'var(--font-dai-banna)',
                                         fontSize: '20px',
                                         fontWeight: 500,
                                         lineHeight: '30px',

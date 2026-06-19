@@ -39,7 +39,7 @@ const t = {
   yellowBg: "#FEF2D2",
 };
 
-const display = "'Dai Banna SIL', serif";
+const display = "'var(--font-dai-banna)', serif";
 const body = "'Nunito Sans', sans-serif";
 
 /* status -> dot + filled-badge palette */

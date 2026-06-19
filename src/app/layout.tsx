@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Nunito_Sans, Playfair_Display } from 'next/font/google'
+import { Nunito_Sans, Playfair_Display, Dai_Banna_SIL } from 'next/font/google'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
 import MuiThemeProvider from '@/utils/providers/MuiThemeProvider'
@@ -20,6 +20,13 @@ const playfairDisplay = Playfair_Display({
   display: 'swap',
 })
 
+const daiBannaSil = Dai_Banna_SIL({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-dai-banna',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   title: { default: 'Growve Logistics — Smarter logistics for modern businesses', template: '%s | Growve Logistics' },
   description:
@@ -34,7 +41,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' suppressHydrationWarning className={`${nunitoSans.variable} ${playfairDisplay.variable}`}>
+    <html lang='en' suppressHydrationWarning className={`${nunitoSans.variable} ${playfairDisplay.variable} ${daiBannaSil.variable}`}>
       <body suppressHydrationWarning>
         <InitColorSchemeScript attribute='data-mui-color-scheme' defaultMode='light' />
         <AppRouterCacheProvider>

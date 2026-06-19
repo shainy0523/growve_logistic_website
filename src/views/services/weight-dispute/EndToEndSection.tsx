@@ -87,7 +87,7 @@ export default function EndToEndSection() {
 
                             <Typography
                                 sx={{
-                                    fontFamily: 'Dai Banna SIL',
+                                    fontFamily: 'var(--font-dai-banna)',
                                     fontSize: '20px',
                                     fontWeight: 500,
                                     lineHeight: '28px',
@@ -113,7 +113,7 @@ export default function EndToEndSection() {
                                     position: 'absolute',
                                     top: 20,
                                     right: 24,
-                                    fontFamily: 'Dai Banna SIL',
+                                    fontFamily: 'var(--font-dai-banna)',
                                     fontSize: '32px',
                                     fontWeight: 500,
                                     color: '#E1E1E4',
