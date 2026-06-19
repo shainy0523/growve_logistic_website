@@ -1,6 +1,7 @@
 import NdrRecoveryAutomationView from "@/views/services/ndr-recovery/NdrRecoveryService"
 import SmartCourierAllocationView from "@/views/services/service-allocation/SmartCourierAllocationView"
 import WeightDisputeProtectionView from "@/views/services/weight-dispute/WeightDisputeProtectionView"
+import RealTimeShipmentTrackingView from "@/views/services/shipment-tracking/RealTimeShipmentTrackingView"
 
 
 export interface NavLink {
@@ -83,7 +84,7 @@ export const SERVICES = [
 export const SERVICE_PAGES = {
   'smart-courier-allocation': SmartCourierAllocationView,
   // 'returns-rto-control': ReturnsRtoControlView,
-  // 'shipment-tracking': ShipmentTrackingView,
+  'shipment-tracking': RealTimeShipmentTrackingView,
   'weight-dispute-protection': WeightDisputeProtectionView,
   // 'performance-analytics': PerformanceAnalyticsView,
   // 'marketplace-integrations': MarketplaceIntegrationsView,
