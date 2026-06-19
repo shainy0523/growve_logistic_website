@@ -55,59 +55,60 @@ const RecoverSection = () => {
                         <Box
                             key={step.title}
                             sx={{
-                                bgcolor: '#F5F5F6',
-                                border: '1px solid #EAEAEC',
-                                borderRadius: '12px',
+                                borderRadius: {
+                                    xs: '19px',
+                                    sm: '20px',
+                                    md: '15px',
+                                },
                                 overflow: 'hidden',
                                 display: 'flex',
                                 flexDirection: 'column',
+                                backgroundColor: '#F5F5F6',
                             }}
                         >
-                            {/* VISUAL AREA */}
+                            {/* SVG CARD */}
                             <Box
                                 sx={{
-                                    height: 280,
-                                    bgcolor: '#FFF',
-                                    borderBottom: '1px solid #EAEAEC',
-                                    p: 2.5,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
+                                    position: 'relative',
+                                    width: '100%',
+                                    aspectRatio: {
+                                        xs: '376 / 312',
+                                        sm: '376 / 360',
+                                        md: '376 / 313',
+                                    },
+                                    overflow: 'hidden',
                                 }}
                             >
-                                {index === 0 && <Image
-                                    src='/images/Recover1.svg'
-                                    width={300}
-                                    height={300}
-                                    alt='recover1' />}
-                                {index === 1 && <Image
-                                    src='/images/Recover2.svg'
-                                    width={300}
-                                    height={300}
-                                    alt='recover1' />}
-                                {index === 2 && <Image
-                                    src='/images/Recover3.svg'
-                                    width={300}
-                                    height={300}
-                                    alt='recover1' />}
+                                <Image
+                                    src={`/images/Recover${index + 1}.svg`}
+                                    alt={step.title}
+                                    fill
+                                    priority
+                                    style={{
+                                        objectFit: 'contain',
+                                        width: '100%',
+                                        height: '100%',
+                                    }}
+                                />
                             </Box>
 
                             {/* CONTENT */}
                             <Box
                                 sx={{
-                                    px: 2.5,
-                                    pb: 3,
-                                    pt: 3,
+                                    // mt: 1,
+                                    px: 2,
+                                    textAlign: 'center',
                                 }}
                             >
                                 <Typography
                                     sx={{
-                                        textAlign: 'center',
                                         fontFamily: 'Dai Banna SIL',
-                                        fontSize: '22px',
+                                        fontSize: '20px',
                                         fontWeight: 500,
+                                        lineHeight: '30px',
                                         color: '#000',
-                                        mb: 1,
+                                        mb: 1.5,
+                                        mt: 3,
                                     }}
                                 >
                                     {step.title}
@@ -115,10 +116,12 @@ const RecoverSection = () => {
 
                                 <Typography
                                     sx={{
-                                        textAlign: 'center',
                                         fontSize: '14px',
-                                        lineHeight: '21px',
+                                        lineHeight: '28px',
                                         color: '#6D6B77',
+                                        maxWidth: 340,
+                                        mx: 'auto',
+                                        mb: 2,
                                     }}
                                 >
                                     {step.description}
