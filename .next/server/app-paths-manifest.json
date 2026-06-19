@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-{}
-=======
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
-  "/services/[slug]/page": "app/services/[slug]/page.js"
-}
->>>>>>> ee6800e7189b95ee77b5c118b97b03f91420febb
