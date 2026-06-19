@@ -64,7 +64,7 @@ export default function SectionHeading({
           letterSpacing: '-0.01em',
           color: titleColor,
           whiteSpace: "pre-line",
-          fontFamily: "Dai Banna SIL"
+          fontFamily: "var(--font-dai-banna)"
         }}
       >
         {title}

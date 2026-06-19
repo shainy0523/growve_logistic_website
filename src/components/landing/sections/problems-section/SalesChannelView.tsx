@@ -88,7 +88,7 @@ export default function ConnectedEcosystem() {
                                 },
                                 lineHeight: 1.1,
                                 fontWeight: 500,
-                                fontFamily: "Dai Banna SIL, serif",
+                                fontFamily: "var(--font-dai-banna), serif",
                                 mb: 3,
                                 color:'#000000'
                             }}

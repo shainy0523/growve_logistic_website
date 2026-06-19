@@ -38,7 +38,7 @@ export default function StatsCard({
       <Box>
         <Typography
           sx={{
-            fontFamily: 'Dai Banna SIL, sans-serif',
+            fontFamily: 'var(--font-dai-banna), sans-serif',
             fontSize: '20px',
             fontWeight: 500,
             color: '#444050',

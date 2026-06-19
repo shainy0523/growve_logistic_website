@@ -176,7 +176,7 @@ export default function LogisticsHero() {
                     <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: "0.32em", textTransform: "uppercase", color: "#A6A4AE" }}>
                         End-to-end operations
                     </div>
-                    <h1 style={{ fontFamily: "Dai Banna SIL, serif", fontWeight: 500, fontSize: "clamp(28px,4.6vw,44px)", lineHeight: 1.28, letterSpacing: "-0.005em", margin: 0, color: "#1F1D26" }}>
+                    <h1 style={{ fontFamily: "var(--font-dai-banna), serif", fontWeight: 500, fontSize: "clamp(28px,4.6vw,44px)", lineHeight: 1.28, letterSpacing: "-0.005em", margin: 0, color: "#1F1D26" }}>
                         From pickup to delivery. And<br />
                         everything{" "}
                         <span style={{ color: "#B9B7C1" }}>in between.</span>

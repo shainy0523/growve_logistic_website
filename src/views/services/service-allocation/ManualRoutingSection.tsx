@@ -57,7 +57,7 @@ export default function ManualRoutingSection() {
 
           <Typography
             sx={{
-              fontFamily: 'Dai Banna SIL, sans-serif',
+              fontFamily: 'var(--font-dai-banna), sans-serif',
               fontSize: {
                 xs: '34px',
                 md: '48px',

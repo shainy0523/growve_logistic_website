@@ -84,7 +84,7 @@ export default function ServiceHero({
       <Typography
         component='h1'
         sx={{
-          fontFamily: 'Dai Banna SIL,sans-serif',
+          fontFamily: 'var(--font-dai-banna), sans-serif',
           fontSize: {
             xs: '36px',
             md: '54px',

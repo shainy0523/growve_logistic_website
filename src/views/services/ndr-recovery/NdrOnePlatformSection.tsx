@@ -39,7 +39,7 @@ export default function NdrOnePlatformSection() {
   return (
     <Box
       sx={{
-        py: { xs: 10, md: '100px' },
+        py: { xs: 10, md: '90px' },
       }}
       className="landing-container"
     >
