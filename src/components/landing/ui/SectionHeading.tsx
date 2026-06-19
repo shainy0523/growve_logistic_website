@@ -68,6 +68,7 @@ export default function SectionHeading({
         }}
       >
         {title}
+        <br/>
         {accent && (
           <>
             {' '}
@@ -84,7 +85,7 @@ export default function SectionHeading({
           sx={{
             mt: 3,
             color: subtitleColor,
-            maxWidth: 600,
+            maxWidth: 620,
             lineHeight:1.5,
             mx: align === 'center' ? 'auto' : 0,
           }}
