@@ -115,41 +115,50 @@ export default function PlatformSection() {
           }}
         >
           {PLATFORM.cards.map((card, i) => (
-            <Box key={card.title} sx={{
-              width: '100%',
-              background: '#111',
-              borderRadius: 3,
-              // overflow: 'hidden',
-              display: 'flex',
-              flexDirection: 'column',
-            }}>
-              {i === 0 ?
-                <StoreIntegrationShowcase /> :
-                (
-                  <Box
-                    sx={{
-                      position: 'relative',
-                      width: '100%',
-                      height: '100%',
-                      // aspectRatio: '16/10', // adjust based on your design
-                    }}
-                  >
-                    <Image
-                      src="/images/laptop.png"
-                      alt="laptop"
-                      fill
-                      style={{
-                        objectFit: 'cover', // or 'contain'
-                        borderRadius: '15px'
-                      }}
-                    />
-                  </Box>
-                )}
-              <Box className='p-2'>
-                <Typography variant='Heading/H4-Bold' sx={{ color: 'var(--text-on-dark)' }}>
-                  {card.title}<br />
+            <Box
+              key={card.title}
+              sx={{
+                width: "100%",
+                background: "#111",
+                borderRadius: 3,
+                overflow: "hidden",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <Box
+                sx={{
+                  position: "relative",
+                  // width: "100%",
+                }}
+              >
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "15px",
+                  }}
+                />
+              </Box>
+
+              <Box className="p-2">
+                <Typography
+                  variant="Heading/H4-Bold"
+                  sx={{ color: "var(--text-on-dark)" }}
+                >
+                  {card.title}
                 </Typography>
-                <Typography className='text-[.75rem]! max-w-[500px]' sx={{ color: 'var(--text-on-dark-muted)', lineHeight: 1.6 }}>
+
+                <Typography
+                  className="text-[.75rem]! max-w-[500px]"
+                  sx={{
+                    color: "var(--text-on-dark-muted)",
+                    lineHeight: 1.6,
+                  }}
+                >
                   {card.description}
                 </Typography>
               </Box>
