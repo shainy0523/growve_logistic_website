@@ -1,11 +1,13 @@
+"use client"
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import { Icon } from '@iconify/react'
 import { FEATURE_CARDS } from '../../data/landing.data'
+import { motion } from 'framer-motion';
 
 export default function FeatureCardsSection() {
   return (
-    <Box className='landing-container' sx={{ pt: { xs: 6, md: 8 } }}>
+    <Box className='landing-container' sx={{ py: { xs: 6, md: 15 } }}>
       <Box
         sx={{
           display: 'grid',
@@ -13,8 +15,15 @@ export default function FeatureCardsSection() {
           gap: 2.5,
         }}
       >
-        {FEATURE_CARDS.map((card) => (
-          <Box
+        {FEATURE_CARDS.map((card, index) => (
+          <Box component={motion.div}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{
+              duration: 0.3,
+              delay: index * 0.15,
+            }}
             key={card.title}
             sx={{
               backgroundColor: 'var(--surface-muted)',
@@ -33,20 +42,18 @@ export default function FeatureCardsSection() {
           >
             <Box
               sx={{
-                width: 32,
-                height: 32,
-                borderRadius: '8px',
-                backgroundColor: '#FFFFFF',
-                border: '1px solid var(--border-subtle)',
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
                 color: 'var(--text-strong)',
+                pb:1,
               }}
             >
-              <Icon icon={card.icon} fontSize={18} />
+              <Icon icon={card.icon} fontSize={25} />
             </Box>
-            <Typography variant='Heading/H5-Bold' sx={{ color: 'var(--text-strong)' }}>
+            <Typography
+              sx={{
+                color: 'var(--text-strong)',
+                fontFamily: 'var(--font-dai-banna), sans-serif',
+                fontWeight:500,
+               }}>
               {card.title}
             </Typography>
             <Typography variant='Body/S-Regular' sx={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>

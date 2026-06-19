@@ -109,6 +109,7 @@ export default function CtaSection() {
         </PrimaryCta>
         <SecondaryCta
           component='a'
+          bgColor='#FFFFFF'
         // startIcon={<Icon icon='mdi:play-circle-outline' fontSize={16} />}
         >
           Book a Demo

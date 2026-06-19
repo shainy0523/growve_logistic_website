@@ -17,6 +17,7 @@
     "@mui/material": "^9.1.1",
     "@mui/material-nextjs": "^9.0.1",
     "@mui/system": "^9.0.1",
+    "framer-motion": "^12.40.0",
     "leaflet": "^1.9.4",
     "next": "15.5.18",
     "react": "19.1.0",

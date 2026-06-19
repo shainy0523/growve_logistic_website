@@ -13,7 +13,7 @@ export default function HeroSection() {
   return (
     <Box
       id={SECTION_IDS.HOME}
-      className='pt-10 mr-8! ml-8! rounded-[15px]!'
+      className='pt-10 mr-8! ml-8! mt-4! rounded-[20px]!'
       sx={{
         position: 'relative',
         overflow: 'hidden',

@@ -169,7 +169,7 @@ export default function LogisticsHero() {
             `}
             </style>
 
-            <div style={{ maxWidth: 1100, margin: "8rem auto", padding: "80px 32px 0" }}>
+            <div style={{ maxWidth: 1100, margin: "10rem auto", padding: "10px 32px 0" }}>
 
                 {/* ── Hero copy ── */}
                 <div className="rise-1" style={{ maxWidth: 620, margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 20 }}>

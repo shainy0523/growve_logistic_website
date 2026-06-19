@@ -28,10 +28,10 @@ const daiBannaSil = Dai_Banna_SIL({
 })
 
 export const metadata: Metadata = {
-  title: { default: 'Growve Logistics — Smarter logistics for modern businesses', template: '%s | Growve Logistics' },
+  title: { default: 'Growve Logistics — Ship Smarter, Recover Faster, Grow Bigger', template: '%s | Growve Logistics' },
   description:
     'Automate courier selection, recover failed deliveries, and track every order in real time — all from a single logistics platform built for growing e-commerce brands in India.',
-  icons: { icon: '/favicon.ico' },
+  icons: { icon: '/images/wesite-logo.png' },
 }
 
 export const viewport: Viewport = {

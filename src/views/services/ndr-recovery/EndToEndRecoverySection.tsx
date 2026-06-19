@@ -2,136 +2,26 @@ import SectionHeading from '@/components/landing/ui/SectionHeading'
 import { Box, Typography } from '@mui/material'
 import RecoveryAnalyticsSection from './RecoveryAnalyticsSection'
 
-interface CarrierRow {
-    name: string
-    value: number
-}
-
-const CARRIER_ROWS: CarrierRow[] = [
-    { name: 'Delhivery', value: 60 },
-    { name: 'DTDC', value: 34 },
-    { name: 'BlueDart', value: 30 },
-]
-
 const CARDS = [
     {
-        title: 'Recovery performance by courier',
+        image: '/images/ndr/recovery_1.svg',
+        title: 'Fake-attempt detection',
         description:
-            'The failure is captured in real time, reason normalised, and queued for recovery automatically.',
-        metric: 'Recovery Rate',
+            'When a courier logs a delivery that never happened, Growve cross-checks GPS, timing and contact history, flags it, and raises the dispute on your behalf.',
     },
     {
-        title: 'Revenue impact',
+        image: '/images/ndr/recovery_2.svg',
+        title: 'Address intelligence',
         description:
-            'The buyer picks an option in one tap; the preference and any address fix are validated instantly.',
-        metric: 'Volume Share',
+            'Incomplete or wrong addresses are validated and auto-corrected against pincode & geocode data before the re-attempt so it lands the second time.',
     },
     {
-        title: 'Recovery rate trend',
+        image: '/images/ndr/recovery_3.svg',
+        title: 'Self-serve rescheduling',
         description:
-            'Growve pushes the new slot to the courier, tracks it to the door, and closes the loop — RTO avoided.',
-        metric: 'Volume Share',
+            "Buyers get a branded page to pick their own delivery slot or fix their address — no agent, no phone tag. It's the highest-converting recovery channel there is.",
     },
 ]
-
-function CarrierComparisonMock({ metric }: { metric: string }) {
-    return (
-        <Box
-            sx={{
-                bgcolor: '#FFF',
-                border: '1px solid #EAEAEC',
-                borderRadius: '12px',
-                p: 2,
-                // fade the mock into the card
-                maskImage: 'linear-gradient(180deg, #000 55%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(180deg, #000 55%, transparent 100%)',
-            }}
-        >
-            <Typography
-                sx={{
-                    fontSize: 13,
-                    fontWeight: 600,
-                    color: '#000',
-                    mb: 1.5,
-                }}
-            >
-                Carrier Comparison
-            </Typography>
-
-            {/* Table header */}
-            <Box
-                sx={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    pb: 1,
-                    borderBottom: '1px solid #F0F0F2',
-                }}
-            >
-                <Typography sx={{ fontSize: 11, color: '#9A98A4' }}>Carrier</Typography>
-                <Typography sx={{ fontSize: 11, color: '#9A98A4' }}>{metric}</Typography>
-            </Box>
-
-            {/* Rows */}
-            {CARRIER_ROWS.map(row => (
-                <Box
-                    key={row.name}
-                    sx={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        py: 1.25,
-                        borderBottom: '1px solid #F5F5F6',
-                    }}
-                >
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                        <Box
-                            sx={{
-                                width: 18,
-                                height: 18,
-                                borderRadius: '5px',
-                                bgcolor: '#1F1F1F',
-                                color: '#FFF',
-                                fontSize: 10,
-                                fontWeight: 700,
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            {row.name[0]}
-                        </Box>
-                        <Typography sx={{ fontSize: 12, color: '#1F1F1F' }}>{row.name}</Typography>
-                    </Box>
-
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                        <Box
-                            sx={{
-                                width: 56,
-                                height: 6,
-                                borderRadius: '999px',
-                                bgcolor: '#F0F0F2',
-                                overflow: 'hidden',
-                            }}
-                        >
-                            <Box
-                                sx={{
-                                    width: `${row.value}%`,
-                                    height: '100%',
-                                    borderRadius: '999px',
-                                    bgcolor: '#FBC942',
-                                }}
-                            />
-                        </Box>
-                        <Typography sx={{ fontSize: 12, color: '#6D6B77', width: 26, textAlign: 'right' }}>
-                            {row.value}%
-                        </Typography>
-                    </Box>
-                </Box>
-            ))}
-        </Box>
-    )
-}
 
 export default function EndToEndRecoverySection() {
     return (
@@ -160,14 +50,24 @@ export default function EndToEndRecoverySection() {
                             key={card.title}
                             sx={{
                                 borderRadius: '16px',
-                                border: '1px solid #EAEAEC',
-                                bgcolor: '#F5F5F6',
                                 p: 2.5,
                                 display: 'flex',
                                 flexDirection: 'column',
                             }}
                         >
-                            <CarrierComparisonMock metric={card.metric} />
+                            {/* card mock visual */}
+                            <Box
+                                component="img"
+                                src={card.image}
+                                alt={card.title}
+                                sx={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    display: 'block',
+                                    borderRadius: '12px',
+                                    bgcolor: '#F5F5F6',
+                                }}
+                            />
 
                             <Typography
                                 sx={{

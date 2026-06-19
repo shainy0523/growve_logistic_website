@@ -104,22 +104,22 @@ export const HERO = {
 
 export const FEATURE_CARDS = [
   {
-    icon: 'mdi:truck-fast-outline',
+    icon: 'material-symbols:local-shipping-outline-rounded',
     title: 'Smart Multi-Courier',
     description: 'Automatically choose the best courier based on cost, delivery performance & serviceability.',
   },
   {
-    icon: 'mdi:check-decagram-outline',
+    icon: 'material-symbols:published-with-changes',
     title: 'NDR Recovery',
     description: 'Recover failed deliveries through automated customer outreach & intelligent retry workflows.',
   },
   {
-    icon: 'mdi:medical-bag',
+    icon: 'material-symbols:assignment-return-outline',
     title: 'Returns & RTO Control',
     description: 'Reduce return losses with complete visibility into return reasons.',
   },
   {
-    icon: 'mdi:eye-outline',
+    icon: 'material-symbols:travel-explore-rounded',
     title: 'Real-Time Visibility',
     description: 'Track every shipment milestone from pickup to final delivery in one place.',
   },

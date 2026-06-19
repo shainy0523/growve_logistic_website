@@ -193,7 +193,11 @@ export default function AdvantageSection() {
                 overflow: 'hidden'
               }}
             >
-              <Typography variant='Heading/H4-Bold' sx={{ color: 'var(--text-strong)' }}>
+              <Typography variant='Heading/H4-Bold' sx={{
+                color: 'var(--text-strong)',
+                fontFamily: 'var(--font-dai-banna), sans-serif',
+                fontWeight:500
+              }}>
                 {card.title}
               </Typography>
               <Typography variant='Body/S-Regular' sx={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>

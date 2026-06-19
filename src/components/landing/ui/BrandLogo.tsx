@@ -7,9 +7,10 @@ interface BrandLogoProps {
   showText?: boolean
 }
 
-export default function BrandLogo({ size = 35, variant = 'dark', showText = true }: BrandLogoProps) {
-  const textColor = variant === 'dark' ? '#1F1F1F' : '#FFFFFF'
-  const taglineColor = variant === 'dark' ? 'var(--text-subtitle)' : 'var(--text-on-dark-muted)'
+export default function BrandLogo({ size = 35, variant = 'light', showText = true }: BrandLogoProps) {
+  // 'dark' = placed on a dark background → light text; 'light' = on a light surface → dark text
+  const textColor = variant === 'dark' ? '#FFFFFF' : '#1F1F1F'
+  const taglineColor = variant === 'dark' ? 'var(--text-on-dark-muted)' : 'var(--text-subtitle)'
 
   return (
     <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}>

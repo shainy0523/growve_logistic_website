@@ -1,6 +1,7 @@
 'use client'
 
 import React from "react";
+import Image from "next/image";
 import { keyframes } from "@emotion/react";
 import { Box, Typography, Chip, Avatar } from "@mui/material";
 import {
@@ -226,7 +227,14 @@ function TrackingCard() {
                 className="relative flex flex-1 flex-col justify-between overflow-hidden rounded-[7px] p-[9px]"
                 sx={{ bgcolor: t.secLight }}
             >
-                <StylizedMap />
+                <Image
+                    src="/images/basemap.png"
+                    alt="Shipment route map"
+                    fill
+                    className="absolute inset-0 z-0 object-cover"
+                    sizes="410px"
+                    priority
+                />
 
                 {/* navigation pin */}
                 <Box
@@ -260,18 +268,6 @@ function TrackingCard() {
                             <Search sx={{ fontSize: 14, color: t.textPrimary }} />
                         </Box>
                     </Box>
-
-                    {/* <Box
-            className="flex flex-col overflow-hidden rounded-[7px]"
-            sx={{ bgcolor: t.white, boxShadow: "0px 3.5px 7px rgba(0,0,0,0.12)" }}
-          >
-            <ZoomButton divider>
-              <Add sx={{ fontSize: 14, color: t.black }} />
-            </ZoomButton>
-            <ZoomButton>
-              <Remove sx={{ fontSize: 14, color: t.black }} />
-            </ZoomButton>
-          </Box> */}
                 </Box>
 
                 {/* bottom detail */}
@@ -304,17 +300,17 @@ type Point = {
 const round = (n: number) => Number(n.toFixed(2))
 
 const polar = (
-  cx: number,
-  cy: number,
-  r: number,
-  angle: number
+    cx: number,
+    cy: number,
+    r: number,
+    angle: number
 ): Point => {
-  const rad = ((angle - 90) * Math.PI) / 180
+    const rad = ((angle - 90) * Math.PI) / 180
 
-  return {
-    x: round(cx + r * Math.cos(rad)),
-    y: round(cy + r * Math.sin(rad)),
-  }
+    return {
+        x: round(cx + r * Math.cos(rad)),
+        y: round(cy + r * Math.sin(rad)),
+    }
 }
 
 const arcPath = (
