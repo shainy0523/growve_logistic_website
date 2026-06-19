@@ -7,6 +7,7 @@ import SecondaryCta from '../../ui/SecondaryCta'
 import HeroDashboard from './HeroDashboard'
 import { HERO } from '../../data/landing.data'
 import { APP_URLS, SECTION_IDS } from '@/utils/constant'
+import Image from 'next/image'
 
 export default function HeroSection() {
   return (
@@ -15,7 +16,7 @@ export default function HeroSection() {
       className='pt-10 mr-8! ml-8! rounded-[15px]!'
       sx={{
         position: 'relative',
-        overflow: 'hidden',      
+        overflow: 'hidden',
 
         backgroundImage: 'url(/images/hero_bg.png)',
         backgroundRepeat: 'no-repeat',
@@ -152,7 +153,18 @@ export default function HeroSection() {
 
         {/* Dashboard mockup */}
         <Box sx={{ mt: { xs: 5, md: 7 }, px: { xs: 0, md: 2 } }}>
-          <HeroDashboard />
+          {/* <HeroDashboard /> */}
+          <Image
+            src="/images/hero.svg"
+            alt="Growve Platform"
+            width={1052}
+            height={600}
+            style={{
+              width: '100%',
+              height: 'auto',
+              display: 'block',
+            }}
+          />
         </Box>
       </Box>
     </Box>
