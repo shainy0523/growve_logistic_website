@@ -1,37 +1,3 @@
-// 'use client'
-
-// import Button, { type ButtonProps } from '@mui/material/Button'
-// import { Icon } from '@iconify/react'
-
-// type PrimaryCtaProps = ButtonProps & {
-//   withArrow?: boolean
-// }
-
-// export default function PrimaryCta({ withArrow = true, children, sx, ...rest }: PrimaryCtaProps) {
-//   return (
-//     <Button
-//       variant='contained'
-//       endIcon={withArrow ? <Icon icon='mdi:arrow-right' fontSize={16} /> : undefined}
-//       sx={{
-//         backgroundColor: '#1F1F1F',
-//         color: '#FFFFFF',
-//         fontSize: '0.875rem',
-//         fontWeight: 600,
-//         textTransform: 'none',
-//         px: 2.5,
-//         py: 1.05,
-//         borderRadius: '8px',
-//         boxShadow: 'none',
-//         '&:hover': { backgroundColor: '#000', boxShadow: 'none' },
-//         ...sx,
-//       }}
-//       {...rest}
-//     >
-//       {children}
-//     </Button>
-//   )
-// }
-
 'use client'
 
 import Button, { type ButtonProps } from '@mui/material/Button'
@@ -51,7 +17,7 @@ const CTA_SX = {
   fontWeight: 600,
   textTransform: 'none',
 
-  px: 2,
+  px: 2.5,
   py: 0,
 
   display: 'inline-flex',

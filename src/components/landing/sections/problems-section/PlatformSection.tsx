@@ -119,7 +119,6 @@ export default function PlatformSection() {
               key={card.title}
               sx={{
                 width: "100%",
-                background: "#111",
                 borderRadius: 3,
                 overflow: "hidden",
                 display: "flex",
@@ -144,16 +143,20 @@ export default function PlatformSection() {
                 />
               </Box>
 
-              <Box className="p-2">
+              <Box className="p-2 mt-6">
                 <Typography
                   variant="Heading/H4-Bold"
-                  sx={{ color: "var(--text-on-dark)" }}
+                  sx={{
+                    color: "var(--text-on-dark)",
+                    fontFamily: 'var(--font-dai-banna), sans-serif',
+                    fontWeight:500,
+                   }}
                 >
                   {card.title}
                 </Typography>
 
                 <Typography
-                  className="text-[.75rem]! max-w-[500px]"
+                  className="text-[.75rem]! max-w-[500px] pt-1"
                   sx={{
                     color: "var(--text-on-dark-muted)",
                     lineHeight: 1.6,

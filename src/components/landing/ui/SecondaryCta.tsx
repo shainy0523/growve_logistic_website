@@ -22,25 +22,32 @@ const CTA_SX = {
   lineHeight: 1,
 }
 
+interface SecondaryCtaProps extends ButtonProps {
+  bgColor?: string
+  hoverColor?: string
+}
+
 export default function SecondaryCta({
   children,
   sx,
+  bgColor = '#EBEBED',
+  hoverColor = '#FAFAFB',
   ...rest
-}: ButtonProps) {
+}: SecondaryCtaProps) {
   return (
     <Button
       variant='outlined'
       sx={{
         ...CTA_SX,
 
-        backgroundColor: '#EBEBED',
+        backgroundColor: bgColor,
         color: '#1F1F1F',
         borderColor:'transparent',
 
         boxShadow: 'none',
 
         '&:hover': {
-          backgroundColor: '#FAFAFB',
+          backgroundColor: hoverColor,
           boxShadow: 'none',
         },
 
