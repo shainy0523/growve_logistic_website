@@ -29,7 +29,7 @@ function CenterCard() {
         transition: 'transform 0.3s ease',
 
         boxShadow: '-8px 5px 20px rgba(0,0,0,0.30)',
-        cursor:'pointer',
+        cursor: 'pointer',
 
         color: '#FFF',
         '&:hover': {
@@ -162,7 +162,11 @@ export function FeatureCard({ title, description }: { title: string; description
       }}
     >
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 2 }}>
-        <Typography className='text-[1.2rem]!' variant='Heading/H5-Bold' sx={{ color: 'var(--text-strong)' }}>
+        <Typography className='text-[1.2rem]!' variant='Heading/H5-Bold' sx={{
+          color: 'var(--text-strong)',
+          fontFamily: 'var(--font-dai-banna), sans-serif',
+          fontWeight: 500,
+        }}>
           {title}
         </Typography>
         <Icon icon='mdi:arrow-right' fontSize={18} color='#1F1F1F' />

@@ -1,4 +1,4 @@
-import NdrRecoveryAutomationView from "@/views/services/ndr-recovery/NdrRecoveryService"
+import NdrRecoveryAutomationView from "@/views/services/ndr-recovery/NdrRecoveryView"
 import SmartCourierAllocationView from "@/views/services/service-allocation/SmartCourierAllocationView"
 import WeightDisputeProtectionView from "@/views/services/weight-dispute/WeightDisputeProtectionView"
 import RealTimeShipmentTrackingView from "@/views/services/shipment-tracking/RealTimeShipmentTrackingView"

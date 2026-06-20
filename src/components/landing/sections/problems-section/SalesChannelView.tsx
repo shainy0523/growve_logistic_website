@@ -14,12 +14,12 @@ const STAGE_H = 254;
 const TILE = 59.26; // tile size from Figma
 
 const TILES = [
-    { left: 0, top: 130.5, glow: "#C3EBFF", icon: "/images/penguin.png" },
-    { left: 76.19, top: 91.71, glow: "#FFDCC0", icon: "/images/magento.png" },
-    { left: 152.37, top: 53.61, glow: "#B9E0FF", icon: "/images/windows.png" },
-    { left: 152.37, top: 129.8, glow: "#E9FFBF", icon: "/images/shopify.png" },
-    { left: 228.56, top: 91.71, glow: "#FFD9D9", icon: "/images/amazon.png" },
-    { left: 304.75, top: 53.61, glow: "#DDC5FF", icon: "/images/woocommerce.png" },
+    { left: 0, top: 130.5, glow: "#C3EBFF", icon: "/images/penguin.svg" },
+    { left: 76.19, top: 91.71, glow: "#FFDCC0", icon: "/images/magento.svg" },
+    { left: 152.37, top: 53.61, glow: "#B9E0FF", icon: "/images/windows.svg" },
+    { left: 152.37, top: 129.8, glow: "#E9FFBF", icon: "/images/shopify.svg" },
+    { left: 228.56, top: 91.71, glow: "#FFD9D9", icon: "/images/amazon.svg" },
+    { left: 304.75, top: 53.61, glow: "#DDC5FF", icon: "/images/woocommerce.svg" },
 ];
 
 // Decorative fade tiles that blend the cluster into the surface.
@@ -122,7 +122,7 @@ export default function ConnectedEcosystem() {
                         }}
                     >
                         {/* Center glow */}
-                        <Box
+                        {/* <Box
                             sx={{
                                 position: "absolute",
                                 left: "50%",
@@ -136,7 +136,7 @@ export default function ConnectedEcosystem() {
                                 animation: "glowPulse 5s ease-in-out infinite",
                                 zIndex: 0,
                             }}
-                        />
+                        /> */}
 
                         <Box
                             sx={{
@@ -193,7 +193,7 @@ export default function ConnectedEcosystem() {
                                                 height: "62%",
                                                 borderRadius: "9999px",
                                                 background: tile.glow,
-                                                filter: "blur(11px)",
+                                                filter: "blur(8px)",
                                                 opacity: 0.9,
                                                 transform: "translateY(16%)",
                                             }}
