@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 import HorizontalScroller from "./HorizontalScroller";
-import ImageContainer from "@/components/common/ImageContainer";
+// import ImageContainer from "@/components/common/ImageContainer";
 import Image from "next/image";
 // import StaticImageComponent from './StaticImageComponent'
 

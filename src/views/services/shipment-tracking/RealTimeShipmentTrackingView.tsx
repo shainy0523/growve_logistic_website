@@ -41,7 +41,7 @@ const RealTimeShipmentTrackingView = () => {
       <KeepInformedSection />
       <OneViewSection />
       <LiveTrackingMapSection />
-       <TrackingHandledSection section='carrier'/>
+      <TrackingHandledSection section='carrier'/>
       {/* <CourierAgnosticSection /> */}
       <TrackingOnePlatformSection />
     </Box>

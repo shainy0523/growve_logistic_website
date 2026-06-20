@@ -1,4 +1,4 @@
-import FeatureSplitSection from './FeatureSplitSection'
+import FeatureSplitSection, { SplitFeature } from './FeatureSplitSection'
 
 const FEATURES: SplitFeature[] = [
   {
