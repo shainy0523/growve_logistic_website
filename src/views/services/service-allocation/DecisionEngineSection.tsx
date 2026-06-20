@@ -75,7 +75,7 @@ export default function DecisionEngineSection() {
 
                     <Typography
                         sx={{
-                            fontFamily: 'var(--font-serif)',
+                            fontFamily: 'var(--font-dai-banna),serif',
                             fontSize: {
                                 xs: '34px',
                                 md: '48px',
@@ -149,7 +149,7 @@ export default function DecisionEngineSection() {
 
                             <Typography
                                 sx={{
-                                    fontFamily: 'var(--font-serif)',
+                                    fontFamily: 'var(--font-dai-banna), sans-serif',
                                     fontSize: {
                                         xs: '34px',
                                         md: '48px',

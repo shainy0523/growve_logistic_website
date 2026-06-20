@@ -1,7 +1,9 @@
 import SectionHeading from '@/components/landing/ui/SectionHeading'
 import { Box, Typography } from '@mui/material'
-import Image from 'next/image'
 import React from 'react'
+import RecoverCard1 from './RecoverCard1'
+import RecoverCard2 from './RecoverCard2'
+import RecoverCard3 from './RecoverCard3'
 
 const STEPS = [
     {
@@ -46,6 +48,7 @@ const RecoverSection = () => {
                         display: 'grid',
                         gridTemplateColumns: {
                             xs: '1fr',
+                            sm:'repeat(2,1fr)',
                             md: 'repeat(3,1fr)',
                         },
                         gap: '20px',
@@ -55,11 +58,7 @@ const RecoverSection = () => {
                         <Box
                             key={step.title}
                             sx={{
-                                borderRadius: {
-                                    xs: '12px',
-                                    sm: '25px',
-                                    md: '15px',
-                                },
+                                borderRadius: '12px',
                                 overflow: 'hidden',
                                 display: 'flex',
                                 flexDirection: 'column',
@@ -71,25 +70,17 @@ const RecoverSection = () => {
                                 sx={{
                                     position: 'relative',
                                     width: '100%',
-                                    aspectRatio: {
-                                        xs: '376 / 312',
-                                        sm: '376 / 312',
-                                        md: '376 / 313',
-                                    },
+                                    height: { xs: 240, sm: 260, md: 280 },
                                     overflow: 'hidden',
                                 }}
                             >
-                                <Image
-                                    src={`/images/Recover${index + 1}.svg`}
-                                    alt={step.title}
-                                    fill
-                                    priority
-                                    style={{
-                                        objectFit: 'contain',
-                                        width: '100%',
-                                        height: '100%',
-                                    }}
-                                />
+                                {index === 0 ? (
+                                    <RecoverCard1 />
+                                ) : index === 1 ? (
+                                    <RecoverCard2 />
+                                ) : (
+                                    <RecoverCard3 />
+                                )}
                             </Box>
 
                             {/* CONTENT */}
@@ -107,7 +98,7 @@ const RecoverSection = () => {
                                         fontWeight: 500,
                                         lineHeight: '30px',
                                         color: '#000',
-                                        mb: 1.5,
+                                        mb: .5,
                                         mt: 3,
                                     }}
                                 >
@@ -117,7 +108,7 @@ const RecoverSection = () => {
                                 <Typography
                                     sx={{
                                         fontSize: '14px',
-                                        lineHeight: '28px',
+                                        lineHeight: '21px',
                                         color: '#6D6B77',
                                         maxWidth: 340,
                                         mx: 'auto',

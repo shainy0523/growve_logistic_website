@@ -15,6 +15,7 @@ function TruckVisual() {
         position: 'relative',
         overflow: 'hidden',
         minHeight: 220,
+        cursor:'pointer',
       }}
     >
       {/* Truck */}
@@ -23,7 +24,7 @@ function TruckVisual() {
         sx={{
           position: 'absolute',
           bottom: -20,
-          left: 180,
+          left: { xs: 60, sm: 200, md: 198 },
           width: 460,
           zIndex: 1
         }}
@@ -45,7 +46,7 @@ function TruckVisual() {
       <Box
         sx={{
           position: 'absolute',
-          right: 20,
+          right:{xs:-8,md: 20},
           top: 5,
           zIndex: 10,
           opacity: 0.15,
@@ -58,8 +59,135 @@ function TruckVisual() {
   );
 }
 
+type Metric = { label: string; value: string; delta: string }
+
+function MetricCard({ m, index }: { m: Metric; index: number }) {
+  return (
+    <Box
+      sx={{
+        flexShrink: 0,
+        width: index === 1 ? 240 : 220,
+        bgcolor: '#FFF',
+        borderRadius: '12px',
+        p: 2,
+        boxShadow: '0px 1px 2px rgba(0,0,0,0.04)',
+        border: '1px solid #F1F1F1',
+        cursor:'pointer'
+      }}
+    >
+      {/* Header */}
+
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: 1,
+          mb: 3
+        }}
+      >
+        <Box
+          sx={{
+            width: 28,
+            height: 28,
+            borderRadius: '6px',
+            bgcolor: '#FBC942',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
+          <Icon
+            icon="mdi:clock-outline"
+            fontSize={16}
+            color="white"
+          />
+        </Box>
+
+        <Typography
+          sx={{
+            fontSize: 12,
+            fontWeight: 600,
+            color: '#6D6B77'
+          }}
+        >
+          {m.label}
+        </Typography>
+      </Box>
+
+      {/* Value */}
+
+      <Typography
+        sx={{
+          fontSize: 28,
+          fontWeight: 700,
+          color: '#111',
+          lineHeight: 1
+        }}
+      >
+        {m.value}
+      </Typography>
+
+      {/* Footer */}
+
+      <Box
+        sx={{
+          mt: 1.5,
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center'
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: 11,
+            color: '#8D8A94'
+          }}
+        >
+          vs Last Period
+        </Typography>
+
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 0.5
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: 11,
+              fontWeight: 700,
+              color: '#24B364'
+            }}
+          >
+            {m.delta}
+          </Typography>
+
+          <Box
+            sx={{
+              width: 16,
+              height: 16,
+              borderRadius: '50%',
+              bgcolor: '#CBF2DC',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            <Icon
+              icon="mdi:arrow-top-right"
+              fontSize={10}
+              color="#24B364"
+            />
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
+}
+
 function InsightsVisual() {
-  const metrics = [
+  const metrics: Metric[] = [
     {
       label: 'Delivery Success Rate',
       value: '91.4%',
@@ -86,136 +214,37 @@ function InsightsVisual() {
         mt: 'auto'
       }}
     >
+      {/* Marquee viewport */}
       <Box
         sx={{
           position: 'absolute',
-          left: -145,
+          left: 0,
+          right: 0,
           bottom: 0,
-          display: 'flex',
-          gap: 2
+          overflow: 'hidden',
+          // Fade the edges so cards slide in/out smoothly
+          maskImage: 'linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%)',
         }}
       >
-        {metrics.map((m, index) => (
-          <Box
-            key={m.label}
-            sx={{
-              width: index === 1 ? 240 : 220,
-              bgcolor: '#FFF',
-              borderRadius: '12px',
-              p: 2,
-              boxShadow: '0px 1px 2px rgba(0,0,0,0.04)',
-              border: '1px solid #F1F1F1'
-            }}
-          >
-            {/* Header */}
-
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 1,
-                mb: 3
-              }}
-            >
-              <Box
-                sx={{
-                  width: 28,
-                  height: 28,
-                  borderRadius: '6px',
-                  bgcolor: '#FBC942',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}
-              >
-                <Icon
-                  icon="mdi:clock-outline"
-                  fontSize={16}
-                  color="white"
-                />
-              </Box>
-
-              <Typography
-                sx={{
-                  fontSize: 12,
-                  fontWeight: 600,
-                  color: '#6D6B77'
-                }}
-              >
-                {m.label}
-              </Typography>
-            </Box>
-
-            {/* Value */}
-
-            <Typography
-              sx={{
-                fontSize: 28,
-                fontWeight: 700,
-                color: '#111',
-                lineHeight: 1
-              }}
-            >
-              {m.value}
-            </Typography>
-
-            {/* Footer */}
-
-            <Box
-              sx={{
-                mt: 1.5,
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center'
-              }}
-            >
-              <Typography
-                sx={{
-                  fontSize: 11,
-                  color: '#8D8A94'
-                }}
-              >
-                vs Last Period
-              </Typography>
-
-              <Box
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 0.5
-                }}
-              >
-                <Typography
-                  sx={{
-                    fontSize: 11,
-                    fontWeight: 700,
-                    color: '#24B364'
-                  }}
-                >
-                  {m.delta}
-                </Typography>
-
-                <Box
-                  sx={{
-                    width: 16,
-                    height: 16,
-                    borderRadius: '50%',
-                    bgcolor: '#CBF2DC',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                  }}
-                >
-                  <Icon
-                    icon="mdi:arrow-top-right"
-                    fontSize={10}
-                    color="#24B364"
-                  />
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-        ))}
+        {/* Animated track — cards duplicated for a seamless loop */}
+        <Box
+          sx={{
+            display: 'flex',
+            gap: 2,
+            width: 'max-content',
+            '@keyframes onePlatformMarquee': {
+              from: { transform: 'translateX(0)' },
+              to: { transform: 'translateX(-50%)' },
+            },
+            animation: 'onePlatformMarquee 18s linear infinite',
+            '&:hover': { animationPlayState: 'paused' },
+          }}
+        >
+          {[...metrics, ...metrics].map((m, i) => (
+            <MetricCard key={`${m.label}-${i}`} m={m} index={i % metrics.length} />
+          ))}
+        </Box>
       </Box>
     </Box>
   );
@@ -257,7 +286,7 @@ export default function OnePlatformSection() {
             >
               <Box className='flex flex-col'
                 sx={{
-                  p: { xs: 2.5, md: 3 }
+                  p: { xs: 2.5, md: 2 }
                 }}
               >
                 <Typography variant="Heading/H4-Bold" className='text-black'
@@ -306,10 +335,10 @@ export default function OnePlatformSection() {
                 backgroundColor: 'var(--surface-muted)',
                 border: '1px solid var(--border-subtle)',
                 borderRadius: 'var(--radius-lg)',
-                p: { xs: 2.5, md: 3 },
+                p: { xs: 2.5, md: 2 },
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 2,
+                gap: 1.5,
               }}
             >
               <Typography variant='Heading/H5-Bold' sx={{

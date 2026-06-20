@@ -53,7 +53,7 @@ export default function DecisionSignalCard({
         <Box sx={{ flex: 1 }}>
           <Typography
             sx={{
-              fontFamily: 'var(--font-serif)',
+              fontFamily: 'var(--font-dai-banna),sans-serif',
               fontSize: '20px',
               color: '#CFCDE4',
               fontWeight: 500,

@@ -14,6 +14,7 @@ import CallIcon from '@mui/icons-material/Call';
 import SmsIcon from '@mui/icons-material/Sms';
 import SectionHeading from '@/components/landing/ui/SectionHeading';
 import Image from 'next/image';
+import ChannelFallbackCard from './ChannelFallbackCard';
 
 const ruleSteps = [
     {
@@ -136,65 +137,7 @@ export default function AutomationSection() {
                     }}
                 >
                     {/* Communication Card */}
-                    <Paper
-                        elevation={0}
-                        sx={{
-                            bgcolor: '#F5F5F6',
-                            border: '1px solid #EAEAEC',
-                            borderRadius: 1,
-                            overflow: 'hidden',
-                        }}
-                    >
-                        {/* Content */}
-                        <Box sx={{ p: 2 }}>
-                            <Typography
-                                variant="h5"
-                                sx={{
-                                    fontWeight: 600,
-                                    mb: 1,
-                                    color: '#000',
-                                }}
-                            >
-                                Reach customers where they are
-                            </Typography>
-
-                            <Typography
-                                sx={{
-                                    color: '#6D6B77',
-                                    mb: 4,
-                                    fontSize: 13,
-                                }}
-                            >
-                                WhatsApp first, with SMS and IVR fallback —
-                                in the customer's language.
-                            </Typography>
-                        </Box>
-
-                        {/* Full-width Image */}
-                        <Box
-                            sx={{
-                                position: 'relative',
-                                width: '100%',
-                                height: 240,
-                                overflow: 'hidden',
-                            }}
-                        >
-                            <Box
-                                component="img"
-                                src="/images/automation_icons.svg"
-                                alt="automation"
-                                sx={{
-                                    position: 'absolute',
-                                    left: '50%',
-                                    top: 20,
-                                    transform: 'translateX(-50%)',
-                                    width: '110%',
-                                    minWidth: 900,
-                                    height: 'auto',
-                                }}
-                            />
-                        </Box>
-                    </Paper>
+                    <ChannelFallbackCard />
 
                     {/* Team Card */}
                     <Paper
