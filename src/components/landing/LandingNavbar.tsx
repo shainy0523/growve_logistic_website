@@ -52,7 +52,9 @@ export default function LandingNavbar() {
       <Box
         className='landing-container'
         sx={{
-          height: 72,
+          position: 'relative',
+          minHeight: 84,
+          py: 3,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -66,7 +68,13 @@ export default function LandingNavbar() {
         {/* Desktop nav */}
         <Box
           component='nav'
-          sx={{ display: { xs: 'none', md: 'inline-flex' } }}
+          sx={{
+            display: { xs: 'none', md: 'inline-flex' },
+            position: 'absolute',
+            left: '50%',
+            top: '50%',
+            transform: 'translate(-50%, -50%)',
+          }}
           className='items-center gap-3 rounded-xl border border-black/10 bg-[#F5F5F6] p-1 backdrop-blur-[30px]'
         >
           {NAV_LINKS.map(item => {
@@ -114,7 +122,7 @@ export default function LandingNavbar() {
         </Box>
 
         {/* Right side: CTAs + mobile hamburger */}
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           <Button
             component='a'
             href={APP_URLS.LOGIN}
