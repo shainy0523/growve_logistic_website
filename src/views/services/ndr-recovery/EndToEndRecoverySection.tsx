@@ -42,7 +42,7 @@ export default function EndToEndRecoverySection() {
                         mt: 6,
                         display: 'grid',
                         gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' },
-                        gap: '20px',
+                        gap: '30px',
                     }}
                 >
                     {CARDS.map(card => (
@@ -50,7 +50,6 @@ export default function EndToEndRecoverySection() {
                             key={card.title}
                             sx={{
                                 borderRadius: '16px',
-                                p: 2.5,
                                 display: 'flex',
                                 flexDirection: 'column',
                             }}

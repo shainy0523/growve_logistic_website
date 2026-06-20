@@ -9,52 +9,52 @@ import TruckLogo from '@/components/logo/TruckLogo'
 
 function TruckVisual() {
   return (
-   <Box
-  sx={{
-    flex: 1,
-    position: 'relative',
-    overflow: 'hidden',
-    minHeight: 220,
-  }}
->
-  {/* Truck */}
-
-  <Box
-    sx={{
-      position: 'absolute',
-      bottom: -20,
-      left: 180,
-      width: 460,
-      zIndex: 1
-    }}
-  >
-    <Image
-      src="/images/truck.png"
-      alt="truck"
-      width={460}
-      height={320}
-      style={{
-        width: '100%',
-        height: 'auto'
+    <Box
+      sx={{
+        flex: 1,
+        position: 'relative',
+        overflow: 'hidden',
+        minHeight: 220,
       }}
-    />
-  </Box>
+    >
+      {/* Truck */}
 
-  {/* Logo */}
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: -20,
+          left: 180,
+          width: 460,
+          zIndex: 1
+        }}
+      >
+        <Image
+          src="/images/truck.png"
+          alt="truck"
+          width={460}
+          height={320}
+          style={{
+            width: '100%',
+            height: 'auto'
+          }}
+        />
+      </Box>
 
-  <Box
-    sx={{
-      position: 'absolute',
-      right: 20,
-      top: 5,
-      zIndex: 10,
-      opacity: 0.15,
-      pointerEvents: 'none'
-    }}
-  >
-    <TruckLogo/>
-  </Box>
-</Box>
+      {/* Logo */}
+
+      <Box
+        sx={{
+          position: 'absolute',
+          right: 20,
+          top: 5,
+          zIndex: 10,
+          opacity: 0.15,
+          pointerEvents: 'none'
+        }}
+      >
+        <TruckLogo />
+      </Box>
+    </Box>
   );
 }
 
@@ -252,7 +252,7 @@ export default function OnePlatformSection() {
                 flexDirection: 'column',
                 gap: 2,
                 minHeight: 320,
-                overflow:'hidden'
+                overflow: 'hidden'
               }}
             >
               <Box className='flex flex-col'
@@ -260,7 +260,11 @@ export default function OnePlatformSection() {
                   p: { xs: 2.5, md: 3 }
                 }}
               >
-                <Typography variant="Heading/H4-Bold" className='text-black'>
+                <Typography variant="Heading/H4-Bold" className='text-black'
+                  sx={{
+                    fontFamily: 'var(--font-dai-banna), sans-serif',
+                    fontWeight: 500,
+                  }}>
                   {card.title}
                 </Typography>
 
@@ -308,7 +312,11 @@ export default function OnePlatformSection() {
                 gap: 2,
               }}
             >
-              <Typography variant='Heading/H5-Bold' sx={{ color: 'var(--text-strong)' }}>
+              <Typography variant='Heading/H5-Bold' sx={{
+                color: 'var(--text-strong)',
+                fontFamily: 'var(--font-dai-banna), sans-serif',
+                fontWeight: 500,
+              }}>
                 {card.title}
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>

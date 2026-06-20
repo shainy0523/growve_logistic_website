@@ -42,7 +42,7 @@ export default function ImpactCard({
         <Box>
           <Typography
             sx={{
-              fontFamily: 'var(--font-serif)',
+             fontFamily: 'var(--font-dai-banna), sans-serif',
               fontSize: '20px',
               fontWeight: 500,
               color: '#CFCDE4',
@@ -54,6 +54,7 @@ export default function ImpactCard({
 
           <Typography
             sx={{
+              fontWeight:'var(--font-primary)',
               fontSize: '14px',
               lineHeight: '21px',
               color: '#ACABC1',

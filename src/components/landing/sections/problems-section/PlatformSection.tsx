@@ -114,7 +114,7 @@ export default function PlatformSection() {
             gap:4
           }}
         >
-          {PLATFORM.cards.map((card, i) => (
+          {PLATFORM.cards.map((card: any, i: any) => (
             <Box
               key={card.title}
               sx={{

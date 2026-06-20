@@ -31,7 +31,7 @@ export default function SecondaryCta({
   children,
   sx,
   bgColor = '#EBEBED',
-  hoverColor = '#FAFAFB',
+  hoverColor = '#D6D7DB',
   ...rest
 }: SecondaryCtaProps) {
   return (
@@ -42,7 +42,7 @@ export default function SecondaryCta({
 
         backgroundColor: bgColor,
         color: '#1F1F1F',
-        borderColor:'transparent',
+        borderColor: 'transparent',
 
         boxShadow: 'none',
 

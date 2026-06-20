@@ -18,7 +18,7 @@ export default function AIRecoverySection() {
 
         px: {
           xs: 3,
-          md: '364px',
+          md: '304px',
         },
 
         py: {
