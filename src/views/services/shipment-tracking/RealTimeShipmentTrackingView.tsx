@@ -18,7 +18,7 @@ const RealTimeShipmentTrackingView = () => {
         className="pt-15! pb-15"
       >
         <Box className="landing-container pt-10! pb-5">
-          <Box className="grid grid-cols-2 md:gir-cols-1 gap-10">
+          <Box className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <ServiceHero
               badge="Real-Time Shipment Tracking"
               title="Know where every order is"
@@ -41,7 +41,7 @@ const RealTimeShipmentTrackingView = () => {
       <KeepInformedSection />
       <OneViewSection />
       <LiveTrackingMapSection />
-       <TrackingHandledSection section='carrier'/>
+      <TrackingHandledSection section='carrier'/>
       {/* <CourierAgnosticSection /> */}
       <TrackingOnePlatformSection />
     </Box>
