@@ -81,7 +81,7 @@ export default function EndToEndRecoverySection() {
                                 {card.title}
                             </Typography>
 
-                            <Typography sx={{ fontSize: 14, lineHeight: '22px', color: '#6D6B77' }}>
+                            <Typography sx={{ fontSize: 14, lineHeight: '21px', color: '#6D6B77' }}>
                                 {card.description}
                             </Typography>
                         </Box>

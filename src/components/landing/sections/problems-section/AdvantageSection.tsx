@@ -188,12 +188,13 @@ export default function AdvantageSection() {
                 p: { xs: 3, md: 4 },
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 2,
+                gap: .5,
                 height: 450,
                 overflow: 'hidden'
               }}
             >
               <Typography variant='Heading/H4-Bold' sx={{
+                fontSize: '24px',
                 color: 'var(--text-strong)',
                 fontFamily: 'var(--font-dai-banna), sans-serif',
                 fontWeight:500
@@ -211,7 +212,7 @@ export default function AdvantageSection() {
                     width={300}
                     height={400}
                     style={{
-                      paddingTop:'1rem',
+                      paddingTop:'1.5rem',
                       width: '300px',
                       height: 'auto',
                       objectFit: 'contain',
