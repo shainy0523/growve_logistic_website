@@ -186,22 +186,23 @@ export default function TrackingHandledSection({
           sx={{
             position: "relative",
             width: "100%",
-            height: 409,
+            height: { xs: "auto", md: 409 },
             p: "20px",
             bgcolor: "#F5F5F6",
             borderRadius: "12px",
             border: "1px solid #EAEAEC",
             overflow: "hidden",
             display: "flex",
+            flexDirection: { xs: "column", md: "row" },
             gap: "20px",
-            alignItems: "center",
-            top: "5rem",
+            alignItems: { xs: "stretch", md: "center" },
+            top: { xs: 0, md: "5rem" },
           }}
         >
           {/* Left Content */}
           <Box
             sx={{
-              width: "338px",
+              width: { xs: "100%", md: "338px" },
               display: "flex",
               flexDirection: "column",
               gap: "16px",
@@ -246,23 +247,24 @@ export default function TrackingHandledSection({
           {/* Right Side Image / Table */}
           <Box
             sx={{
-              position: "absolute",
-              left: "55%",
+              position: { xs: "relative", md: "absolute" },
+              left: { xs: "auto", md: "55%" },
               // top: '25px',
-              width: "700px",
-              height: "360px",
+              width: { xs: "100%", md: "700px" },
+              height: { xs: "auto", md: "360px" },
               bgcolor: "#fff",
               borderRadius: "12px",
               overflow: "hidden",
               boxShadow: "0px 8px 24px rgba(0,0,0,0.06)",
             }}
           >
-            <img
+            <Box
+              component="img"
               src="/images/services/carrier-comparison.png"
               alt="Carrier comparison table"
-              style={{
+              sx={{
                 width: "100%",
-                height: "100%",
+                height: { xs: "auto", md: "100%" },
                 objectFit: "cover",
                 display: "block",
               }}
