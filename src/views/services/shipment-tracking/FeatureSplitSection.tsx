@@ -60,6 +60,7 @@ export default function FeatureSplitSection({
           </Typography>
 
           <Typography
+          component={"div"}
             sx={{
               fontFamily: "Dai Banna SIL, serif",
               fontSize: {
