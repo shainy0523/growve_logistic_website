@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import { Icon } from '@iconify/react'
+import Image from 'next/image'
 const couriers = [
     {
         name: 'Delhivery',
@@ -7,7 +8,8 @@ const couriers = [
         deliveryRate: 98.2,
         score: 72,
         progress: 92,
-        logoBg: '#000',
+        // logoBg: '#000',
+        image:'/images/common/delhivery.svg'
     },
     {
         name: 'DTDC',
@@ -15,7 +17,8 @@ const couriers = [
         deliveryRate: 93.1,
         score: 74,
         progress: 72,
-        logoBg: '#07287F',
+        // logoBg: '#07287F',
+        image:'/images/common/dtdc.svg'
     },
     {
         name: 'Shadowfax',
@@ -23,7 +26,8 @@ const couriers = [
         deliveryRate: 96.6,
         score: 72,
         progress: 55,
-        logoBg: '#000',
+        // logoBg: '#000',
+        image:'/images/common/shadowfox.svg'
     },
     {
         name: 'Xpressbees',
@@ -31,7 +35,8 @@ const couriers = [
         deliveryRate: 88.4,
         score: 78,
         progress: 38,
-        logoBg: '#07287F',
+        // logoBg: '#07287F',
+        image:'/images/common/xpressbees.svg'
     },
     {
         name: 'Amazon',
@@ -39,7 +44,8 @@ const couriers = [
         deliveryRate: 84.3,
         score: 66,
         progress: 22,
-        logoBg: '#231F20',
+        // logoBg: '#231F20',
+        image:'/images/common/amazon.svg'
     },
     {
         name: 'Ekart',
@@ -47,7 +53,8 @@ const couriers = [
         deliveryRate: 79.1,
         score: 68,
         progress: 12,
-        logoBg: '#F5F5F5',
+        // logoBg: '#F5F5F5',
+        image:'/images/common/ekart.svg'
     },
 ]
 
@@ -108,21 +115,19 @@ export default function CourierRankingCard() {
                                             width: 30,
                                             height: 30,
                                             borderRadius: '6px',
-                                            bgcolor: courier.logoBg,
                                             display: 'flex',
                                             alignItems: 'center',
                                             justifyContent: 'center',
+                                            overflow: 'hidden',
                                         }}
                                     >
-                                        <Typography
-                                            sx={{
-                                                color: '#FFF',
-                                                fontSize: 10,
-                                                fontWeight: 800,
-                                            }}
-                                        >
-                                            {courier.name[0]}
-                                        </Typography>
+                                        <Image
+                                            src={courier.image}
+                                            alt={courier.name}
+                                            width={30}
+                                            height={30}
+                                            style={{ objectFit: 'contain' }}
+                                        />
                                     </Box>
 
                                     <Typography

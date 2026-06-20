@@ -57,7 +57,7 @@ export default function RecoveryAnalyticsSection() {
                             sx={{
                                 fontFamily: 'var(--font-dai-banna)',
                                 fontSize: { xs: '1.75rem', md: '2.125rem' },
-                                fontWeight: 600,
+                                fontWeight: 500,
                                 lineHeight: 1.2,
                                 letterSpacing: '-0.01em',
                                 color: '#000',

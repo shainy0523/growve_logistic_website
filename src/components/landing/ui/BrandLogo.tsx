@@ -29,8 +29,8 @@ export default function BrandLogo({ size = 35, variant = 'light', showText = tru
         <Image
           src='/images/logo2.png'
           alt='Growve'
-          width={30}
-          height={30}
+          width={25}
+          height={25}
           style={{ objectFit: 'contain' }}
           priority
         />
