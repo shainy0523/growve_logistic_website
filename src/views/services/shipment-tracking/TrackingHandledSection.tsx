@@ -22,26 +22,60 @@ const FEATURES = [
   },
 ];
 
+interface Feature {
+  title: string;
+  description: string;
+}
+
+interface HeadingContent {
+  eyebrow: string;
+  /** Supports `\n` for manual line breaks. */
+  title: string;
+  /** Greyed trailing text, rendered inline after the title. */
+  accent?: string;
+  /** Supports `\n` for manual line breaks. */
+  subtitle: string;
+}
+
+const DEFAULT_HEADING: HeadingContent = {
+  eyebrow: "why teams switch",
+  title: "Tracking is handled for you — from\npickup ",
+  accent: "to doorstep.",
+  subtitle:
+    "Live location, proactive updates, and exception alerts on\nevery shipment, across every courier.",
+};
+
 interface TrackingHandledSectionProps {
   /**
    * Which block to render. Omit to render the whole section
    * (heading + feature cards + carrier comparison).
    */
   section?: "features" | "carrier";
+  /** Override the default feature cards. */
+  features?: Feature[];
+  /**
+   * Override the heading copy. When provided, the heading renders even
+   * alongside a specific `section` (e.g. `section="features"`).
+   */
+  heading?: HeadingContent;
 }
 
 export default function TrackingHandledSection({
   section,
+  features = FEATURES,
+  heading,
 }: TrackingHandledSectionProps = {}) {
   const showAll = !section;
   const showFeatures = showAll || section === "features";
   const showCarrier = showAll || section === "carrier";
+  const showHeading = showAll || !!heading;
+  const headingContent = heading ?? DEFAULT_HEADING;
 
   return (
     <Box sx={{ py: { xs: 8, md: 12.5 }, bgcolor: "#FFF" }}>
       <Box className="landing-container">
         {/* Heading */}
-        {showAll && (
+        {showHeading && (
         <Box
           sx={{
             display: "flex",
@@ -72,7 +106,7 @@ export default function TrackingHandledSection({
                 textTransform: "uppercase",
               }}
             >
-              why teams switch
+              {headingContent.eyebrow}
             </Typography>
 
             <Typography
@@ -84,14 +118,15 @@ export default function TrackingHandledSection({
                 fontWeight: 500,
                 lineHeight: 1.1,
                 color: "#000",
+                whiteSpace: "pre-line",
               }}
             >
-              Tracking is handled for you — from
-              <br />
-              pickup{" "}
-              <Box component="span" sx={{ color: "#8D8A94" }}>
-                to doorstep.
-              </Box>
+              {headingContent.title}
+              {headingContent.accent && (
+                <Box component="span" sx={{ color: "#8D8A94" }}>
+                  {headingContent.accent}
+                </Box>
+              )}
             </Typography>
           </Box>
 
@@ -103,11 +138,10 @@ export default function TrackingHandledSection({
               fontSize: "16px",
               fontWeight: 400,
               lineHeight: "23.04px",
+              whiteSpace: "pre-line",
             }}
           >
-            Live location, proactive updates, and exception alerts on
-            <br />
-            every shipment, across every courier.
+            {headingContent.subtitle}
           </Typography>
         </Box>
         )}
@@ -115,7 +149,7 @@ export default function TrackingHandledSection({
         {/* Feature cards */}
         {showFeatures && (
         <Box className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {FEATURES.map((feature) => (
+          {features.map((feature) => (
             <Box
               key={feature.title}
               sx={{
@@ -247,24 +281,23 @@ export default function TrackingHandledSection({
           {/* Right Side Image / Table */}
           <Box
             sx={{
-              position: { xs: "relative", md: "absolute" },
-              left: { xs: "auto", md: "55%" },
+              position: "absolute",
+              left: "55%",
               // top: '25px',
-              width: { xs: "100%", md: "700px" },
-              height: { xs: "auto", md: "360px" },
+              width: "700px",
+              height: "360px",
               bgcolor: "#fff",
               borderRadius: "12px",
               overflow: "hidden",
               boxShadow: "0px 8px 24px rgba(0,0,0,0.06)",
             }}
           >
-            <Box
-              component="img"
+            <img
               src="/images/services/carrier-comparison.png"
               alt="Carrier comparison table"
-              sx={{
+              style={{
                 width: "100%",
-                height: { xs: "auto", md: "100%" },
+                height: "100%",
                 objectFit: "cover",
                 display: "block",
               }}
