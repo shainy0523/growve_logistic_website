@@ -250,14 +250,14 @@ export default function LandingNavbar() {
                               width: 34,
                               height: 34,
                               flexShrink: 0,
-                              bgcolor: '#EBEBED',
+                              bgcolor: 'var(--surface-dark)',
                               borderRadius: '9px',
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
                             }}
                           >
-                            <Icon icon={service.icon!} width={18} height={18} color='#444050' />
+                            <Icon icon={service.icon!} width={18} height={18} color='var(--text-on-dark)' />
                           </Box>
                           <Typography sx={{ fontSize: 14, fontWeight: 600, color: 'var(--text-on-dark)' }}>
                             {service.title}
@@ -319,7 +319,13 @@ export default function LandingNavbar() {
             component='a'
             href={APP_URLS.SIGNUP}
             onClick={closeMobile}
-            sx={{ width: '100%', height: 44 }}
+            sx={{
+              width: '100%',
+              height: 44,
+              backgroundColor: '#FBC942',
+              color: '#1F1F1F',
+              '&:hover': { backgroundColor: '#FBC942', color: '#1F1F1F' },
+            }}
           >
             Get Started
           </PrimaryCta>
