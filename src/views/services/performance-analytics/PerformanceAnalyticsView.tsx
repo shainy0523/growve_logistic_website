@@ -22,7 +22,7 @@ const TRACK_METRIC_CARDS = [
   },
 ]
 import DataToolsSection from './DataToolsSection'
-import OnePlatformSection from './OnePlatformSection'
+import EverythingSection from '@/components/landing/sections/problems-section/EverythingSection'
 import ImageContainer from '@/components/common/ImageContainer'
 
 const PerformanceAnalyticsView = () => {
@@ -66,7 +66,10 @@ const PerformanceAnalyticsView = () => {
       />
       <ProactiveBandSection />
       <DataToolsSection />
-      <OnePlatformSection />
+      <EverythingSection
+        excludeTitles={['Performance Analytics', 'Billing & Reconciliation']}
+        showCenterCard={false}
+      />
     </Box>
   )
 }

@@ -7,7 +7,7 @@ import KeepInformedSection from './KeepInformedSection'
 import OneViewSection from './OneViewSection'
 import LiveTrackingMapSection from './LiveTrackingMapSection'
 import CourierAgnosticSection from './CourierAgnosticSection'
-import TrackingOnePlatformSection from './TrackingOnePlatformSection'
+import EverythingSection from '@/components/landing/sections/problems-section/EverythingSection'
 
 const RealTimeShipmentTrackingView = () => {
   return (
@@ -43,7 +43,10 @@ const RealTimeShipmentTrackingView = () => {
       <LiveTrackingMapSection />
       <TrackingHandledSection section='carrier'/>
       {/* <CourierAgnosticSection /> */}
-      <TrackingOnePlatformSection />
+      <EverythingSection
+        excludeTitles={['Real-Time Shipment Tracking', 'Billing & Reconciliation']}
+        showCenterCard={false}
+      />
     </Box>
   )
 }
