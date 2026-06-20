@@ -19,7 +19,7 @@ export default function ServicesMegaMenu() {
         borderBottomLeftRadius: '14px',
         borderBottomRightRadius: '14px',
         border: '1px solid #EAEAEC',
-        boxShadow: '0px 20px 44px rgba(0,0,0,0.24)',
+        boxShadow: '0px 50px 120px rgba(0,0,0,0.10)',
         p: 5,
         zIndex: 1200,
         '&::before': {

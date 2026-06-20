@@ -40,8 +40,8 @@ const t = {
   yellowBg: "#FEF2D2",
 };
 
-const display = "'var(--font-dai-banna)', serif";
-const body = "'Nunito Sans', sans-serif";
+const display = 'var(--font-dai-banna), sans-serif';
+const body = 'Nunito Sans, sans-serif';
 
 /* status -> dot + filled-badge palette */
 const STATUS = {
@@ -280,7 +280,21 @@ function RiskCard() {
         <Box
           key={idx}
           className="absolute flex gap-5"
-          sx={{ left: group.position.left, top: group.position.top }}
+          sx={{
+            left: group.position.left,
+            top: group.position.top,
+            // Upper group (idx 0) drifts left, lower group (idx 1) drifts right
+            '@keyframes courierDriftLeft': {
+              '0%, 100%': { transform: 'translateX(0)' },
+              '50%': { transform: 'translateX(-24px)' },
+            },
+            '@keyframes courierDriftRight': {
+              '0%, 100%': { transform: 'translateX(0)' },
+              '50%': { transform: 'translateX(24px)' },
+            },
+            animation: `${idx === 0 ? 'courierDriftLeft' : 'courierDriftRight'} 4s ease-in-out infinite`,
+            '&:hover': { animationPlayState: 'paused' },
+          }}
         >
           {group.cards.map((card) => (
             <CourierCard

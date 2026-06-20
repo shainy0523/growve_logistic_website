@@ -9,6 +9,7 @@ import RecoverSection from "./RecoverSection";
 import EndToEndRecoverySection from "./EndToEndRecoverySection";
 import RecoveryAnalyticsSection from "./RecoveryAnalyticsSection";
 import EverythingSection from "@/components/landing/sections/problems-section/EverythingSection";
+import AutomationSection from "./AutomationSection";
 
 const NdrRecoveryAutomationView = () => {
   return (
@@ -77,6 +78,9 @@ const NdrRecoveryAutomationView = () => {
       </Box>
       <Box>
         <RecoverSection />
+      </Box>
+      <Box>
+        <AutomationSection/>
       </Box>
       <Box>
         <AIRecoverySection />
