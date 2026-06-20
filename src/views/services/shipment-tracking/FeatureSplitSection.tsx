@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 import HorizontalScroller from "./HorizontalScroller";
-import ImageContainer from "@/components/common/ImageContainer";
+// import ImageContainer from "@/components/common/ImageContainer";
 import Image from "next/image";
 // import StaticImageComponent from './StaticImageComponent'
 
@@ -60,6 +60,7 @@ export default function FeatureSplitSection({
           </Typography>
 
           <Typography
+          component={"div"}
             sx={{
               fontFamily: "Dai Banna SIL, serif",
               fontSize: {
