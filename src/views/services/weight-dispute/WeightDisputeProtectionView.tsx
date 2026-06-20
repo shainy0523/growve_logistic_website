@@ -6,6 +6,7 @@ import LeakageSection from './LeakageSection'
 import WhatsInsideSection from './WhatsInsideSection'
 import WeightScannerSection from './WeightScannerSection'
 import WeightMattersSection from './WeightMattersSection'
+import TrackingSection from './WeightTracking'
 import WeightOnePlatformSection from './WeightOnePlatformSection'
 
 const WeightDisputeProtectionView = () => {
@@ -14,8 +15,8 @@ const WeightDisputeProtectionView = () => {
             {/* Hero */}
             <Box
                 sx={{
-                    backgroundColor: '#F5F5F6',
-                    py: '100px',
+                    background: 'linear-gradient(180deg, #FFFFFF 0%, #F5F5F6 100%)',
+                    py: { xs: '40px', md: '100px' },
                     overflow: 'hidden',
                 }}
             >
@@ -23,17 +24,17 @@ const WeightDisputeProtectionView = () => {
                     className="landing-container"
                     sx={{
                         display: 'flex',
-                        alignItems: 'flex-start',
+                        flexDirection: { xs: 'column', md: 'row' },
+                        alignItems: { xs: 'center', md: 'flex-start' },
                         justifyContent: 'space-between',
-                        gap: '48px',
+                        gap: { xs: '32px', md: '48px' },
                     }}
                 >
                     {/* LEFT */}
                     <Box
                         sx={{
-                            width: '100%',
                             maxWidth: '502px',
-                            flexShrink: 0,
+                            flex: { xs: '1 1 100%', md: '0 0 auto' },
                         }}
                     >
                         <ServiceHero
@@ -47,18 +48,18 @@ const WeightDisputeProtectionView = () => {
                     {/* RIGHT */}
                     <Box
                         sx={{
-                            width: '100%',
-                            maxWidth: '900px',
+                            maxWidth: { xs: '100%', md: '900px' },
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            flexShrink: 0,
+                            flex: { xs: '1 1 100%', md: '1 1 auto' },
+                            minWidth: 0,
                         }}
                     >
                         <Image
-                            src="/images/hero.png"
+                            src="/images/weight_dispute/weight_dispute_hero.svg"
                             alt="Weight dispute dashboard"
-                            width={747}
+                            width={500}
                             height={460}
                             priority
                             style={{
@@ -66,7 +67,7 @@ const WeightDisputeProtectionView = () => {
                                 height: 'auto',
                                 display: 'block',
                                 borderRadius: '12px',
-                                boxShadow: '0px 24px 60px rgba(0,0,0,0.12)',
+                                boxShadow: '0px 10px 20px rgba(0,0,0,0.12)',
                             }}
                         />
                     </Box>
@@ -83,10 +84,10 @@ const WeightDisputeProtectionView = () => {
                 <WhatsInsideSection />
             </Box>
             <Box>
-                <WeightScannerSection />
+                <WeightMattersSection />
             </Box>
             <Box>
-                <WeightMattersSection />
+                <TrackingSection/>
             </Box>
             <Box>
                 <WeightOnePlatformSection />

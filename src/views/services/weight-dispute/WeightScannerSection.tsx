@@ -1,157 +1,71 @@
-import SectionHeading from '@/components/landing/ui/SectionHeading'
 import { Box, Typography } from '@mui/material'
-import { Icon } from '@iconify/react'
-
-const READINGS = [
-    { label: 'Weight', value: '0.840 kg' },
-    { label: 'Length', value: '24 cm' },
-    { label: 'Breadth', value: '18 cm' },
-    { label: 'Height', value: '10 cm' },
-]
 
 export default function WeightScannerSection() {
     return (
-        <Box
-            sx={{
-                py: { xs: 10, md: '100px' },
-                bgcolor: '#F5F5F6',
-            }}
-        >
+        <Box sx={{ bgcolor: '#FFF', py: { xs: '40px', md: '60px' } }}>
             <Box
                 className="landing-container"
                 sx={{
+                    position: 'relative',
+                    minHeight: { xs: 'auto', md: 409 },
+                    p: { xs: 2, md: 2.5 },
+                    borderRadius: '12px',
+                    bgcolor: '#F5F5F6',
+                    border: '1px solid #EAEAEC',
+                    outlineOffset: '-1px',
+                    overflow: 'hidden',
                     display: 'flex',
-                    flexDirection: { xs: 'column', md: 'row' },
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    gap: { xs: 6, md: '64px' },
+                    flexDirection: 'column',
+                    gap: { xs: 3, md: 0 },
+                    justifyContent: 'center',
                 }}
             >
-                {/* LEFT — copy */}
-                <Box sx={{ width: '100%', maxWidth: 480, flexShrink: 0 }}>
-                    <SectionHeading
-                        eyebrow="AT THE SOURCE"
-                        title="Introducing Weight Scanner."
-                        subtitle="Capture verified weight and dimensions at packing in one tap. That reading becomes the source of truth every dispute is built on."
-                        variant="light"
-                        align="left"
-                        size="lg"
-                    />
+                {/* Left copy */}
+                <Box sx={{ maxWidth: { xs: '100%', md: 338 }, display: 'flex', flexDirection: 'column', gap: 2 }}>
+                    <Typography
+                        sx={{
+                            fontSize: '12px',
+                            fontWeight: 600,
+                            lineHeight: '15.6px',
+                            letterSpacing: '0.3em',
+                            textTransform: 'uppercase',
+                            color: '#8D8A94',
+                        }}
+                    >
+                        At the source
+                    </Typography>
+                    <Typography
+                        sx={{
+                            fontFamily: 'var(--font-dai-banna)',
+                            fontSize: '24px',
+                            fontWeight: 500,
+                            color: '#000',
+                        }}
+                    >
+                        Introducing Weight Scanner.
+                    </Typography>
+                    <Typography sx={{ fontSize: '14px', fontWeight: 400, lineHeight: '21px', color: '#6D6B77' }}>
+                        Capture verified weight and dimensions at packing in one tap. That reading becomes the source
+                        of truth every dispute is built on.
+                    </Typography>
                 </Box>
 
-                {/* RIGHT — scanner mock */}
+                {/* Comparison image — stacks below on mobile, overflows right on desktop */}
                 <Box
+                    component="img"
+                    src="/images/weight_dispute/carrier_comparison.svg"
+                    alt="Carrier Comparison"
                     sx={{
-                        width: '100%',
-                        maxWidth: 520,
-                        bgcolor: '#FFF',
-                        borderRadius: '16px',
-                        border: '1px solid #EAEAEC',
-                        boxShadow: '0px 24px 60px rgba(0,0,0,0.08)',
-                        p: 3,
+                        position: { xs: 'static', md: 'absolute' },
+                        left: { md: 583 },
+                        top: { md: -36 },
+                        width: { xs: '100%', md: 600 },
+                        maxWidth: 'none',
+                        height: 'auto',
+                        display: 'block',
+                        borderRadius: '12px',
                     }}
-                >
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            mb: 3,
-                        }}
-                    >
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                            <Box
-                                sx={{
-                                    width: 40,
-                                    height: 40,
-                                    borderRadius: '10px',
-                                    bgcolor: '#FEF6E1',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <Icon icon="material-symbols:scale-outline" fontSize={22} color="#1F1F1F" />
-                            </Box>
-                            <Box>
-                                <Typography sx={{ fontSize: 14, fontWeight: 600, color: '#000' }}>
-                                    Weight Scanner
-                                </Typography>
-                                <Typography sx={{ fontSize: 12, color: '#6D6B77' }}>
-                                    Order #TN29A78463
-                                </Typography>
-                            </Box>
-                        </Box>
-
-                        <Box
-                            sx={{
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: 0.75,
-                                px: 1.25,
-                                py: 0.5,
-                                borderRadius: '999px',
-                                bgcolor: '#E9F7EF',
-                            }}
-                        >
-                            <Box sx={{ width: 7, height: 7, borderRadius: '999px', bgcolor: '#22A565' }} />
-                            <Typography sx={{ fontSize: 12, fontWeight: 600, color: '#22A565' }}>
-                                Verified
-                            </Typography>
-                        </Box>
-                    </Box>
-
-                    <Box
-                        sx={{
-                            display: 'grid',
-                            gridTemplateColumns: 'repeat(2, 1fr)',
-                            gap: 1.5,
-                        }}
-                    >
-                        {READINGS.map(reading => (
-                            <Box
-                                key={reading.label}
-                                sx={{
-                                    bgcolor: '#F5F5F6',
-                                    borderRadius: '10px',
-                                    p: 2,
-                                }}
-                            >
-                                <Typography sx={{ fontSize: 12, color: '#6D6B77', mb: 0.5 }}>
-                                    {reading.label}
-                                </Typography>
-                                <Typography
-                                    sx={{
-                                        fontFamily: 'var(--font-dai-banna)',
-                                        fontSize: 22,
-                                        fontWeight: 500,
-                                        color: '#000',
-                                    }}
-                                >
-                                    {reading.value}
-                                </Typography>
-                            </Box>
-                        ))}
-                    </Box>
-
-                    <Box
-                        sx={{
-                            mt: 2,
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: 1,
-                            px: 2,
-                            py: 1.5,
-                            borderRadius: '10px',
-                            bgcolor: '#FEF6E1',
-                        }}
-                    >
-                        <Icon icon="material-symbols:photo-camera-outline-rounded" fontSize={18} color="#1F1F1F" />
-                        <Typography sx={{ fontSize: 13, color: '#1F1F1F', fontWeight: 500 }}>
-                            Scan & photo attached as dispute evidence
-                        </Typography>
-                    </Box>
-                </Box>
+                />
             </Box>
         </Box>
     )

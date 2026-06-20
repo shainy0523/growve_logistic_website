@@ -1,6 +1,8 @@
 import { FeatureCard } from '@/components/landing/sections/problems-section/EverythingSection'
 import SectionHeading from '@/components/landing/ui/SectionHeading'
+import { Typography } from '@mui/material'
 import Box from '@mui/material/Box'
+import WeightScannerSection from './WeightScannerSection'
 
 const INSIDE_FEATURES = [
     {
@@ -33,25 +35,60 @@ export default function WhatsInsideSection() {
             }}
             className="landing-container"
         >
-            <SectionHeading
-                eyebrow="WHAT'S INSIDE"
-                title="Cut the busywork from"
-                accent="capture, detection, dispute, and recovery."
-                subtitle="Every step from the packing table to your courier invoice is handled in one place — no spreadsheets, no manual filing."
-            />
+            <Box className='pb-15'>
+                <SectionHeading
+                    eyebrow="WHAT'S INSIDE"
+                    title="Cut the busywork from capture, detection,"
+                    accent=" dispute, and recovery."
+                    subtitle="Every step from the packing table to your courier invoice is handled in one place — no spreadsheets, no manual filing."
+                />
 
-            <Box
-                sx={{ mt: 6 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-5"
-            >
-                {INSIDE_FEATURES.map(item => (
-                    <FeatureCard
-                        key={item.title}
-                        title={item.title}
-                        description={item.description}
-                    />
-                ))}
+                <Box
+                    sx={{ mt: 6 }}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                >
+                    {INSIDE_FEATURES.map(item => (
+                        <Box key={item?.title}>
+                            <Box
+                                sx={{
+                                    border: '1px solid #EAEAEC',
+                                    borderRadius: '12px',
+                                    bgcolor: '#F1F1F2',
+                                    pt: { xs: 4, md: 6 },
+                                    pl: { xs: 3, md: 5 },
+                                    overflow: 'hidden',
+                                }}
+                            >
+                                <Box
+                                    component="img"
+                                    src="/images/weight_dispute/carrier_comparison.svg"
+                                    alt="Carrier Comparison"
+                                    sx={{
+                                        width: '100%',
+                                        height: 'auto',
+                                        display: 'block',
+                                        borderTopLeftRadius: '18px',
+                                        boxShadow: '0 20px 50px rgba(17,17,26,0.08)',
+                                    }}
+                                />
+                            </Box>
+                            <Box className='pt-6'>
+                                <Typography className='text-[1.2rem]!' variant='Heading/H5-Bold' sx={{
+                                    color: 'var(--text-strong)',
+                                    fontFamily: 'var(--font-dai-banna), sans-serif',
+                                    fontWeight: 500,
+                                }}>
+                                    {item?.title}
+                                </Typography>
+                                <Typography className='text-[.8rem]! pt-1 pb-5' sx={{ color: 'var(--text-secondary)', lineHeight: 1.6, mt: 'auto' }}>
+                                    {item?.description}
+                                </Typography>
+                            </Box>
+                        </Box>
+                    ))}
+                </Box>
             </Box>
+            <WeightScannerSection />
         </Box>
     )
 }
