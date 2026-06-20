@@ -4,6 +4,16 @@ import { Icon } from '@iconify/react'
 import SectionHeading from '../../ui/SectionHeading'
 import { EVERYTHING } from '../../data/landing.data'
 import Image from 'next/image'
+import Link from 'next/link'
+
+// Maps each card title to its live service-page slug (`/services/<slug>`).
+// Titles without a live page are intentionally omitted and render as non-clickable cards.
+const CARD_SLUGS: Record<string, string> = {
+  'Smart Courier Allocation': 'smart-courier-allocation',
+  'Real-Time Shipment Tracking': 'shipment-tracking',
+  'Weight Dispute Protection': 'weight-dispute-protection',
+  'NDR Recovery Automation': 'ndr-recovery-automation',
+}
 
 
 function CenterCard() {
