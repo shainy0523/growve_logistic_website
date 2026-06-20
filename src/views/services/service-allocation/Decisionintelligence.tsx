@@ -1,5 +1,6 @@
 
 import React from "react";
+import Image from "next/image";
 import {
   Box,
   Typography,
@@ -81,8 +82,47 @@ interface StatusBadgeProps {
 /* Small reusable pieces                                                   */
 /* ----------------------------------------------------------------------- */
 
-// Brand logo tile (self-contained, no external assets)
-function BrandTile({ name, color, size = 36 }:any) {
+// Brand logo assets (in /public/images/common)
+const BRAND_LOGOS: Record<string, string> = {
+  delhivery: "/images/common/delhivery.svg",
+  dtdc: "/images/common/dtdc.svg",
+  shadowfax: "/images/common/shadowfox.svg",
+  xpressbees: "/images/common/xpressbees.svg",
+  amazon: "/images/common/amazon.svg",
+  ekart: "/images/common/ekart.svg",
+};
+
+// Brand logo tile — uses the real brand asset when available,
+// otherwise falls back to a colored letter tile (e.g. BlueDart).
+function BrandTile({ name, color, size = 36 }: any) {
+  const logo = BRAND_LOGOS[name?.toLowerCase()];
+
+  if (logo) {
+    return (
+      <Box
+        sx={{
+          width: size,
+          height: size,
+          borderRadius: `${size * 0.22}px`,
+          bgcolor: t.white,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden",
+          flexShrink: 0,
+        }}
+      >
+        <Image
+          src={logo}
+          alt={name}
+          width={size}
+          height={size}
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
+        />
+      </Box>
+    );
+  }
+
   return (
     <Avatar
       variant="rounded"
@@ -206,6 +246,17 @@ function Heading() {
   );
 }
 
+const RISK_COURIER_GROUPS = [
+  { position: { left: "-187px", top: "164px" }, cards: [
+    { name: "DTDC", color: "#07287F", rank: 1, status: "Attention", faded: true },
+    { name: "Delhivery", color: "#1A1A1A", rank: 1, status: "Good" },
+  ] },
+  { position: { left: "5px", top: "254px" }, cards: [
+    { name: "Xpressbees", color: "#07287F", rank: 3, status: "Attention" },
+    { name: "Ekart", color: "#0F4C81", rank: 4, status: "Critical", faded: true },
+  ] },
+];
+
 /* ----------------------------------------------------------------------- */
 /* Card 1 — Avoids Risky Courier Choices                                   */
 /* ----------------------------------------------------------------------- */
@@ -225,14 +276,24 @@ function RiskCard() {
       </Box>
 
       {/* scattered courier cards (top row bleeds off the left edge) */}
-      <Box className="absolute left-[-187px] top-[164px] flex gap-5">
-        <CourierCard name="DTDC" color="#07287F" rank={1} status="Attention" faded />
-        <CourierCard name="Delhivery" color="#1A1A1A" rank={1} status="Good" />
-      </Box>
-      <Box className="absolute left-5 top-[254px] flex gap-5">
-        <CourierCard name="Xpressbees" color="#07287F" rank={3} status="Attention" />
-        <CourierCard name="Ekart" color="#0F4C81" rank={4} status="Critical" faded />
-      </Box>
+      {RISK_COURIER_GROUPS.map((group, idx) => (
+        <Box
+          key={idx}
+          className="absolute flex gap-5"
+          sx={{ left: group.position.left, top: group.position.top }}
+        >
+          {group.cards.map((card) => (
+            <CourierCard
+              key={card.name}
+              name={card.name}
+              color={card.color}
+              rank={card.rank}
+              status={card.status}
+              faded={card.faded}
+            />
+          ))}
+        </Box>
+      ))}
     </Box>
   );
 }

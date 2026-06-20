@@ -64,7 +64,6 @@ export default function EndToEndRecoverySection() {
                                     height: 'auto',
                                     display: 'block',
                                     borderRadius: '12px',
-                                    bgcolor: '#F5F5F6',
                                 }}
                             />
 

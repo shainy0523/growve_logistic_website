@@ -28,10 +28,69 @@ const daiBannaSil = Dai_Banna_SIL({
 })
 
 export const metadata: Metadata = {
-  title: { default: 'Growve Logistics — Ship Smarter, Recover Faster, Grow Bigger', template: '%s | Growve Logistics' },
+  metadataBase: new URL('https://growvelogistics.com'),
+  title: {
+    default: 'Growve Logistics — Ship Smarter, Recover Faster, Grow Bigger',
+    template: '%s | Growve Logistics',
+  },
   description:
     'Automate courier selection, recover failed deliveries, and track every order in real time — all from a single logistics platform built for growing e-commerce brands in India.',
-  icons: { icon: '/images/wesite-logo.png' },
+  keywords: [
+    'logistics platform',
+    'courier aggregator',
+    'shipping automation',
+    'NDR recovery',
+    'failed delivery recovery',
+    'order tracking',
+    'ecommerce shipping India',
+    'weight dispute protection',
+    'multi-carrier shipping',
+    'last mile delivery',
+  ],
+  authors: [{ name: 'Growve Logistics' }],
+  creator: 'Growve Logistics',
+  publisher: 'Growve Logistics',
+  category: 'Logistics',
+  icons: {
+    icon: '/images/wesite-logo.png',
+    shortcut: '/images/wesite-logo.png',
+    apple: '/images/wesite-logo.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://growvelogistics.com',
+    siteName: 'Growve Logistics',
+    title: 'Growve Logistics — Ship Smarter, Recover Faster, Grow Bigger',
+    description:
+      'Automate courier selection, recover failed deliveries, and track every order in real time — all from a single logistics platform built for growing e-commerce brands in India.',
+    images: [
+      {
+        url: '/images/wesite-logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Growve Logistics',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Growve Logistics — Ship Smarter, Recover Faster, Grow Bigger',
+    description:
+      'Automate courier selection, recover failed deliveries, and track every order in real time — all from a single logistics platform built for growing e-commerce brands in India.',
+    images: ['/images/wesite-logo.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
 }
 
 export const viewport: Viewport = {

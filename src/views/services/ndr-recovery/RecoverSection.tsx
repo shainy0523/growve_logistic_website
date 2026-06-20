@@ -56,8 +56,8 @@ const RecoverSection = () => {
                             key={step.title}
                             sx={{
                                 borderRadius: {
-                                    xs: '19px',
-                                    sm: '20px',
+                                    xs: '12px',
+                                    sm: '25px',
                                     md: '15px',
                                 },
                                 overflow: 'hidden',
@@ -73,7 +73,7 @@ const RecoverSection = () => {
                                     width: '100%',
                                     aspectRatio: {
                                         xs: '376 / 312',
-                                        sm: '376 / 360',
+                                        sm: '376 / 312',
                                         md: '376 / 313',
                                     },
                                     overflow: 'hidden',

@@ -24,17 +24,17 @@ const IMPACT_STATS = [
 
 const FEATURE_TILES = [
     {
-        icon: 'material-symbols:timer-outline',
+        icon: 'material-symbols:speaker-notes-outline-sharp',
         title: 'Window guard',
         description: "Files every dispute before the courier's claim window closes.",
     },
     {
-        icon: 'material-symbols:dataset-outline-rounded',
+        icon: 'material-symbols:speaker-notes-outline-sharp',
         title: 'Slab-aware',
         description: "Knows each courier's weight slabs and volumetric formula.",
     },
     {
-        icon: 'material-symbols:attach-file-rounded',
+        icon: 'material-symbols:speaker-notes-outline-sharp',
         title: 'Auto evidence',
         description: 'Attaches the scan, photo and dimensions as proof, automatically.',
     },
@@ -88,9 +88,9 @@ export default function LeakageSection() {
                         key={item.title}
                         sx={{
                             p: 3,
-                            bgcolor: '#0E0E12',
+                            bgcolor: '#18181E',
                             borderRadius: '8px',
-                            border: '1px solid #2A2D3A',
+                            border: '1px solid #44485E',
                             height: '100%',
                             display: 'flex',
                             flexDirection: 'column',
@@ -99,16 +99,16 @@ export default function LeakageSection() {
                     >
                         <Box
                             sx={{
-                                width: 40,
-                                height: 40,
+                                width: 35,
+                                height: 35,
                                 borderRadius: '10px',
-                                bgcolor: '#FEF6E1',
+                                border:'1px solid #7F753B',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
                             }}
                         >
-                            <Icon icon={item.icon} fontSize={22} color="#1F1F1F" />
+                            <Icon icon={item.icon} fontSize={18} color="#FBC942" />
                         </Box>
 
                         <Typography
