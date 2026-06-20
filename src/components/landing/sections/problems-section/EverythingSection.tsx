@@ -2,7 +2,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import { Icon } from '@iconify/react'
 import SectionHeading from '../../ui/SectionHeading'
-import { EVERYTHING } from '../../data/landing.data'
+import { EVERYTHING, SERVICES } from '../../data/landing.data'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -112,9 +112,31 @@ function CenterCard() {
   )
 }
 
-export default function EverythingSection() {
-  // Render 3x3 grid; insert CenterCard at position [1,1] (index 4 in DOM order)
-  const allCards = EVERYTHING.cards
+interface EverythingSectionProps {
+  /** Card titles to drop (e.g. the page you're already on). */
+  excludeTitles?: string[]
+  /** Render the dark "Explore the Growve Platform" center card. */
+  showCenterCard?: boolean
+}
+
+export default function EverythingSection({
+  excludeTitles = [],
+  showCenterCard = true,
+}: EverythingSectionProps = {}) {
+  // Render 3x3 grid; insert CenterCard at position [1,1] (index 4 in DOM order).
+  // On a service page, drop the page's own card (and any others passed in).
+  const allCards = excludeTitles.length
+    ? EVERYTHING.cards.filter((card) => !excludeTitles.includes(card.title))
+    : EVERYTHING.cards
+
+  // Resolve lazily at render time — `SERVICES` lives in the same data module
+  // that imports the service views, so reading it at module load would hit a
+  // circular-import race where `SERVICES` is still undefined.
+  const hrefFor = (title: string) => {
+    const slug = SERVICES.find((service) => service.title === title)?.slug
+    return slug ? `/services/${slug}` : undefined
+  }
+
   return (
     <Box className='landing-section' sx={{ backgroundColor: 'var(--surface-page)' }}>
       <Box className='landing-container'>
@@ -135,13 +157,15 @@ export default function EverythingSection() {
           }}
         >
           {allCards.slice(0, 1).map((card) => (
-            <FeatureCard key={card.title} title={card.title} description={card.description} />
+            <FeatureCard key={card.title} title={card.title} description={card.description} href={hrefFor(card.title)} />
           ))}
-          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-            <CenterCard />
-          </Box>
+          {showCenterCard && (
+            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+              <CenterCard />
+            </Box>
+          )}
           {allCards.slice(1).map((card) => (
-            <FeatureCard key={card.title} title={card.title} description={card.description} />
+            <FeatureCard key={card.title} title={card.title} description={card.description} href={hrefFor(card.title)} />
           ))}
         </Box>
       </Box>
@@ -149,9 +173,10 @@ export default function EverythingSection() {
   )
 }
 
-export function FeatureCard({ title, description }: { title: string; description: string }) {
+export function FeatureCard({ title, description, href }: { title: string; description: string; href?: string }) {
   return (
     <Box
+      {...(href ? { component: Link, href } : {})}
       sx={{
         fontFamily: 'Nunito Sans',
         backgroundColor: 'var(--surface-muted)',
@@ -163,6 +188,8 @@ export function FeatureCard({ title, description }: { title: string; description
         gap: 2,
         minHeight: 220,
         cursor: 'pointer',
+        textDecoration: 'none',
+        color: 'inherit',
         transform: 'scale(1)',
         transition: 'transform 0.2s ease, box-shadow 0.2s ease',
         '&:hover': {
