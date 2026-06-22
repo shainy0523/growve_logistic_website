@@ -6,6 +6,7 @@ import TrackingStatsSection from './TrackingStatsSection'
 import KeepInformedSection from './KeepInformedSection'
 import OneViewSection from './OneViewSection'
 import LiveTrackingMapSection from './LiveTrackingMapSection'
+import ShipmentVisibilitySection from './ShipmentVisibilitySection'
 import CourierAgnosticSection from './CourierAgnosticSection'
 import EverythingSection from '@/components/landing/sections/problems-section/EverythingSection'
 
@@ -25,13 +26,28 @@ const RealTimeShipmentTrackingView = () => {
               accent="— in real time."
               description="Live tracking across every courier, proactive customer updates, and instant exception alerts — so your team stops chasing statuses and your customers stop asking."
             />
-            <ImageContainer
+            <Box className='relative inline-block w-full'>
+              <Box
+                component='img'
+                src='/images/shipment_tracking/card_shipment.svg'
+                alt='shipment tracking'
+                className='relative z-10 block w-full h-auto'
+              />
+              <Box
+                component='img'
+                src='/images/shipment_tracking/basemap.svg'
+                alt=''
+                aria-hidden
+                className='absolute bottom-0 right-0 z-10 w-1/2 h-auto max-w-[50%]'
+              />
+            </Box>
+            {/* <ImageContainer
               src="/images/services/Table.png"
               alt="Live courier comparison — delivery rate and value score per carrier"
               width={470}
               height={440}
               priority
-            />
+            /> */}
           </Box>
         </Box>
       </Box>
@@ -40,8 +56,9 @@ const RealTimeShipmentTrackingView = () => {
       <TrackingStatsSection />
       <KeepInformedSection />
       <OneViewSection />
+      <ShipmentVisibilitySection />
       <LiveTrackingMapSection />
-      <TrackingHandledSection section='carrier'/>
+      <TrackingHandledSection section='carrier' />
       {/* <CourierAgnosticSection /> */}
       <EverythingSection
         excludeTitles={['Real-Time Shipment Tracking', 'Billing & Reconciliation']}

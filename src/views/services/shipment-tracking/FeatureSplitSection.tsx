@@ -10,7 +10,7 @@ export interface SplitFeature {
   role?: "scroll" | "static";
   title: string;
   description: string;
-  images?: string[];
+  images?: string | string[];
   image?: string;
   direction?: "left" | "right" | "top" | "bottom";
 }
@@ -112,7 +112,7 @@ export default function FeatureSplitSection({
             <Box
               key={feature.title}
               sx={{
-                minHeight: 525,
+                minHeight: 550,
                 bgcolor: "#F5F5F6",
                 borderRadius: "12px",
                 border: "1px solid #EAEAEC",
@@ -172,52 +172,39 @@ export default function FeatureSplitSection({
               <Box
                 sx={{
                   position: "absolute",
-                  inset: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  top: 120,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  px: 2.5,
+                  pb: 2.5,
                   pointerEvents: "none",
                 }}
               >
-                {feature.role === "scroll" && (
-                  <Box
-                    sx={{
-                      width: "100%",
-                      height: "100%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <HorizontalScroller />
-                  </Box>
-                )}
-
-                {feature.role === "static" && feature.image && (
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      right: 0,
-                      bottom: 0,
-                      width: "75%",
-                      height: "auto",
-                      display: "flex",
-                      justifyContent: "flex-end",
-                      alignItems: "flex-end",
-                    }}
-                  >
-                    <Image
-                      src={feature.image}
-                      alt={feature.title}
-                      width={600}
-                      height={420}
-                      style={{
-                        display: "block",
-                        width: "100%",
-                        height: "auto",
-                        objectFit: "contain",
-                        borderRadius: "16px 0px 0px 0px",
-                        boxShadow: "0px 8px 24px rgba(0,0,0,0.06)",
-                      }}
-                    />
-                  </Box>
+                {Array.isArray(feature.images) ? (
+                  // Multiple images → animated courier scroller.
+                  <HorizontalScroller />
+                ) : (
+                  (() => {
+                    const src = feature.images ?? feature.image;
+                    return src ? (
+                      <Image
+                        src={src}
+                        alt={feature.title}
+                        width={600}
+                        height={420}
+                        style={{
+                          display: "block",
+                          width: "100%",
+                          height: "auto",
+                          objectFit: "contain",
+                        }}
+                      />
+                    ) : null;
+                  })()
                 )}
               </Box>
             </Box>

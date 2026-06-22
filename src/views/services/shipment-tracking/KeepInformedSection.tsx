@@ -4,10 +4,10 @@ const FEATURES: SplitFeature[] = [
   {
     icon: 'mdi:whatsapp',
     role: 'scroll',
-    title: 'Keep customers updated automatically',
+    title: 'One clean timeline across every courier',
     description:
-      'Every milestone is pushed to the customer on WhatsApp and SMS — no manual messages, fewer support tickets.',
-    images: ['/images/card1.png', '/images/card2.png', '/images/card3.png'],
+      "Growve translates each courier's raw scan codes into a single normalised status — so a cryptic \"EvtFlag 7\" reads as \"Out for delivery\" on every shipment, every partner.",
+    images: '/images/shipment_tracking/shipment_frame.svg',
     direction: 'left',
   },
   {
@@ -16,16 +16,16 @@ const FEATURES: SplitFeature[] = [
     title: 'Route exceptions to the right team',
     description:
       'Stuck or delayed shipments are assigned automatically, so the right person is already on it.',
-    image:'/images/services/carrier-comparison-large.png',
+    image:'/images/shipment_tracking/shipment_tracking.svg',
   },
 ]
 
 export default function KeepInformedSection() {
   return (
     <FeatureSplitSection
-      eyebrow="Decision Intelligence"
+      eyebrow="Built-in intelligence"
       title="Tracking that"
-      accent="everyone informed."
+      accent="understands shipping."
       features={FEATURES}
       bgcolor="#FFF"
     />

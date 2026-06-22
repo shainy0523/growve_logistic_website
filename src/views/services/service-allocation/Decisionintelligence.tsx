@@ -281,24 +281,26 @@ function RiskCard() {
           key={idx}
           className="absolute flex gap-5"
           sx={{
-            left: group.position.left,
+            left: idx === 0 ? group.position.left : "-187px",
             top: group.position.top,
-            // Upper group (idx 0) drifts left, lower group (idx 1) drifts right
-            '@keyframes courierDriftLeft': {
-              '0%, 100%': { transform: 'translateX(0)' },
-              '50%': { transform: 'translateX(-24px)' },
+            width: "max-content",
+            pr: "20px",
+            // Upper group (idx 0) marquees left, lower group (idx 1) marquees right
+            '@keyframes courierMarqueeLeft': {
+              from: { transform: 'translateX(0)' },
+              to: { transform: 'translateX(-50%)' },
             },
-            '@keyframes courierDriftRight': {
-              '0%, 100%': { transform: 'translateX(0)' },
-              '50%': { transform: 'translateX(24px)' },
+            '@keyframes courierMarqueeRight': {
+              from: { transform: 'translateX(-50%)' },
+              to: { transform: 'translateX(0)' },
             },
-            animation: `${idx === 0 ? 'courierDriftLeft' : 'courierDriftRight'} 4s ease-in-out infinite`,
+            animation: `${idx === 0 ? 'courierMarqueeLeft' : 'courierMarqueeRight'} 18s linear infinite`,
             '&:hover': { animationPlayState: 'paused' },
           }}
         >
-          {group.cards.map((card) => (
+          {[...group.cards, ...group.cards].map((card, i) => (
             <CourierCard
-              key={card.name}
+              key={`${card.name}-${i}`}
               name={card.name}
               color={card.color}
               rank={card.rank}
