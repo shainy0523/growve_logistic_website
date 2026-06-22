@@ -38,7 +38,7 @@ const RealTimeShipmentTrackingView = () => {
                 src='/images/shipment_tracking/basemap.svg'
                 alt=''
                 aria-hidden
-                className='absolute bottom-0 right-0 z-10 w-1/2 h-auto max-w-[50%]'
+                className='absolute bottom-[37px] -right-[25px] z-10 w-[40%] h-auto max-w-540%]'
               />
             </Box>
             {/* <ImageContainer
