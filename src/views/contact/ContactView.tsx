@@ -30,27 +30,27 @@ interface ContactFormValues {
 
 const CONTACT_DETAILS: ContactDetail[] = [
   {
-    image: '/icons/contact/Warehouse.png',
+    icon: 'material-symbols:business-center-outline-sharp',
     title: 'Company',
     value: 'Growve Retail and Management Services Pvt. Ltd.',
   },
   {
-    image: '/icons/contact/Warehouse.png',
+    icon: 'material-symbols:warehouse-outline',
     title: 'Fulfillment Hubs',
     value: 'Delhi (Active) • Mumbai (Launching)',
   },
   {
-    image: '/icons/contact/mail_outline.png',
+    icon: 'material-symbols:mail-outline',
     title: 'Email',
     value: 'contact@growvelogistics.com',
   },
   {
-    image: '/icons/contact/Phone enabled.png',
+    icon: 'mdi:phone-outline',
     title: 'Phone',
     value: '+91 98765 43210',
   },
   {
-    image: '/icons/contact/language.png',
+    icon: 'material-symbols:language',
     title: 'Website',
     value: 'growvelogistics.com',
   },
@@ -166,7 +166,7 @@ export default function ContactView() {
                   <Box
                     sx={{
                       flexShrink: 0,
-                      p: 1.25,
+                      p: .5,
                       backgroundColor: '#ffc400',
                       borderRadius: '12px',
                       border: '1px solid var(--border-subtle)',
@@ -178,7 +178,7 @@ export default function ContactView() {
                     {detail.image ? (
                       <Image src={detail.image} alt={detail.title} width={20} height={20} />
                     ) : (
-                      <Icon icon={detail.icon!} fontSize={20} color='var(--color-yellow-dark, #BD8125)' />
+                      <Icon icon={detail.icon!} fontSize={30} color='#000000' />
                     )}
                   </Box>
                   <Box>

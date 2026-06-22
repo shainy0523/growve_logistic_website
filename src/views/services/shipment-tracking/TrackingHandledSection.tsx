@@ -1,30 +1,35 @@
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
+import FeatureCarousel from "./FeatureCarousel";
 
 const FEATURES = [
   {
     title: "Live map tracking",
     description: "Watch every shipment move in real time, courier agnostic.",
+    image:'/images/shipment_tracking/tracking1.svg'
   },
   {
     title: "Proactive customer updates",
     description:
       'Customers get every status automatically — no "where is my order?"',
+    image:'/images/shipment_tracking/tracking2.svg'
   },
   {
     title: "Instant exception alerts",
     description:
       "Delays and stuck shipments surface before they become failures.",
+    image:'/images/shipment_tracking/tracking3.svg'
   },
   {
     title: "Branded tracking page",
     description: "A tracking page in your brand, not the courier’s.",
+    image:'/images/shipment_tracking/tracking4.svg'
   },
 ];
 
 interface Feature {
   title: string;
   description: string;
+  image: string;
 }
 
 interface HeadingContent {
@@ -146,91 +151,24 @@ export default function TrackingHandledSection({
         </Box>
         )}
 
-        {/* Feature cards */}
-        {showFeatures && (
-        <Box className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {features.map((feature) => (
-            <Box
-              key={feature.title}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "24px",
-              }}
-            >
-              {/* Carrier comparison preview */}
-              <Box
-                sx={{
-                  position: "relative",
-                  height: 220,
-                  borderRadius: "12px",
-                  border: "1px solid #EAEAEC",
-                  bgcolor: "#F5F5F6",
-                  overflow: "hidden",
-                }}
-              >
-                <Image
-                  src="/images/services/carrier-section.png"
-                  alt="Carrier comparison dashboard preview"
-                  width={301}
-                  height={223}
-                  style={{
-                    position: "absolute",
-                    right: "0px",
-                    bottom: "0px",
-                    width: "88%",
-                    height: "auto",
-                    borderRadius: "12px 0px 0px 0px",
-                    boxShadow: "0px 8px 24px rgba(0,0,0,0.06)",
-                  }}
-                />
-              </Box>
+        {/* Feature carousel — autoplays, pauses on hover */}
+        {showFeatures && <FeatureCarousel features={features} />}
 
-              {/* Copy */}
-              <Box>
-                <Typography
-                  sx={{
-                    fontFamily: "Dai Banna SIL, serif",
-                    fontSize: "20px",
-                    fontWeight: 500,
-                    color: "#000",
-                    mb: 1,
-                  }}
-                >
-                  {feature.title}
-                </Typography>
-                <Typography
-                  sx={{
-                    fontSize: "14px",
-                    lineHeight: "21px",
-                    color: "#6D6B77",
-                  }}
-                >
-                  {feature.description}
-                </Typography>
-              </Box>
-            </Box>
-          ))}
-        </Box>
-        )}
-
-        {/* Carrier Comparison Table */}
+        {/* Exceptions, caught early */}
         {showCarrier && (
         <Box
           sx={{
-            position: "relative",
             width: "100%",
-            height: { xs: "auto", md: 409 },
-            p: "20px",
+            p: { xs: "24px", md: "40px" },
             bgcolor: "#F5F5F6",
             borderRadius: "12px",
             border: "1px solid #EAEAEC",
-            overflow: "hidden",
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
-            gap: "20px",
-            alignItems: { xs: "stretch", md: "center" },
-            top: { xs: 0, md: "5rem" },
+            gap: { xs: "32px", md: "40px" },
+            alignItems: "center",
+              justifyContent: "space-between",
+            marginTop:'4rem'
           }}
         >
           {/* Left Content */}
@@ -257,7 +195,7 @@ export default function TrackingHandledSection({
 
             <Typography
               sx={{
-                fontSize: "24px",
+                fontSize: { xs: "24px", md: "28px" },
                 fontWeight: 500,
                 color: "#000000",
                 fontFamily: "Dai Banna SIL, serif",
@@ -274,31 +212,28 @@ export default function TrackingHandledSection({
               }}
             >
               Growve watches every shipment against its SLA and flags delays,
-              stuck parcels and misroutes the moment they happen.
+              stuck parcels and misroutes the moment they happen — so you act
+              before the customer ever notices.
             </Typography>
           </Box>
 
-          {/* Right Side Image / Table */}
+          {/* Right Side Card */}
           <Box
             sx={{
-              position: "absolute",
-              left: "55%",
-              // top: '25px',
-              width: "700px",
-              height: "360px",
-              bgcolor: "#fff",
+              flex: 1,
+              maxWidth: { xs: "100%", md: 520 },
               borderRadius: "12px",
               overflow: "hidden",
               boxShadow: "0px 8px 24px rgba(0,0,0,0.06)",
             }}
           >
-            <img
-              src="/images/services/carrier-comparison.png"
-              alt="Carrier comparison table"
-              style={{
+            <Box
+              component="img"
+              src="/images/shipment_tracking/shipment_transit.svg"
+              alt="Exception alert — shipment stuck at hub before SLA breach"
+              sx={{
                 width: "100%",
-                height: "100%",
-                objectFit: "cover",
+                height: "auto",
                 display: "block",
               }}
             />

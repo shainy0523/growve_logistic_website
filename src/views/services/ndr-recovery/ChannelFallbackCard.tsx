@@ -150,45 +150,49 @@ export default function ChannelFallbackCard() {
                 </Typography>
             </Box>
 
-            {/* Top row — drifts left */}
+            {/* Top row — marquee scrolling left */}
             <Box
                 sx={{
                     position: 'absolute',
                     left: -187,
                     top: 164,
                     display: 'flex',
+                    width: 'max-content',
                     gap: 2.5,
-                    '@keyframes channelDriftLeft': {
-                        '0%, 100%': { transform: 'translateX(0)' },
-                        '50%': { transform: 'translateX(-24px)' },
+                    pr: 2.5,
+                    '@keyframes channelMarqueeLeft': {
+                        from: { transform: 'translateX(0)' },
+                        to: { transform: 'translateX(-50%)' },
                     },
-                    animation: 'channelDriftLeft 4s ease-in-out infinite',
+                    animation: 'channelMarqueeLeft 18s linear infinite',
                     '&:hover': { animationPlayState: 'paused' },
                 }}
             >
-                {TOP_ROW.map((c) => (
-                    <ChannelCard key={c.name} c={c} />
+                {[...TOP_ROW, ...TOP_ROW].map((c, i) => (
+                    <ChannelCard key={`${c.name}-${i}`} c={c} />
                 ))}
             </Box>
 
-            {/* Bottom row — drifts right */}
+            {/* Bottom row — marquee scrolling right */}
             <Box
                 sx={{
                     position: 'absolute',
-                    left: 20,
+                    left: -187,
                     top: 254,
                     display: 'flex',
+                    width: 'max-content',
                     gap: 2.5,
-                    '@keyframes channelDriftRight': {
-                        '0%, 100%': { transform: 'translateX(0)' },
-                        '50%': { transform: 'translateX(24px)' },
+                    pr: 2.5,
+                    '@keyframes channelMarqueeRight': {
+                        from: { transform: 'translateX(-50%)' },
+                        to: { transform: 'translateX(0)' },
                     },
-                    animation: 'channelDriftRight 4s ease-in-out infinite',
+                    animation: 'channelMarqueeRight 18s linear infinite',
                     '&:hover': { animationPlayState: 'paused' },
                 }}
             >
-                {BOTTOM_ROW.map((c) => (
-                    <ChannelCard key={c.name} c={c} />
+                {[...BOTTOM_ROW, ...BOTTOM_ROW].map((c, i) => (
+                    <ChannelCard key={`${c.name}-${i}`} c={c} />
                 ))}
             </Box>
         </Box>

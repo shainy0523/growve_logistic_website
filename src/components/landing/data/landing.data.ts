@@ -1,5 +1,8 @@
 import NdrRecoveryAutomationView from "@/views/services/ndr-recovery/NdrRecoveryView"
 import SmartCourierAllocationView from "@/views/services/service-allocation/SmartCourierAllocationView"
+import ReturnsRtoControlView from "@/views/services/returns-rto-control/ReturnsRtoControlView"
+import BillingReconciliationView from "@/views/services/billing-reconciliation/BillingReconciliationView"
+import MarketplaceIntegrationsView from "@/views/services/marketplace-integrations/MarketplaceIntegrationsView"
 import WeightDisputeProtectionView from "@/views/services/weight-dispute/WeightDisputeProtectionView"
 import RealTimeShipmentTrackingView from "@/views/services/shipment-tracking/RealTimeShipmentTrackingView"
 import PerformanceAnalyticsView from "@/views/services/performance-analytics/PerformanceAnalyticsView"
@@ -84,12 +87,12 @@ export const SERVICES = [
 
 export const SERVICE_PAGES = {
   'smart-courier-allocation': SmartCourierAllocationView,
-  // 'returns-rto-control': ReturnsRtoControlView,
+  'returns-rto-control': ReturnsRtoControlView,
   'shipment-tracking': RealTimeShipmentTrackingView,
   'weight-dispute-protection': WeightDisputeProtectionView,
   'performance-analytics': PerformanceAnalyticsView,
-  // 'marketplace-integrations': MarketplaceIntegrationsView,
-  // 'billing-reconciliation': BillingReconciliationView,
+  'marketplace-integrations': MarketplaceIntegrationsView,
+  'billing-reconciliation': BillingReconciliationView,
   'ndr-recovery-automation': NdrRecoveryAutomationView,
 }
 
