@@ -12,6 +12,8 @@ export interface SplitFeature {
   description: string;
   images?: string | string[];
   image?: string;
+  /** Render a bespoke visual instead of an image. */
+  variant?: "map";
   direction?: "left" | "right" | "top" | "bottom";
 }
 
