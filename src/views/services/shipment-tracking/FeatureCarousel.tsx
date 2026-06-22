@@ -42,6 +42,7 @@ export default function FeatureCarousel({
       <Box
         sx={{
           display: "flex",
+          alignItems: "stretch",
           gap: "20px",
           width: "max-content",
           animation: `feature-marquee ${speed}s linear infinite`,
@@ -67,29 +68,29 @@ function FeatureCard({ feature }: { feature: CarouselFeature }) {
       sx={{
         flex: "0 0 auto",
         width: { xs: 280, md: 300 },
+        height: "100%",
         display: "flex",
         flexDirection: "column",
         gap: "20px",
-        cursor:'pointer',
+        cursor: "pointer",
       }}
     >
-      {/* Image */}
+      {/* Image — rendered at its natural width/height */}
       <Box
         sx={{
-          position: "relative",
-          height: 290,
           borderRadius: "12px",
-          border: "1px solid #EAEAEC",
-          bgcolor: "#F5F5F6",
+          // border: "1px solid #EAEAEC",
+          // bgcolor: "#F5F5F6",
           overflow: "hidden",
         }}
       >
         <Image
           src={feature.image}
           alt={feature.title}
-          fill
+          width={300}
+          height={290}
           sizes="300px"
-          style={{ objectFit: "contain", padding: "16px" }}
+          style={{ width: "100%", height: "auto", display: "block" }}
         />
       </Box>
 
