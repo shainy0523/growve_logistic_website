@@ -1,4 +1,3 @@
-import { FeatureCard } from '@/components/landing/sections/problems-section/EverythingSection'
 import SectionHeading from '@/components/landing/ui/SectionHeading'
 import { Typography } from '@mui/material'
 import Box from '@mui/material/Box'

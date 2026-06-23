@@ -1,13 +1,10 @@
 import { Box } from '@mui/material'
-import ImageContainer from '@/components/common/ImageContainer'
 import ServiceHero from '../service-allocation/ServiceHero'
 import TrackingHandledSection from './TrackingHandledSection'
 import TrackingStatsSection from './TrackingStatsSection'
 import KeepInformedSection from './KeepInformedSection'
 import OneViewSection from './OneViewSection'
 import LiveTrackingMapSection from './LiveTrackingMapSection'
-import ShipmentVisibilitySection from './ShipmentVisibilitySection'
-import CourierAgnosticSection from './CourierAgnosticSection'
 import EverythingSection from '@/components/landing/sections/problems-section/EverythingSection'
 
 const RealTimeShipmentTrackingView = () => {
@@ -38,7 +35,7 @@ const RealTimeShipmentTrackingView = () => {
                 src='/images/shipment_tracking/basemap.svg'
                 alt=''
                 aria-hidden
-                className='absolute bottom-0 right-0 z-10 w-1/2 h-auto max-w-[50%]'
+                className='absolute bottom-[37px] -right-[25px] z-10 w-[40%] h-auto max-w-540%]'
               />
             </Box>
             {/* <ImageContainer

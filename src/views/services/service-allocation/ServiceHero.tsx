@@ -1,7 +1,6 @@
 'use client'
 
 import { Box, Typography } from '@mui/material'
-import { Icon } from '@iconify/react'
 import PrimaryCta from '@/components/landing/ui/PrimaryCta'
 import SecondaryCta from '@/components/landing/ui/SecondaryCta'
 

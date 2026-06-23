@@ -1,7 +1,5 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { Button } from '@mui/material'
-import { Icon } from '@iconify/react'
 import Image from 'next/image'
 import PrimaryCta from '../../ui/PrimaryCta'
 import SecondaryCta from '../../ui/SecondaryCta'

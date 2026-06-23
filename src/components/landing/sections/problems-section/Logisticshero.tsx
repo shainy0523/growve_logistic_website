@@ -63,7 +63,7 @@ const CheckIcon = () => (
 );
 
 export default function LogisticsHero() {
-    const [blink, setBlink] = useState(true);
+    const [_, setBlink] = useState(true);
     const [planePos, setPlanePos] = useState(0);
 
     useEffect(() => {

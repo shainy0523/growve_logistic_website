@@ -3,11 +3,9 @@ import React from "react";
 import ServiceHero from "../service-allocation/ServiceHero";
 import NDRImpactSection from "./NDRImpactSection";
 import AIRecoverySection from "./AIRecoverySection";
-import NdrOnePlatformSection from "./NdrOnePlatformSection";
 import Image from "next/image";
 import RecoverSection from "./RecoverSection";
 import EndToEndRecoverySection from "./EndToEndRecoverySection";
-import RecoveryAnalyticsSection from "./RecoveryAnalyticsSection";
 import EverythingSection from "@/components/landing/sections/problems-section/EverythingSection";
 import AutomationSection from "./AutomationSection";
 

@@ -4,35 +4,9 @@ import {
     Box,
     Typography,
     Paper,
-    Chip,
-    Stack,
-    Divider,
 } from '@mui/material';
-import SettingsIcon from '@mui/icons-material/Settings';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import CallIcon from '@mui/icons-material/Call';
-import SmsIcon from '@mui/icons-material/Sms';
 import SectionHeading from '@/components/landing/ui/SectionHeading';
-import Image from 'next/image';
 import ChannelFallbackCard from './ChannelFallbackCard';
-
-const ruleSteps = [
-    {
-        title: 'Trigger',
-        value: 'Customer Unavailable',
-        badge: 'NDR marked by courier',
-    },
-    {
-        title: 'Action',
-        value: 'Send WhatsApp message',
-        badge: 'Auto',
-    },
-    {
-        title: 'Action',
-        value: 'Wait for response',
-        badges: ['Responded', 'No response'],
-    },
-];
 
 export default function AutomationSection() {
     return (

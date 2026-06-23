@@ -1,7 +1,6 @@
 'use client'
 
 import { Box, Typography, LinearProgress } from '@mui/material'
-import { Icon } from '@iconify/react'
 import { SectionHead } from './_shared'
 
 const display = 'var(--font-dai-banna), sans-serif'

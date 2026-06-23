@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import BrandLogo from './ui/BrandLogo'
 import { FOOTER } from './data/landing.data'
 import { SECTION_IDS } from '@/utils/constant'
 import Image from 'next/image'

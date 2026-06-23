@@ -78,7 +78,7 @@ export default function ShipmentMap() {
         {route.map((point, i) => (
           <Marker
             key={i}
-            position={point as any}
+            position={point}
             icon={yellowIcon}
           />
         ))}
