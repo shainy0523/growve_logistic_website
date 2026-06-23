@@ -7,7 +7,7 @@ import Image from "next/image";
 export interface CarouselFeature {
   title: string;
   description: string;
-  image: string;
+  image?: string;
 }
 
 interface FeatureCarouselProps {
@@ -84,14 +84,16 @@ function FeatureCard({ feature }: { feature: CarouselFeature }) {
           overflow: "hidden",
         }}
       >
-        <Image
-          src={feature.image}
-          alt={feature.title}
-          width={300}
-          height={290}
-          sizes="300px"
-          style={{ width: "100%", height: "auto", display: "block" }}
-        />
+        {feature.image && (
+          <Image
+            src={feature.image}
+            alt={feature.title}
+            width={300}
+            height={290}
+            sizes="300px"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        )}
       </Box>
 
       {/* Copy */}

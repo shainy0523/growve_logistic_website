@@ -1,13 +1,10 @@
 import { Box } from '@mui/material'
-import ImageContainer from '@/components/common/ImageContainer'
 import ServiceHero from '../service-allocation/ServiceHero'
 import TrackingHandledSection from './TrackingHandledSection'
 import TrackingStatsSection from './TrackingStatsSection'
 import KeepInformedSection from './KeepInformedSection'
 import OneViewSection from './OneViewSection'
 import LiveTrackingMapSection from './LiveTrackingMapSection'
-import ShipmentVisibilitySection from './ShipmentVisibilitySection'
-import CourierAgnosticSection from './CourierAgnosticSection'
 import EverythingSection from '@/components/landing/sections/problems-section/EverythingSection'
 
 const RealTimeShipmentTrackingView = () => {

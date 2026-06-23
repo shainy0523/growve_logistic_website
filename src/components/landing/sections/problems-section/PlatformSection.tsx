@@ -1,12 +1,8 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import { Icon } from '@iconify/react'
 import SectionHeading from '../../ui/SectionHeading'
 import { PLATFORM } from '../../data/landing.data'
 import { SECTION_IDS } from '@/utils/constant'
-import StoreIntegrationShowcase from './StoreIntegrationShowcase'
-import LaptopMockup from './LaptopMockup'
-import Image from 'next/image'
 
 // function LaptopMockup() {
 //   return (
@@ -114,7 +110,7 @@ export default function PlatformSection() {
             gap:4
           }}
         >
-          {PLATFORM.cards.map((card: any, i: any) => (
+          {PLATFORM.cards.map((card: { title: string; image: string; description: string }) => (
             <Box
               key={card.title}
               sx={{

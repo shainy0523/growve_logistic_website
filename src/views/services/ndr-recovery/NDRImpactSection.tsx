@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
 import ImpactCard from './ImpactCard'
 import SectionHeading from '@/components/landing/ui/SectionHeading'
 

@@ -1,5 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import StatsCard from "../service-allocation/StatsCard";
 
 const STATS = [
   {

@@ -94,7 +94,7 @@ const BRAND_LOGOS: Record<string, string> = {
 
 // Brand logo tile — uses the real brand asset when available,
 // otherwise falls back to a colored letter tile (e.g. BlueDart).
-function BrandTile({ name, color, size = 36 }: any) {
+function BrandTile({ name, color, size = 36 }: { name: string; color: string; size?: number }) {
   const logo = BRAND_LOGOS[name?.toLowerCase()];
 
   if (logo) {
@@ -191,7 +191,7 @@ function StatusBadge({ label }:StatusBadgeProps) {
 }
 
 // Floating courier summary card (left feature card)
-function CourierCard({ name, color, rank, status, faded }:any) {
+function CourierCard({ name, color, rank, status, faded }: { name: string; color: string; rank: number; status: StatusVariant; faded?: boolean }) {
   return (
     <Box
       className="w-[279px] rounded-xl p-4"
@@ -246,7 +246,9 @@ function Heading() {
   );
 }
 
-const RISK_COURIER_GROUPS = [
+type CourierCardData = { name: string; color: string; rank: number; status: StatusVariant; faded?: boolean };
+
+const RISK_COURIER_GROUPS: { position: { left: string; top: string }; cards: CourierCardData[] }[] = [
   { position: { left: "-187px", top: "164px" }, cards: [
     { name: "DTDC", color: "#07287F", rank: 1, status: "Attention", faded: true },
     { name: "Delhivery", color: "#1A1A1A", rank: 1, status: "Good" },
@@ -348,7 +350,7 @@ const bodyCellSx = {
   py: 1.75,
 };
 
-function FilterChip({ label }:any) {
+function FilterChip({ label }: { label: string }) {
   return (
     <Box
       className="flex items-center gap-1 rounded-lg px-2.5 py-1.5"
@@ -550,7 +552,7 @@ function AccuracyCard() {
 /* ----------------------------------------------------------------------- */
 /* Card 5 — Auto-Reassigns When Routes Fail                                */
 /* ----------------------------------------------------------------------- */
-function ReassignRow({ title, id, status }:any) {
+function ReassignRow({ title, id, status }: { title: string; id: string; status: StatusVariant }) {
   return (
     <Box className="w-[279px] rounded-xl p-4" sx={{ bgcolor: t.white }}>
       <Box className="flex items-start gap-2.5">
@@ -585,7 +587,7 @@ function ReassignCard() {
 }
 
 /* shared caption used by the three bottom cards */
-function CardCaption({ title, body: text }:any) {
+function CardCaption({ title, body: text }: { title: string; body: string }) {
   return (
     <Box className="flex flex-col gap-2">
       <Typography sx={{ fontFamily: display, fontWeight: 500, fontSize: 22, color: t.black }}>{title}</Typography>

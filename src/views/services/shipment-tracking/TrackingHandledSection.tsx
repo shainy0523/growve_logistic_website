@@ -29,7 +29,7 @@ const FEATURES = [
 interface Feature {
   title: string;
   description: string;
-  image: string;
+  image?: string;
 }
 
 interface HeadingContent {

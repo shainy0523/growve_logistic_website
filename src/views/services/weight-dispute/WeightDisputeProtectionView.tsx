@@ -4,10 +4,8 @@ import ServiceHero from "../service-allocation/ServiceHero";
 import EndToEndSection from "./EndToEndSection";
 import LeakageSection from "./LeakageSection";
 import WhatsInsideSection from "./WhatsInsideSection";
-import WeightScannerSection from "./WeightScannerSection";
 import WeightMattersSection from "./WeightMattersSection";
 import TrackingSection from "./WeightTracking";
-import WeightOnePlatformSection from "./WeightOnePlatformSection";
 import EverythingSection from "@/components/landing/sections/problems-section/EverythingSection";
 
 const WeightDisputeProtectionView = () => {
