@@ -88,6 +88,10 @@ const NdrRecoveryAutomationView = () => {
       </Box>
       <Box>
         <EverythingSection
+          eyebrow = 'One platform'
+            title = {'NDR recovery works better\nwhen connected to'}
+            accent = 'everything else.'
+            subtitle = 'Recovery is most effective when allocation, tracking, returns, billing, and analytics work together. Manage the complete shipment lifecycle from a single platform.'
           excludeTitles={[
             "NDR Recovery Automation",
             "Billing & Reconciliation",

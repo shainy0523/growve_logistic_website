@@ -132,7 +132,7 @@ export const FEATURE_CARDS = [
 
 export const ADVANTAGE = {
   eyebrow: 'THE GROWVE ADVANTAGE',
-  titleLeading: 'Stop reacting to shipping problems Start',
+  titleLeading: 'Stop reacting to shipping problems\nStart',
   titleAccent: ' preventing them.',
   subtitle:
     'Growve helps teams identify delivery risks, recover failed shipments, and stay ahead of operational issues before they impact customers or revenue.',
@@ -201,7 +201,7 @@ export const PLATFORM = {
   ],
   callout: {
     eyebrow: 'THE GROWVE ADVANTAGE',
-    titleLeading: "Logistics shouldn't require five",
+    titleLeading: "Logistics shouldn't\nrequire five",
     titleAccent: 'different tools.',
     subtitle:
       'Built to help growing brands streamline execution, improve delivery outcomes, and stay focused on what matters most.',
@@ -242,7 +242,7 @@ export const ONE_PLATFORM = {
 
 export const TRACKING = {
   eyebrow: 'REAL-TIME VISIBILITY',
-  titleLeading: 'Track every shipment. Understand',
+  titleLeading: 'Track every shipment. Understand\n',
   titleAccent: 'every outcome.',
   subtitle:
     'From pickup to delivery, get complete visibility into shipment movement, courier performance, and business-critical logistics data.',
@@ -260,8 +260,8 @@ export const TRACKING = {
 
 export const EVERYTHING = {
   eyebrow: 'CORE CAPABILITIES',
-  titleLeading: 'Everything you need',
-  titleAccent: 'to run logistics efficiently.',
+  titleLeading: 'Everything you need\nto run',
+  titleAccent: 'logistics efficiently.',
   subtitle:
     'From pickup to delivery, get complete visibility into shipment movement, courier performance, and business-critical logistics data.',
   cards: [

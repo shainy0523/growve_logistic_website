@@ -89,8 +89,8 @@ export default function EndToEndSection() {
                             border:'1px solid #EAEAEC',
                             borderRadius: '12px',
                             bgcolor: '#F1F1F2',
-                            pt: { xs: 3, md: 10 },
-                            pl: { xs: 1, md: 5 },
+                            pt: { xs: 3, md: 6 },
+                            pl: { xs: 3, md: 5 },
                             overflow: 'hidden',
                         }}
                     >
