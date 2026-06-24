@@ -96,7 +96,7 @@ export default function MarketplaceHero() {
           {/* LEFT — copy + CTAs */}
           <ServiceHero
             badge="Marketplace Integrations"
-            title="Every order, every channel —"
+            title={"Every order, every\nchannel —"}
             accent="in one place."
             description="Connect Shopify, Amazon, Flipkart, WooCommerce and more in minutes. Orders flow in, tracking flows back, and your whole operation runs from one pipeline."
             primaryButton="Get Started"

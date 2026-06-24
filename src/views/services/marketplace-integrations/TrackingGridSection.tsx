@@ -16,7 +16,7 @@ export default function TrackingGridSection() {
         <SectionHead
           eyebrow="Why teams switch"
           title="Built for ops teams that"
-          accent="ship at volume."
+          accent={"\nship at volume."}
           subtitle="From pickup to delivery, get complete visibility into shipment movement, courier performance, and business-critical logistics data."
         />
 

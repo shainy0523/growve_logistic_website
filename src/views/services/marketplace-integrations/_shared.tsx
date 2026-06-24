@@ -34,7 +34,7 @@ export function SectionHead({ eyebrow, title, accent, subtitle, variant = 'light
       <Typography sx={{ fontFamily: body, fontWeight: 600, fontSize: 12, letterSpacing: '0.32em', textTransform: 'uppercase', color: eyebrowColor, mb: 2 }}>
         {eyebrow}
       </Typography>
-      <Typography sx={{ fontFamily: display, fontWeight: 500, fontSize: { xs: 30, md: 42 }, lineHeight: 1.12, color: titleColor }}>
+      <Typography sx={{ fontFamily: display, fontWeight: 500, fontSize: { xs: 30, md: 42 }, lineHeight: 1.12, color: titleColor,whiteSpace:'pre-line' }}>
         {title}
         {accent && (
           <>

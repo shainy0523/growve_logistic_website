@@ -113,7 +113,7 @@ export default function GrowveAdvantageSection() {
       <Box className="landing-container">
         <SectionHead
           eyebrow="The Growve Advantage"
-          title="Stop reacting to shipping problems."
+          title={"Stop reacting to shipping\nproblems."}
           accent="Start preventing them."
           subtitle="Growve helps teams identify delivery risks, recover failed shipments, and stay ahead of operational issues before they impact customers or revenue."
         />
