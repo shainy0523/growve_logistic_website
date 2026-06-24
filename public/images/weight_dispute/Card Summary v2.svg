@@ -1,0 +1,25 @@
+<svg width="273" height="114" viewBox="0 0 273 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_7349_171354)">
+<rect width="272.667" height="114" rx="12" fill="white" shape-rendering="crispEdges"/>
+<text fill="#737682" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="16" y="27.948">Recovered This Month</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="28" font-weight="bold" letter-spacing="0em"><tspan x="16" y="66.712">&#x20b9;1.42L</tspan></text>
+<text fill="#737682" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="10" letter-spacing="0em"><tspan x="16" y="93.79">across</tspan></text>
+<rect x="49" y="83" width="30" height="15" rx="7.5" fill="#CBF2DC"/>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="10" letter-spacing="0em"><tspan x="55" y="93.79">612</tspan></text>
+<text fill="#737682" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="10" letter-spacing="0em"><tspan x="81" y="93.79">disputes</tspan></text>
+<rect x="206.668" y="36" width="42" height="42" rx="8" fill="#FBC942"/>
+<path d="M230.417 60.666H233.167C233.671 60.666 234.083 60.2535 234.083 59.7493V54.2493C234.083 53.7452 233.671 53.3327 233.167 53.3327H230.417C229.913 53.3327 229.5 53.7452 229.5 54.2493V59.7493C229.5 60.2535 229.913 60.666 230.417 60.666ZM231.333 55.166H232.25V58.8327H231.333V55.166ZM224.917 60.666H227.667C228.171 60.666 228.583 60.2535 228.583 59.7493V54.2493C228.583 53.7452 228.171 53.3327 227.667 53.3327H224.917C224.413 53.3327 224 53.7452 224 54.2493V59.7493C224 60.2535 224.413 60.666 224.917 60.666ZM225.833 55.166H226.75V58.8327H225.833V55.166ZM222.167 53.3327C221.663 53.3327 221.25 53.7452 221.25 54.2493V59.7493C221.25 60.2535 221.663 60.666 222.167 60.666C222.671 60.666 223.083 60.2535 223.083 59.7493V54.2493C223.083 53.7452 222.671 53.3327 222.167 53.3327ZM218.5 51.4993V62.4993C218.5 63.5077 219.325 64.3327 220.333 64.3327H235C236.008 64.3327 236.833 63.5077 236.833 62.4993V51.4993C236.833 50.491 236.008 49.666 235 49.666H220.333C219.325 49.666 218.5 50.491 218.5 51.4993ZM234.083 62.4993H221.25C220.746 62.4993 220.333 62.0868 220.333 61.5827V52.416C220.333 51.9118 220.746 51.4993 221.25 51.4993H234.083C234.588 51.4993 235 51.9118 235 52.416V61.5827C235 62.0868 234.588 62.4993 234.083 62.4993Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_7349_171354" x="-34" y="-20" width="340.668" height="182" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="14"/>
+<feGaussianBlur stdDeviation="17"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_7349_171354"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7349_171354" result="shape"/>
+</filter>
+</defs>
+</svg>

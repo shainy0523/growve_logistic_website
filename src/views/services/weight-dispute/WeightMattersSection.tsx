@@ -16,9 +16,11 @@ export default function WeightMattersSection() {
               display: 'flex',
               alignItems: 'center',
       
-              px: {
+              pl: {
                 xs: 3,
-                md: '304px',
+                sm: 5,
+                md:6,
+                lg: '305px',
               },
       
               py: {
@@ -26,24 +28,11 @@ export default function WeightMattersSection() {
                 md: '100px',
               },
       
-              backgroundImage: `url('/images/weight_dispute/weight_dispute_banner.png')`,
+              backgroundImage: `linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, #000 70.75%), url('/images/weight_dispute/weight_dispute_banner.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            {/* Gradient Overlay */}
-            <Box
-              sx={{
-                position: 'absolute',
-                inset: 0,
-      
-                background:
-                  'linear-gradient(270deg, rgba(0,0,0,0) 0%, #000 100%)',
-      
-                zIndex: 1,
-              }}
-            />
-      
             {/* Content */}
             <Box
               sx={{

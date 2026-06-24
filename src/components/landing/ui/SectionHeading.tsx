@@ -68,7 +68,6 @@ export default function SectionHeading({
         }}
       >
         {title}
-        <br/>
         {accent && (
           <>
             {' '}

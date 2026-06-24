@@ -107,11 +107,20 @@ interface EverythingSectionProps {
   excludeTitles?: string[]
   /** Render the dark "Explore the Growve Platform" center card. */
   showCenterCard?: boolean
+  /** Override the section heading per page (defaults to the EVERYTHING copy). */
+  eyebrow?: string
+  title?: string
+  accent?: string
+  subtitle?: string
 }
 
 export default function EverythingSection({
   excludeTitles = [],
   showCenterCard = true,
+  eyebrow = EVERYTHING.eyebrow,
+  title = EVERYTHING.titleLeading,
+  accent = EVERYTHING.titleAccent,
+  subtitle = EVERYTHING.subtitle,
 }: EverythingSectionProps = {}) {
   // Render 3x3 grid; insert CenterCard at position [1,1] (index 4 in DOM order).
   // On a service page, drop the page's own card (and any others passed in).
@@ -131,10 +140,10 @@ export default function EverythingSection({
     <Box className='landing-section' sx={{ backgroundColor: 'var(--surface-page)' }}>
       <Box className='landing-container'>
         <SectionHeading
-          eyebrow={EVERYTHING.eyebrow}
-          title={EVERYTHING.titleLeading}
-          accent={EVERYTHING.titleAccent}
-          subtitle={EVERYTHING.subtitle}
+          eyebrow={eyebrow}
+          title={title}
+          accent={accent}
+          subtitle={subtitle}
           size='md'
         />
 

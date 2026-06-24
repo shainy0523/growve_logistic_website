@@ -1,7 +1,6 @@
 import SectionHeading from '@/components/landing/ui/SectionHeading'
 import { Typography } from '@mui/material'
 import Box from '@mui/material/Box'
-import WeightScannerSection from './WeightScannerSection'
 
 const INSIDE_FEATURES = [
     {
@@ -46,28 +45,35 @@ export default function WhatsInsideSection() {
                     sx={{ mt: 6 }}
                     className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 >
-                    {INSIDE_FEATURES.map(item => (
+                    {INSIDE_FEATURES.map((item,index) => (
                         <Box key={item?.title}>
                             <Box
                                 sx={{
                                     border: '1px solid #EAEAEC',
                                     borderRadius: '12px',
                                     bgcolor: '#F1F1F2',
-                                    pt: { xs: 4, md: 6 },
-                                    pl: { xs: 3, md: 5 },
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent:'center',
+                                    // p: { xs: 4, md: 6 },
+                                    height: {
+                                        xs: 315,
+                                        md:400,
+                                    },
+                                    // pl: { xs: 3, md: 5 },
                                     overflow: 'hidden',
                                 }}
                             >
                                 <Box
                                     component="img"
-                                    src="/images/weight_dispute/carrier_comparison.svg"
+                                    src={`/images/weight_dispute/weight_dispute${index+1}.svg`}
                                     alt="Carrier Comparison"
                                     sx={{
-                                        width: '100%',
+                                        width: '350px',
                                         height: 'auto',
                                         display: 'block',
-                                        borderTopLeftRadius: '18px',
-                                        boxShadow: '0 20px 50px rgba(17,17,26,0.08)',
+                                        // borderTopLeftRadius: '18px',
+                                        // boxShadow: '0 20px 50px rgba(17,17,26,0.08)',
                                     }}
                                 />
                             </Box>
@@ -87,7 +93,6 @@ export default function WhatsInsideSection() {
                     ))}
                 </Box>
             </Box>
-            <WeightScannerSection />
         </Box>
     )
 }

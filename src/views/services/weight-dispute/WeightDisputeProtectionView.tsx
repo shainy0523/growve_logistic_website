@@ -7,6 +7,7 @@ import WhatsInsideSection from "./WhatsInsideSection";
 import WeightMattersSection from "./WeightMattersSection";
 import TrackingSection from "./WeightTracking";
 import EverythingSection from "@/components/landing/sections/problems-section/EverythingSection";
+import LogoGridSection from "./LogoGridSection";
 
 const WeightDisputeProtectionView = () => {
   return (
@@ -15,7 +16,7 @@ const WeightDisputeProtectionView = () => {
       <Box
         sx={{
           background: "linear-gradient(180deg, #FFFFFF 0%, #F5F5F6 100%)",
-          py: { xs: "40px", md: "100px" },
+          py: { xs: "40px", md: "120px" },
           overflow: "hidden",
         }}
       >
@@ -47,19 +48,30 @@ const WeightDisputeProtectionView = () => {
           {/* RIGHT */}
           <Box
             sx={{
-              maxWidth: { xs: "100%", md: "900px" },
+              maxWidth: { xs: "100%", md: "800px" },
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               flex: { xs: "1 1 100%", md: "1 1 auto" },
               minWidth: 0,
+              backgroundColor: '#EBEBED',
+              borderRadius: '12px',
+              position: 'relative',
+              py: {
+                xs: 3, md: 6
+              },
+              px: 3,
+              marginTop: {
+                xs: '5rem',
+                md: 0,
+              }
             }}
           >
             <Image
               src="/images/weight_dispute/weight_dispute_hero.svg"
               alt="Weight dispute dashboard"
-              width={500}
-              height={460}
+              width={300}
+              height={360}
               priority
               style={{
                 width: "100%",
@@ -67,8 +79,39 @@ const WeightDisputeProtectionView = () => {
                 display: "block",
                 borderRadius: "12px",
                 boxShadow: "0px 10px 20px rgba(0,0,0,0.12)",
+                position: 'relative',
               }}
             />
+            <Box
+              sx={{
+                position: "absolute",
+                top: {
+                  xs: "-70px",
+                  md: "-85px",
+                },
+                right: {
+                  xs: "-15px",
+                  md: "-70px",
+                },
+                width: {
+                  xs: 230,
+                  md: 320,
+                },
+              }}
+            >
+              <Image
+                src="/images/weight_dispute/weight_dispute_overlay.svg"
+                alt="Weight dispute dashboard"
+                width={350}
+                height={300}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  boxShadow: '0px 5px 20px rgba(0,0,0,.1)',
+                  borderRadius: '12px'
+                }}
+              />
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -86,10 +129,17 @@ const WeightDisputeProtectionView = () => {
         <WeightMattersSection />
       </Box>
       <Box>
+        <LogoGridSection />
+      </Box>
+      <Box>
         <TrackingSection />
       </Box>
       <Box>
         <EverythingSection
+          eyebrow='One platform'
+          title={'Weight Dispute Protection is one\npart'}
+          accent='of the loop.'
+          subtitle='Allocation, tracking, returns and analytics — every stage of the order journey, on one platform.'
           excludeTitles={[
             "Weight Dispute Protection",
             "Billing & Reconciliation",
