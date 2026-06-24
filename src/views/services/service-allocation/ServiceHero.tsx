@@ -93,6 +93,7 @@ export default function ServiceHero({
           letterSpacing: '-0.02em',
           color: '#000',
           maxWidth: '900px',
+          whiteSpace:'pre-line'
         }}
       >
         {title}{' '}
