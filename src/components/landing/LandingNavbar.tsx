@@ -53,8 +53,8 @@ export default function LandingNavbar() {
         className='landing-container'
         sx={{
           position: 'relative',
-          minHeight: 84,
-          py: 3,
+          minHeight: 60,
+          py: 2,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -99,7 +99,7 @@ export default function LandingNavbar() {
                       href={item.href}
                       disableRipple
                       endIcon={<Icon icon='mdi:chevron-down' fontSize={14} />}
-                      className='!min-w-0 !rounded-lg !px-4 !py-1.5 !text-sm !font-semibold !text-black'
+                      className='!min-w-0 !rounded-lg !px-4 !py-1 !text-sm !font-semibold !text-black'
                     >
                       Services
                     </Button>
@@ -111,7 +111,7 @@ export default function LandingNavbar() {
                     component={Link}
                     href={item.href}
                     disableRipple
-                    className='!min-w-0 !rounded-lg !px-4 !py-1.5 !text-sm !font-semibold !text-black'
+                    className='!min-w-0 !rounded-lg !px-4 !py-1 !text-sm !font-semibold !text-black'
                   >
                     {item.label}
                   </Button>
