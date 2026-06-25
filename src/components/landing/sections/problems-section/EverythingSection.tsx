@@ -133,7 +133,7 @@ export default function EverythingSection({
   // circular-import race where `SERVICES` is still undefined.
   const hrefFor = (title: string) => {
     const slug = SERVICES.find((service) => service.title === title)?.slug
-    return slug ? `/services/${slug}` : undefined
+    return slug ? `/features/${slug}` : undefined
   }
 
   return (

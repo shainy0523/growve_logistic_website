@@ -6,7 +6,11 @@ import Link from 'next/link'
 import { SERVICES } from './data/landing.data'
 import { Icon } from '@iconify/react'
 
-export default function ServicesMegaMenu() {
+export default function ServicesMegaMenu({
+  onItemClick,
+}: {
+  onItemClick?: () => void
+}) {
   return (
     <Box
       sx={{
@@ -56,7 +60,8 @@ export default function ServicesMegaMenu() {
           <Box
             key={service.slug}
             component={Link}
-            href={`/services/${service.slug}`}
+            href={`/features/${service.slug}`}
+            onClick={onItemClick}
             sx={{
               display: 'flex',
               alignItems: 'center',
