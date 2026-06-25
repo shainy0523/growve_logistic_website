@@ -36,7 +36,7 @@ export default function WhatsInsideSection() {
             <Box className='pb-15'>
                 <SectionHeading
                     eyebrow="WHAT'S INSIDE"
-                    title="Cut the busywork from capture, detection,"
+                    title={"Cut the busywork from\ncapture, detection,"}
                     accent=" dispute, and recovery."
                     subtitle="Every step from the packing table to your courier invoice is handled in one place — no spreadsheets, no manual filing."
                 />

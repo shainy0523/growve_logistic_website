@@ -366,7 +366,7 @@ export const CTA = {
 
 export const FOOTER = {
   tagline:
-    'Built by e-commerce sellers shipping 35K+ orders/month. Courier aggregation & fulfillment for Indian sellers.',
+    'The logistics operating system for Indian D2C and ecommerce brands. Allocate, recover, reconcile — on one platform.',
   services: [
     'Smart Courier Allocation',
     'Returns & RTO Control',
