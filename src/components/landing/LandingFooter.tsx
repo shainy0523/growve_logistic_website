@@ -43,26 +43,26 @@ export default function LandingFooter() {
         >
           <Box className='flex flex-col'>
             <Image
-              src='/images/footer-logo.png'
-              width={120}
-              height={40}
+              className='-mt-2'
+              src='/images/footer-logo.svg'
+              width={100}
+              height={70}
               alt='footer-logo'
             />
-            <Typography
-              variant='Body/S-Regular'
-              sx={{ mt: 1, color: 'var(--text-on-dark-muted)', lineHeight: 1.6, maxWidth: 240 }}
+            <Typography className='text-[.8rem]! cursor-pointer'
+              sx={{ color: 'var(--text-on-dark-muted)', lineHeight: 1.6, maxWidth: 240 }}
             >
               {FOOTER.tagline}
             </Typography>
           </Box>
 
           <Box>
-            <Typography variant='Body/XS-SemiBold' sx={columnTitleSx}>
+            <Typography className='text-[.85rem]!' sx={columnTitleSx}>
               SERVICES
             </Typography>
             <Box className='mt-3' sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
               {FOOTER.services.map((s) => (
-                <Box key={s} component={Link} href='#' sx={linkSx}>
+                <Box className='text-[.8rem]!' key={s} component={Link} href='#' sx={linkSx}>
                   {s}
                 </Box>
               ))}
@@ -70,18 +70,18 @@ export default function LandingFooter() {
           </Box>
 
           <Box>
-            <Typography variant='Body/XS-SemiBold' sx={columnTitleSx}>
+            <Typography className='text-[.85rem]!' sx={columnTitleSx}>
               OFFICE
             </Typography>
             <Box className='mt-2' sx={{ display: 'flex', flexDirection: 'column', gap: 1.75 }}>
-              <Typography variant='Body/S-Regular' sx={{ ...linkSx, lineHeight: 1.6, maxWidth: 280 }}>
+              <Typography className='text-[.8rem]! cursor-pointer' sx={{ ...linkSx, lineHeight: 1.6, maxWidth: 280 }}>
                 {FOOTER.office.address}
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
-                <Typography variant='Body/S-Regular' sx={linkSx}>
+                <Typography className='text-[.8rem]! cursor-pointer' sx={linkSx}>
                   Email: {FOOTER.office.email}
                 </Typography>
-                <Typography variant='Body/S-Regular' sx={linkSx}>
+                <Typography className='text-[.8rem]! cursor-pointer' sx={linkSx}>
                   {FOOTER.office.phone}
                 </Typography>
               </Box>
@@ -89,12 +89,12 @@ export default function LandingFooter() {
           </Box>
 
           <Box>
-            <Typography variant='Body/XS-SemiBold' sx={columnTitleSx}>
+            <Typography className='text-[.85rem]!' sx={columnTitleSx}>
               NAVIGATE
             </Typography>
             <Box className='mt-2' sx={{ display: 'flex', flexDirection: 'column', gap: 1.25 }}>
               {FOOTER.navigate.map((n) => (
-                <Box key={n.label} component={Link} href={n.href} sx={linkSx}>
+                <Box className='text-[.8rem]!' key={n.label} component={Link} href={n.href} sx={linkSx}>
                   {n.label}
                 </Box>
               ))}

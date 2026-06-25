@@ -7,36 +7,36 @@ import ImpactCard from '../ndr-recovery/ImpactCard'
 const IMPACT_STATS = [
     {
         value: '92%',
-        title: 'Disputes won',
-        description: 'Of flagged overcharges recovered, with evidence attached.',
+        title: 'Disputes Recovered',
+        description: 'Successful recoveries backed by scan data, shipment records, and courier evidence.',
     },
     {
         value: '₹1.4L',
-        title: 'Recovered / month',
-        description: 'Typical recovery for a mid-size COD brand.',
+        title: 'Revenue Recovered',
+        description: 'Average monthly savings reclaimed from billing discrepancies and weight disputes.',
     },
     {
         value: '3×',
-        title: 'Faster filing',
-        description: 'Disputes raised within minutes, not at month-end.',
+        title: 'Faster Resolution',
+        description: 'Disputes are raised automatically while recovery opportunities still exist.',
     },
 ]
 
 const FEATURE_TILES = [
     {
-        icon: 'material-symbols:speaker-notes-outline-sharp',
+        icon: 'mdi:access-time',
         title: 'Window guard',
-        description: "Files every dispute before the courier's claim window closes.",
+        description: "Never miss a claim deadline. Growve monitors courier dispute windows automatically.",
     },
     {
-        icon: 'material-symbols:speaker-notes-outline-sharp',
-        title: 'Slab-aware',
-        description: "Knows each courier's weight slabs and volumetric formula.",
+        icon: 'material-symbols:scale-outline',
+        title: 'Courier-aware validation',
+        description: "Weight checks adapt to each courier's slab structure and billing logic.",
     },
     {
-        icon: 'material-symbols:speaker-notes-outline-sharp',
+        icon: 'material-symbols:fact-check-outline-rounded',
         title: 'Auto evidence',
-        description: 'Attaches the scan, photo and dimensions as proof, automatically.',
+        description: 'Scan, dimension, and billing data attached automatically.',
     },
 ]
 
@@ -62,10 +62,10 @@ export default function LeakageSection() {
                     variant="dark"
                     align="center"
                     size="lg"
-                    eyebrow="THE LEAKAGE YOU CAN'T SEE"
-                    title="Less overbilling. Less checking."
-                    accent="Less leakage."
-                    subtitle="What automated weight protection does to the charges you'd otherwise just pay."
+                    eyebrow="Less overbilling. Less checking. Less leakage."
+                    title="Catch overcharges before they"
+                    accent="become losses."
+                    subtitle="Growve compares declared, scanned, and billed weights automatically — identifying discrepancies and filing disputes before recovery windows close."
                 />
             </Box>
 
@@ -102,7 +102,8 @@ export default function LeakageSection() {
                                 width: 35,
                                 height: 35,
                                 borderRadius: '10px',
-                                border:'1px solid #7F753B',
+                                border: '1px solid #212333',
+                                bgcolor:'#000000',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -113,7 +114,7 @@ export default function LeakageSection() {
 
                         <Typography
                             sx={{
-                                fontFamily: 'var(--font-serif)',
+                                fontFamily: 'var(--font-dai-banna)',
                                 fontSize: '20px',
                                 fontWeight: 500,
                                 color: '#CFCDE4',
