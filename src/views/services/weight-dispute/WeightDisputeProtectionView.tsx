@@ -64,7 +64,8 @@ const WeightDisputeProtectionView = () => {
               marginTop: {
                 xs: '5rem',
                 md: 0,
-              }
+              },
+              cursor:'pointer',
             }}
           >
             <Image
@@ -78,7 +79,7 @@ const WeightDisputeProtectionView = () => {
                 height: "auto",
                 display: "block",
                 borderRadius: "12px",
-                boxShadow: "0px 10px 20px rgba(0,0,0,0.12)",
+                boxShadow: "0 14px 34px 0 rgba(0, 0, 0, 0.06)",
                 position: 'relative',
               }}
             />

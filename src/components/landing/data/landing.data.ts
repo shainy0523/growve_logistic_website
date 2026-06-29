@@ -20,8 +20,8 @@ export const NAV_LINKS: NavLink[] = [
     href: '/',
   },
   {
-    label: 'Services',
-    href: '/services',
+    label: 'Features',
+    href: '/features',
     hasMenu: true,
   },
   {

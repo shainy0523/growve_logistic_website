@@ -12,7 +12,7 @@ import { Icon } from '@iconify/react'
 import BrandLogo from './ui/BrandLogo'
 import { NAV_LINKS, SERVICES } from './data/landing.data'
 import { APP_URLS } from '@/utils/constant'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import ServicesMegaMenu from './ServicesMegaMenu'
@@ -24,6 +24,7 @@ export default function LandingNavbar() {
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const servicesRef = useRef<HTMLDivElement>(null)
 
   const closeMobile = () => {
     setMobileOpen(false)
@@ -36,6 +37,23 @@ export default function LandingNavbar() {
       closeMobile()
     }
   }, [isDesktop, mobileOpen])
+
+  // Close the desktop Features menu when clicking outside it or on scroll
+  useEffect(() => {
+    if (!servicesOpen) return
+    const handleClickOutside = (event: MouseEvent) => {
+      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
+        setServicesOpen(false)
+      }
+    }
+    const handleScroll = () => setServicesOpen(false)
+    document.addEventListener('mousedown', handleClickOutside)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [servicesOpen])
 
   return (
     <Box
@@ -78,7 +96,7 @@ export default function LandingNavbar() {
           className='items-center gap-3 rounded-xl border border-black/10 bg-[#F5F5F6] p-1 backdrop-blur-[30px]'
         >
           {NAV_LINKS.map(item => {
-            const isServices = item.label === 'Services'
+            const isServices = item.hasMenu
 
             return (
               <Box
@@ -90,21 +108,28 @@ export default function LandingNavbar() {
                 }}
               >
                 {isServices ? (
-                  <Box
-                    onMouseEnter={() => setServicesOpen(true)}
-                    onMouseLeave={() => setServicesOpen(false)}
-                  >
+                  <Box ref={servicesRef}>
                     <Button
-                      component={Link}
-                      href={item.href}
+                      onClick={() => setServicesOpen(open => !open)}
                       disableRipple
-                      endIcon={<Icon icon='mdi:chevron-down' fontSize={14} />}
+                      endIcon={
+                        <Icon
+                          icon='mdi:chevron-down'
+                          fontSize={14}
+                          style={{
+                            transform: servicesOpen ? 'rotate(180deg)' : 'none',
+                            transition: 'transform .2s ease',
+                          }}
+                        />
+                      }
                       className='!min-w-0 !rounded-lg !px-4 !py-1 !text-sm !font-semibold !text-black'
                     >
-                      Services
+                      {item.label}
                     </Button>
 
-                    {servicesOpen && <ServicesMegaMenu />}
+                    {servicesOpen && (
+                      <ServicesMegaMenu onItemClick={() => setServicesOpen(false)} />
+                    )}
                   </Box>
                 ) : (
                   <Button
@@ -201,7 +226,7 @@ export default function LandingNavbar() {
         {/* Nav links */}
         <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
           {NAV_LINKS.map(item => {
-            const isServices = item.label === 'Services'
+            const isServices = item.hasMenu
 
             if (isServices) {
               return (
@@ -239,7 +264,7 @@ export default function LandingNavbar() {
                         <Box
                           key={service.slug}
                           component={Link}
-                          href={`/services/${service.slug}`}
+                          href={`/features/${service.slug}`}
                           onClick={closeMobile}
                           sx={{
                             display: 'flex',
