@@ -166,10 +166,30 @@ export default function LogisticsHero() {
                 .rise-4 { animation: rise 1s ease 0.2s both; }
                 .pulse-ring { animation: pulse 2.6s ease-in-out infinite; }
                 .pulse-ring-delay { animation: pulse 2.6s ease-in-out 0.6s infinite; }
+
+                /* md and up */
+                .map-section { margin: -80px auto; }
+                .route-plane { width: 24px; height: 24px; }
+
+                /* ── Small-device responsiveness ── */
+                @media (max-width: 640px) {
+                    .map-section { margin: -40px auto; }
+                    .route-plane { width: 38px; height: 38px; }
+                    .map-card { width: 150px !important; padding: 10px !important; }
+                    .pickup-card { left: -6px !important; top: 70% !important; }
+                    .delivered-card { right: -6px !important; top: 40% !important; }
+                    .map-card .map-card-title { font-size: 12px !important; }
+                    .map-card .map-card-sub { font-size: 10px !important; }
+                }
+                @media (max-width: 380px) {
+                    .map-card { width: 124px !important; padding: 8px !important; }
+                    .pickup-card { left: -2px !important; }
+                    .delivered-card { right: -2px !important; }
+                }
             `}
             </style>
 
-            <div style={{ maxWidth: 1100, margin: "10rem auto", padding: "10px 32px 0" }}>
+            <div style={{ maxWidth: 1100, margin: "clamp(5rem, 14vw, 10rem) auto", padding: "10px clamp(16px, 4vw, 32px) 0" }}>
 
                 {/* ── Hero copy ── */}
                 <div className="rise-1" style={{ maxWidth: 620, margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 20 }}>
@@ -254,12 +274,11 @@ export default function LogisticsHero() {
 
                 {/* ── Map Section ── */}
                 <div
-                    className="rise-4"
+                    className="rise-4 map-section"
                     style={{
                         position: "relative",
                         width: "100%",
                         maxWidth: 800,
-                        margin: "-80px auto",
                         aspectRatio: "800/825"
                     }}
                 >
@@ -310,16 +329,17 @@ export default function LogisticsHero() {
                             strokeLinecap="round"
                         />
                         <foreignObject
-                            x={plane.x - 12}
-                            y={plane.y - 12}
-                            width="24"
-                            height="24"
+                            x={plane.x - 24}
+                            y={plane.y - 24}
+                            width="48"
+                            height="48"
                             opacity={planeOpacity}
+                            style={{ overflow: "visible" }}
                         >
                             <div
                                 style={{
-                                    width: 24,
-                                    height: 24,
+                                    width: 48,
+                                    height: 48,
                                     transform: `rotate(${plane.angle + 45}deg)`,
                                     display: "flex",
                                     alignItems: "center",
@@ -327,9 +347,8 @@ export default function LogisticsHero() {
                                 }}
                             >
                                 <Icon
+                                    className="route-plane"
                                     icon="mdi:airplane"
-                                    width={24}
-                                    height={24}
                                     color="#3A3743"
                                 />
                             </div>
@@ -419,6 +438,7 @@ export default function LogisticsHero() {
 
                     {/* PICKUP CARD */}
                     <div
+                        className="map-card pickup-card"
                         style={{
                             position: "absolute",
                             left: "-40px",
@@ -433,18 +453,19 @@ export default function LogisticsHero() {
                         }}
                     >
                         <Box className='flex gap-2 items-center'>
-                            <Box className='w-9 h-9 flex items-center justify-center bg-[#FBC942] rounded-[12px]!'>
+                            <Box className='w-9 h-9 shrink-0 flex items-center justify-center bg-[#FBC942] rounded-[12px]!'>
                                 <Icon className="text-white" icon={'grommet-icons:package'} width={20} height={20} />
                             </Box>
                             <Box>
-                                <Typography className="text-[14px]! font-semibold!">Pickup</Typography>
-                                <Typography className="text-[12px]!">Mumbai, Maharashtra</Typography>
+                                <Typography className="map-card-title text-[14px]! font-semibold!">Pickup</Typography>
+                                <Typography className="map-card-sub text-[12px]!">Mumbai, Maharashtra</Typography>
                             </Box>
                         </Box>
                     </div>
 
                     {/* DELIVERED CARD */}
                     <div
+                        className="map-card delivered-card"
                         style={{
                             position: "absolute",
                             right: "-35px",
@@ -459,12 +480,12 @@ export default function LogisticsHero() {
                         }}
                     >
                         <Box className='flex gap-2 items-center'>
-                            <Box className='w-9 h-9 flex items-center justify-center bg-[#28C76F] rounded-[12px]!'>
+                            <Box className='w-9 h-9 shrink-0 flex items-center justify-center bg-[#28C76F] rounded-[12px]!'>
                                 <Icon className="text-white" icon={'material-symbols:check-circle-outline'} width={20} height={20} />
                             </Box>
                             <Box>
-                                <Typography className="text-[14px]! font-semibold!">Delivered</Typography>
-                                <Typography className="text-[12px]!">Guwahati, Assam</Typography>
+                                <Typography className="map-card-title text-[14px]! font-semibold!">Delivered</Typography>
+                                <Typography className="map-card-sub text-[12px]!">Guwahati, Assam</Typography>
                             </Box>
                         </Box>
                     </div>

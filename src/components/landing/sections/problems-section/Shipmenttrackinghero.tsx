@@ -435,13 +435,33 @@ function ActiveShipmentsCard() {
 export default function ShipmentTrackingHero() {
     return (
         <Box
-            className="flex h-[540px] w-[1052px] max-w-full flex-col items-center justify-start gap-5 overflow-hidden rounded-xl px-4 py-12 mx-auto mt-10!"
-            sx={{ bgcolor: t.bgLight, outline: `1px solid ${t.divider}`, outlineOffset: "-1px" }}
+            className="flex w-[1052px] max-w-full flex-col items-center justify-center gap-5 overflow-hidden rounded-xl px-4 py-12 mx-auto mt-10!"
+            sx={{
+                bgcolor: t.bgLight,
+                outline: `1px solid ${t.divider}`,
+                outlineOffset: "-1px",
+                height: { xs: 380, sm: 470, md: 540 },
+            }}
         >
-            <Box className="relative h-[444px] w-[553px]">
-                <TrackingCard />
-                <RevenueCard />
-                <ActiveShipmentsCard />
+            {/* Centering wrapper — clips the empty space left by the scaled stage */}
+            <Box className="flex w-full justify-center overflow-hidden">
+                <Box
+                    className="relative h-[444px] w-[553px] shrink-0"
+                    sx={{
+                        transform: {
+                            xs: "scale(0.58)",
+                            sm: "scale(0.8)",
+                            md: "scale(1)",
+                        },
+                        transformOrigin: "top center",
+                        // Collapse the vertical gap the scaling leaves below (444 * (1 - scale))
+                        mb: { xs: "-186px", sm: "-89px", md: 0 },
+                    }}
+                >
+                    <TrackingCard />
+                    <RevenueCard />
+                    <ActiveShipmentsCard />
+                </Box>
             </Box>
         </Box>
     );
