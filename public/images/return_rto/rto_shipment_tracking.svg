@@ -1,0 +1,86 @@
+<svg width="462" height="210" viewBox="0 0 462 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Card Shipment Tracking" filter="url(#filter0_d_7779_13502)">
+<rect width="462" height="209.214" rx="14.628" fill="white" shape-rendering="crispEdges"/>
+<rect x="0.609499" y="0.609499" width="460.781" height="207.995" rx="14.0185" stroke="#FDEAB7" stroke-width="1.219" shape-rendering="crispEdges"/>
+<g id="Header">
+<g id="Icon">
+<rect x="19.5039" y="19.504" width="43.8839" height="43.8839" rx="9.75198" fill="#E1E1E4"/>
+<g id="Icon/Truck">
+<g id="Vector">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M47.1597 43.7315C48.8428 43.7315 50.2072 45.0959 50.2072 46.779C50.2072 48.4621 48.8428 49.8265 47.1597 49.8265C45.7397 49.8265 44.5465 48.8553 44.2082 47.5409H38.6831C38.3448 48.8553 37.1516 49.8265 35.7316 49.8265C34.0485 49.8265 32.6841 48.4621 32.6841 46.779C32.6841 45.0959 34.0485 43.7315 35.7316 43.7315C37.1516 43.7315 38.3448 44.7027 38.6831 46.0171H44.2082C44.5465 44.7027 45.7397 43.7315 47.1597 43.7315ZM35.7316 45.2552C34.8901 45.2552 34.2079 45.9375 34.2079 46.779C34.2079 47.6205 34.8901 48.3027 35.7316 48.3027C36.5732 48.3027 37.2554 47.6205 37.2554 46.779C37.2554 45.9375 36.5732 45.2552 35.7316 45.2552ZM47.1597 45.2552C46.3182 45.2552 45.636 45.9375 45.636 46.779C45.636 47.6205 46.3182 48.3027 47.1597 48.3027C48.0013 48.3027 48.6835 47.6205 48.6835 46.779C48.6835 45.9375 48.0013 45.2552 47.1597 45.2552Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M46.0169 33.8271C46.4377 33.8271 46.7788 34.1683 46.7788 34.589V44.7984C46.7786 45.2191 46.4376 45.5603 46.0169 45.5603C45.5962 45.5603 45.2552 45.2191 45.255 44.7984V42.9696H31.5413V46.0171H33.446C33.8668 46.0171 34.2079 46.3582 34.2079 46.779C34.2079 47.1998 33.8668 47.5409 33.446 47.5409H31.5413C31.1372 47.5409 30.7497 47.3802 30.464 47.0945C30.1782 46.8087 30.0176 46.4212 30.0176 46.0171V35.3509C30.0176 34.9468 30.1782 34.5593 30.464 34.2736C30.7497 33.9878 31.1372 33.8271 31.5413 33.8271H46.0169ZM31.5413 41.4459H45.255V35.3509H31.5413V41.4459Z" fill="black"/>
+<path d="M49.5681 35.3451C50.5 35.3469 51.3313 35.9184 51.6752 36.7781L52.8113 39.6202C52.8232 39.6479 52.8331 39.6765 52.8418 39.7058C52.845 39.7167 52.848 39.7276 52.8507 39.7385C52.8539 39.7515 52.8571 39.7646 52.8596 39.7779C52.8619 39.7896 52.8632 39.8013 52.8649 39.8129C52.8668 39.8265 52.8688 39.84 52.8701 39.8538C52.8714 39.8685 52.8718 39.8831 52.8723 39.8977C52.8725 39.9058 52.8738 39.9141 52.8738 39.9223V46.0173C52.8737 46.4213 52.7131 46.8089 52.4274 47.0946C52.1416 47.3803 51.7541 47.541 51.35 47.541H49.4453C49.0246 47.541 48.6835 47.1997 48.6835 46.779C48.6835 46.3582 49.0246 46.0173 49.4453 46.0173H51.35V40.6841H46.0169C45.5962 40.6841 45.2551 40.343 45.255 39.9223C45.255 39.5015 45.5961 39.1604 46.0169 39.1604H50.9862L50.26 37.3443C50.145 37.0565 49.869 36.8694 49.5651 36.8688C48.9736 36.8677 48.3888 36.87 47.8018 36.8718C47.3368 36.8733 46.87 36.8748 46.3979 36.8748C45.9771 36.8748 45.6361 36.5336 45.636 36.1129C45.636 35.6921 45.9771 35.351 46.3979 35.351C46.8568 35.351 47.3215 35.3495 47.7877 35.3481C48.3819 35.3462 48.9785 35.344 49.5681 35.3451Z" fill="black"/>
+</g>
+</g>
+</g>
+<g id="ID &#38; Carrier">
+<text id="Ship ID" fill="black" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="17.066" font-weight="bold" letter-spacing="0em"><tspan x="75.5776" y="35.6187">#GRV-283746</tspan></text>
+<g id="Detail">
+<text id="Carrier" fill="#737682" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="14.628" font-weight="600" letter-spacing="0em"><tspan x="75.5776" y="57.2546">FedEx</tspan></text>
+</g>
+</g>
+<g id="Badge-status">
+<rect x="356.116" y="19.504" width="86.3799" height="28.752" rx="14.376" fill="#FEF2D2"/>
+<text id="Status" fill="black" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="14.628" font-weight="600" letter-spacing="0em"><tspan x="368.306" y="38.6925">In Transit</tspan></text>
+</g>
+</g>
+<g id="Progress Bar">
+<g id="Bar Chart">
+<g clip-path="url(#clip0_7779_13502)">
+<rect x="19.5039" y="83.8839" width="422.992" height="4.87599" rx="2.43799" fill="#EBEBED"/>
+<rect id="Bar Fill" x="19.5039" y="83.8839" width="301.092" height="4.87599" rx="2.43799" fill="#FBC942"/>
+</g>
+</g>
+<g id="Head">
+<g id="Progress">
+<text id="Title" fill="#737682" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="14.628" letter-spacing="0em"><tspan x="19.5039" y="117.952">Predicted RTO</tspan></text>
+<text id="Percentage" fill="black" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="17.066" font-weight="bold" letter-spacing="0em"><tspan x="119.38" y="118.755">34%</tspan></text>
+</g>
+<g id="Button">
+<g id="Text">
+<text id="Label" fill="black" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="14.628" font-weight="600" letter-spacing="0em"><tspan x="387.681" y="117.952">Close</tspan></text>
+</g>
+<g id="Icon_2">
+<g id="Icon/CaretUp">
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M431.202 114.834C431.38 115.013 431.67 115.013 431.848 114.834L435.182 111.501L438.516 114.834C438.694 115.013 438.984 115.013 439.162 114.834C439.341 114.656 439.341 114.366 439.162 114.188L435.505 110.531C435.327 110.352 435.037 110.352 434.859 110.531L431.202 114.188C431.023 114.366 431.023 114.656 431.202 114.834Z" fill="black"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g id="Frame 2147223174">
+<g id="Button_2">
+<rect x="19.5039" y="149.71" width="203.496" height="40" rx="8" fill="black"/>
+<g id="Text_2">
+<text id="Label_2" fill="white" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="69.5" y="174.316">Hold &#38; Verify</tspan></text>
+</g>
+<g id="Icon Right">
+<g id="check">
+<path id="Vector_3" d="M164.502 172.142L162.478 170.118C162.25 169.891 161.883 169.891 161.655 170.118C161.428 170.346 161.428 170.713 161.655 170.941L164.094 173.379C164.321 173.606 164.689 173.606 164.916 173.379L171.088 167.207C171.315 166.98 171.315 166.612 171.088 166.385C170.86 166.157 170.493 166.157 170.265 166.385L164.502 172.142Z" fill="white"/>
+</g>
+</g>
+</g>
+<g id="Button_3">
+<rect x="239" y="149.71" width="203.496" height="40" rx="8" fill="#EBEBED"/>
+<g id="Text_3">
+<text id="Label_3" fill="black" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="14" font-weight="600" letter-spacing="0em"><tspan x="298.481" y="174.316">Ship Anyway</tspan></text>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_7779_13502" x="-120" y="-96" width="702" height="449.214" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="24"/>
+<feGaussianBlur stdDeviation="60"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.882353 0 0 0 0 0.882353 0 0 0 0 0.894118 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_7779_13502"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7779_13502" result="shape"/>
+</filter>
+<clipPath id="clip0_7779_13502">
+<rect x="19.5039" y="83.8839" width="422.992" height="4.87599" rx="2.43799" fill="white"/>
+</clipPath>
+</defs>
+</svg>
