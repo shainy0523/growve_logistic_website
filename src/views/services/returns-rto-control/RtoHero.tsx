@@ -1,122 +1,9 @@
 'use client'
 
 import { Box, Typography, InputBase, Button } from '@mui/material'
-import Image from 'next/image'
 
 const display = 'var(--font-dai-banna), sans-serif'
 const body = 'Nunito Sans, sans-serif'
-
-type Courier = {
-  name: string
-  logo?: string
-  color: string
-  rate: string
-  score: number
-}
-
-// Brand logo assets (in /public/images/common)
-const LOGOS: Record<string, string> = {
-  Delhivery: '/images/common/delhivery.svg',
-  DTDC: '/images/common/dtdc.svg',
-  Shadowfax: '/images/common/shadowfox.svg',
-  Xpressbees: '/images/common/xpressbees.svg',
-  Amazon: '/images/common/amazon.svg',
-  Ekart: '/images/common/ekart.svg',
-}
-
-const COURIERS: Courier[] = [
-  { name: 'Delhivery', color: '#1A1A1A', rate: '98.2%', score: 72 },
-  { name: 'DTDC', color: '#07287F', rate: '93.1%', score: 74 },
-  { name: 'Shadowfax', color: '#1A1A1A', rate: '96.6%', score: 72 },
-  { name: 'Xpressbees', color: '#07287F', rate: '88.4%', score: 78 },
-  { name: 'Amazon', color: '#231F20', rate: '84.3%', score: 66 },
-  { name: 'Ekart', color: '#0F4C81', rate: '79.1%', score: 68 },
-]
-
-function BrandTile({ courier, size = 32 }: { courier: Courier; size?: number }) {
-  const logo = LOGOS[courier.name]
-  return (
-    <Box
-      sx={{
-        width: size,
-        height: size,
-        borderRadius: `${size * 0.25}px`,
-        bgcolor: logo ? '#FFFFFF' : courier.color,
-        outline: '1px solid #EAEAEC',
-        outlineOffset: '-1px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        overflow: 'hidden',
-        flexShrink: 0,
-        fontFamily: body,
-        fontWeight: 700,
-        fontSize: size * 0.42,
-        color: '#fff',
-      }}
-    >
-      {logo ? (
-        <Image src={logo} alt={courier.name} width={size} height={size} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-      ) : (
-        courier.name[0]
-      )}
-    </Box>
-  )
-}
-
-function CourierValueRow({ courier }: { courier: Courier }) {
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 1.5,
-        p: 1.25,
-        borderRadius: '10px',
-        bgcolor: '#FFFFFF',
-        outline: '1px solid #EAEAEC',
-        outlineOffset: '-1px',
-      }}
-    >
-      <BrandTile courier={courier} />
-      <Box sx={{ flex: 1, minWidth: 0 }}>
-        <Typography sx={{ fontFamily: body, fontWeight: 700, fontSize: 13, color: '#000', lineHeight: 1.2 }}>
-          {courier.name}
-        </Typography>
-        <Typography sx={{ fontFamily: body, fontWeight: 600, fontSize: 11, color: '#8D8A94' }}>
-          ₹48 Avg. Per Cost
-        </Typography>
-      </Box>
-
-      <Box sx={{ textAlign: 'right' }}>
-        <Typography sx={{ fontFamily: body, fontWeight: 600, fontSize: 10, color: '#8D8A94' }}>
-          Delivery Rate
-        </Typography>
-        <Typography sx={{ fontFamily: body, fontWeight: 700, fontSize: 13, color: '#000' }}>
-          {courier.rate}
-        </Typography>
-      </Box>
-
-      <Box
-        sx={{
-          textAlign: 'center',
-          px: 1.25,
-          py: 0.75,
-          borderRadius: '8px',
-          bgcolor: '#FEF2D2',
-          minWidth: 52,
-        }}
-      >
-        <Typography sx={{ fontFamily: body, fontWeight: 600, fontSize: 9, color: '#8D8A94', lineHeight: 1.2 }}>
-          Value Score
-        </Typography>
-        <Typography sx={{ fontFamily: body, fontWeight: 700, fontSize: 15, color: '#000', lineHeight: 1.2 }}>
-          {courier.score}
-        </Typography>
-      </Box>
-    </Box>
-  )
-}
 
 export default function RtoHero() {
   return (
@@ -129,7 +16,7 @@ export default function RtoHero() {
           sx={{
             display: 'grid',
             gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
-            gap: { xs: 6, md: 8 },
+            gap: { xs: 4, md: 8 },
             alignItems: 'center',
           }}
         >
@@ -187,20 +74,29 @@ export default function RtoHero() {
                 mt: 1,
                 display: 'flex',
                 alignItems: 'center',
-                gap: 1,
-                p: '6px',
-                pl: 2,
-                borderRadius: '10px',
+                gap: '6px',
+                pt: '4px',
+                pb: '4px',
+                pl: '12px',
+                pr: '6px',
+                borderRadius: '8px',
                 bgcolor: '#FFFFFF',
-                border: '1px solid #E1E1E4',
+                border: 'none',
                 width: '100%',
-                maxWidth: 440,
-                flexWrap: { xs: 'wrap', sm: 'nowrap' },
+                maxWidth: 349,
               }}
             >
               <InputBase
                 placeholder="What's your work email?"
-                sx={{ flex: 1, fontFamily: body, fontSize: 14, color: '#000', minWidth: 160 }}
+                sx={{
+                  flex: 1,
+                  p: '2px',
+                  fontFamily: body,
+                  fontSize: 12,
+                  lineHeight: '15.6px',
+                  color: '#000',
+                  '& input::placeholder': { color: '#6D6B77', opacity: 1 },
+                }}
               />
               <Button
                 disableElevation
@@ -210,13 +106,15 @@ export default function RtoHero() {
                   textTransform: 'none',
                   fontFamily: body,
                   fontWeight: 600,
-                  fontSize: 14,
-                  bgcolor: '#1F1F1F',
+                  fontSize: 12,
+                  lineHeight: '12px',
+                  bgcolor: '#999CA6',
                   color: '#FFF',
-                  borderRadius: '8px',
-                  px: 2.5,
-                  height: 40,
-                  '&:hover': { bgcolor: '#FBC942', color: '#1F1F1F' },
+                  borderRadius: '6px',
+                  px: '10px',
+                  py: '10px',
+                  minWidth: 0,
+                  '&:hover': { bgcolor: '#8A8D97' },
                 }}
               >
                 Get started for free
@@ -224,23 +122,49 @@ export default function RtoHero() {
             </Box>
           </Box>
 
-          {/* RIGHT — courier value-score card */}
+          {/* RIGHT — RTO card with floating COD-confirmed card */}
           <Box
             sx={{
-              borderRadius: '16px',
-              bgcolor: '#F5F5F6',
-              outline: '1px solid #EAEAEC',
-              outlineOffset: '-1px',
-              p: { xs: 2, md: 2.5 },
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 1.25,
-              boxShadow: '0 24px 48px rgba(0,0,0,0.06)',
+              position: 'relative',
+              width: '100%',
+              maxWidth: 502,
+              mx: 'auto',
+              p: '20px',
             }}
           >
-            {COURIERS.map((c) => (
-              <CourierValueRow key={c.name} courier={c} />
-            ))}
+            {/* main RTO order card */}
+            <Box
+              component="img"
+              src="/images/return_rto/rto_shipment_tracking.svg"
+              alt="RTO prediction order card"
+              sx={{
+                width: '95%',
+                height: 'auto',
+                display: 'block',
+                mt: {
+                  md: '80px',
+                  xs:'60px',
+                },
+              }}
+            />
+            {/* floating COD-confirmed card, overlapping top-right */}
+            <Box
+              component="img"
+              src="/images/return_rto/rto_card.svg"
+              alt="COD confirmed"
+              sx={{
+                position: 'absolute',
+                top: '45px',
+                right: {
+                  xs:'-10px',
+                  md: '-25px'
+                },
+                width: '50%',
+                height: 'auto',
+                display: 'block',
+                filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.10))',
+              }}
+            />
           </Box>
         </Box>
       </Box>

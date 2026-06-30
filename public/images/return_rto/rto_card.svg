@@ -1,0 +1,36 @@
+<svg width="273" height="114" viewBox="0 0 273 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Card Summary v2" filter="url(#filter0_d_7779_13526)">
+<rect width="272.667" height="114" rx="12" fill="white" shape-rendering="crispEdges"/>
+<g id="Main">
+<text id="Category" fill="#737682" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="12" font-weight="600" letter-spacing="0em"><tspan x="16" y="27.948">COD Confirmed</tspan></text>
+<g id="Number">
+<text id="Number_2" fill="black" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="28" font-weight="bold" letter-spacing="0em"><tspan x="16" y="66.712">&#x20b9;1,499</tspan></text>
+</g>
+<g id="Badge-percentage 2">
+<text id="Text" fill="#737682" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="10" letter-spacing="0em"><tspan x="16" y="93.79">Confirmed on</tspan></text>
+<g id="Badge-number">
+<rect x="82" y="83" width="64" height="15" rx="7.5" fill="#CBF2DC"/>
+<text id="Percentage" fill="black" style="white-space: pre" xml:space="preserve" font-family="Nunito Sans" font-size="10" letter-spacing="0em"><tspan x="88" y="93.79">WhatsApp</tspan></text>
+</g>
+</g>
+</g>
+<g id="Icon">
+<rect x="206.667" y="36" width="42" height="42" rx="8" fill="#FBC942"/>
+<g id="Verified">
+<path id="Vector" d="M222.808 63.6917L220.287 63.1417C220.058 63.0959 219.875 62.9773 219.737 62.786C219.6 62.5954 219.546 62.3854 219.577 62.1563L219.829 59.5667L218.11 57.5959C217.957 57.4278 217.881 57.2292 217.881 57C217.881 56.7709 217.957 56.5722 218.11 56.4042L219.829 54.4334L219.577 51.8438C219.546 51.6146 219.6 51.4047 219.737 51.214C219.875 51.0227 220.058 50.9042 220.287 50.8584L222.808 50.3084L224.137 48.0625C224.259 47.8639 224.427 47.7341 224.641 47.6729C224.855 47.6118 225.069 47.6195 225.283 47.6959L227.666 48.7042L230.05 47.6959C230.263 47.6195 230.477 47.6118 230.691 47.6729C230.905 47.7341 231.073 47.8639 231.195 48.0625L232.525 50.3084L235.045 50.8584C235.275 50.9042 235.458 51.0227 235.595 51.214C235.733 51.4047 235.786 51.6146 235.756 51.8438L235.504 54.4334L237.223 56.4042C237.375 56.5722 237.452 56.7709 237.452 57C237.452 57.2292 237.375 57.4278 237.223 57.5959L235.504 59.5667L235.756 62.1563C235.786 62.3854 235.733 62.5954 235.595 62.786C235.458 62.9773 235.275 63.0959 235.045 63.1417L232.525 63.6917L231.195 65.9375C231.073 66.1361 230.905 66.266 230.691 66.3271C230.477 66.3882 230.263 66.3806 230.05 66.3042L227.666 65.2959L225.283 66.3042C225.069 66.3806 224.855 66.3882 224.641 66.3271C224.427 66.266 224.259 66.1361 224.137 65.9375L222.808 63.6917ZM226.062 59.6125C226.23 59.7806 226.444 59.8646 226.704 59.8646C226.963 59.8646 227.177 59.7806 227.345 59.6125L231.241 55.7167C231.425 55.5334 231.516 55.3155 231.516 55.0631C231.516 54.8113 231.425 54.5938 231.241 54.4104C231.058 54.2271 230.84 54.1354 230.589 54.1354C230.336 54.1354 230.118 54.2271 229.935 54.4104L226.704 57.6417L225.375 56.3354C225.191 56.1674 224.974 56.087 224.722 56.0944C224.47 56.1023 224.259 56.1903 224.091 56.3584C223.923 56.5264 223.839 56.7403 223.839 57C223.839 57.2597 223.923 57.4736 224.091 57.6417L226.062 59.6125ZM225.329 64.2875L227.666 63.2792L230.05 64.2875L231.333 62.0875L233.854 61.4917L233.625 58.925L235.32 57L233.625 55.0292L233.854 52.4625L231.333 51.9125L230.004 49.7125L227.666 50.7209L225.283 49.7125L224 51.9125L221.479 52.4625L221.708 55.0292L220.012 57L221.708 58.925L221.479 61.5375L224 62.0875L225.329 64.2875Z" fill="white"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_7779_13526" x="-34" y="-20" width="340.667" height="182" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="14"/>
+<feGaussianBlur stdDeviation="17"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.882353 0 0 0 0 0.882353 0 0 0 0 0.894118 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_7779_13526"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_7779_13526" result="shape"/>
+</filter>
+</defs>
+</svg>
