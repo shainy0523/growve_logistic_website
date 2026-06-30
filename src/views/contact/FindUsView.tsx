@@ -130,7 +130,7 @@ function MapControl({
 // Selectable address card overlaid on the left map.
 function LocationCard({
   location,
-  selected,
+  // selected,
   onSelect,
 }: {
   location: OfficeLocation
