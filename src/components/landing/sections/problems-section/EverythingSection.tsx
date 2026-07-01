@@ -55,7 +55,7 @@ function CenterCard() {
       {/* Header */}
       <Box>
         <Image
-          src="/images/footer-logo.png"
+          src="/images/footer-logo.svg"
           width={125}
           height={40}
           alt="Growve"

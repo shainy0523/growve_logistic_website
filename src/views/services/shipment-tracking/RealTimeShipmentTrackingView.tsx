@@ -1,11 +1,11 @@
 import { Box } from '@mui/material'
-import ServiceHero from '../service-allocation/ServiceHero'
-import TrackingHandledSection from './TrackingHandledSection'
-import TrackingStatsSection from './TrackingStatsSection'
-import KeepInformedSection from './KeepInformedSection'
-import OneViewSection from './OneViewSection'
-import LiveTrackingMapSection from './LiveTrackingMapSection'
+import ServiceHero from '../../../components/landing/sections/services/service-allocation/ServiceHero'
 import EverythingSection from '@/components/landing/sections/problems-section/EverythingSection'
+import TrackingHandledSection from '@/components/landing/sections/services/shipment-tracking/TrackingHandledSection'
+import TrackingStatsSection from '@/components/landing/sections/services/shipment-tracking/TrackingStatsSection'
+import KeepInformedSection from '@/components/landing/sections/services/shipment-tracking/KeepInformedSection'
+import OneViewSection from '@/components/landing/sections/services/shipment-tracking/OneViewSection'
+import LiveTrackingMapSection from '@/components/landing/sections/services/shipment-tracking/LiveTrackingMapSection'
 
 const RealTimeShipmentTrackingView = () => {
   return (

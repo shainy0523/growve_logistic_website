@@ -309,7 +309,7 @@ export const FAQ = {
   titleLeading: 'Questions and',
   titleAccent: 'Answers',
   subtitle:
-    'Learn how Growve helps you streamline shipping operations, automate workflows, and manage logistics from a single platform.',
+    'Learn how Growve helps you streamline shipping operations, automate\nworkflows, and manage logistics from a single platform.',
   items: [
     {
       question: 'How quickly can I get started with Growve?',

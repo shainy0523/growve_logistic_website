@@ -1,13 +1,13 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
-import ServiceHero from "../service-allocation/ServiceHero";
-import EndToEndSection from "./EndToEndSection";
-import LeakageSection from "./LeakageSection";
-import WhatsInsideSection from "./WhatsInsideSection";
-import WeightMattersSection from "./WeightMattersSection";
-import TrackingSection from "./WeightTracking";
+import ServiceHero from "../../../components/landing/sections/services/service-allocation/ServiceHero";
+import EndToEndSection from "../../../components/landing/sections/services/weight-dispute/EndToEndSection";
+import LeakageSection from "../../../components/landing/sections/services/weight-dispute/LeakageSection";
+import WhatsInsideSection from "../../../components/landing/sections/services/weight-dispute/WhatsInsideSection";
+import WeightMattersSection from "../../../components/landing/sections/services/weight-dispute/WeightMattersSection";
+import TrackingSection from "../../../components/landing/sections/services/weight-dispute/WeightTracking";
 import EverythingSection from "@/components/landing/sections/problems-section/EverythingSection";
-import LogoGridSection from "./LogoGridSection";
+import LogoGridSection from "../../../components/landing/sections/services/weight-dispute/LogoGridSection";
 
 const WeightDisputeProtectionView = () => {
   return (

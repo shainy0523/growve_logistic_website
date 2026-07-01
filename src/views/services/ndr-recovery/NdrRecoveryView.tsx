@@ -1,13 +1,13 @@
 import { Box } from "@mui/material";
 import React from "react";
-import ServiceHero from "../service-allocation/ServiceHero";
-import NDRImpactSection from "./NDRImpactSection";
-import AIRecoverySection from "./AIRecoverySection";
+import ServiceHero from "../../../components/landing/sections/services/service-allocation/ServiceHero";
 import Image from "next/image";
-import RecoverSection from "./RecoverSection";
-import EndToEndRecoverySection from "./EndToEndRecoverySection";
 import EverythingSection from "@/components/landing/sections/problems-section/EverythingSection";
-import AutomationSection from "./AutomationSection";
+import NDRImpactSection from "@/components/landing/sections/services/ndr-recovery/NDRImpactSection";
+import RecoverSection from "@/components/landing/sections/services/ndr-recovery/RecoverSection";
+import AutomationSection from "@/components/landing/sections/services/ndr-recovery/AutomationSection";
+import AIRecoverySection from "@/components/landing/sections/services/ndr-recovery/AIRecoverySection";
+import EndToEndRecoverySection from "@/components/landing/sections/services/ndr-recovery/EndToEndRecoverySection";
 
 const NdrRecoveryAutomationView = () => {
   return (
@@ -78,7 +78,7 @@ const NdrRecoveryAutomationView = () => {
         <RecoverSection />
       </Box>
       <Box>
-        <AutomationSection/>
+        <AutomationSection />
       </Box>
       <Box>
         <AIRecoverySection />
@@ -88,10 +88,10 @@ const NdrRecoveryAutomationView = () => {
       </Box>
       <Box>
         <EverythingSection
-          eyebrow = 'One platform'
-            title = {'NDR recovery works better\nwhen connected to'}
-            accent = 'everything else.'
-            subtitle = 'Recovery is most effective when allocation, tracking, returns, billing, and analytics work together. Manage the complete shipment lifecycle from a single platform.'
+          eyebrow='One platform'
+          title={'NDR recovery works better\nwhen connected to'}
+          accent='everything else.'
+          subtitle='Recovery is most effective when allocation, tracking, returns, billing, and analytics work together. Manage the complete shipment lifecycle from a single platform.'
           excludeTitles={[
             "NDR Recovery Automation",
             "Billing & Reconciliation",

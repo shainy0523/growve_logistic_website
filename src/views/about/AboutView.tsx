@@ -1,11 +1,11 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import ServiceHero from '../services/service-allocation/ServiceHero'
-import BuiltForIndia from './BuiltForIndia'
-import HowWeWork from './HowWeWork'
-import OperatingPrinciples from './OperatingPrinciples'
-import CareersSection from './CareersSection'
+import ServiceHero from '../../components/landing/sections/services/service-allocation/ServiceHero'
+import HowWeWork from '../../components/landing/sections/about/HowWeWork'
+import OperatingPrinciples from '../../components/landing/sections/about/OperatingPrinciples'
+import CareersSection from '../../components/landing/sections/about/CareersSection'
 import EverythingSection from '@/components/landing/sections/problems-section/EverythingSection'
+import BuiltForIndia from '@/components/landing/sections/about/BuiltForIndia'
 
 const AboutView = () => {
     return (

@@ -1,8 +1,8 @@
 import { Box } from '@mui/material'
-import ServiceHero from '../service-allocation/ServiceHero'
-import MeasureCompareSection from './MeasureCompareSection'
-import TrackingHandledSection from '../shipment-tracking/TrackingHandledSection'
-import ProactiveBandSection from './ProactiveBandSection'
+import ServiceHero from '../../../components/landing/sections/services/service-allocation/ServiceHero'
+import MeasureCompareSection from '../../../components/landing/sections/services/performance-analytics/MeasureCompareSection'
+
+import ProactiveBandSection from '../../../components/landing/sections/services/performance-analytics/ProactiveBandSection'
 
 const TRACK_METRIC_CARDS = [
   {
@@ -21,9 +21,10 @@ const TRACK_METRIC_CARDS = [
       'The same numbers for ops, finance and leadership — scheduled and shared, so no one reconciles spreadsheets.',
   },
 ]
-import DataToolsSection from './DataToolsSection'
+import DataToolsSection from '../../../components/landing/sections/services/performance-analytics/DataToolsSection'
 import EverythingSection from '@/components/landing/sections/problems-section/EverythingSection'
 import ImageContainer from '@/components/common/ImageContainer'
+import TrackingHandledSection from '@/components/landing/sections/services/shipment-tracking/TrackingHandledSection'
 
 const PerformanceAnalyticsView = () => {
   return (

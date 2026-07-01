@@ -254,7 +254,7 @@ export default function ContactView() {
                 pb: 1,
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 3,
+                gap: 2.5,
               }}
             >
               <Box>
@@ -269,7 +269,7 @@ export default function ContactView() {
               <Box sx={{ height: '1px', backgroundColor: 'var(--divider, #EAEAEC)' }} />
 
               {/* Name + Business */}
-              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2 }}>
+              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 1 }}>
                 <Box>
                   <FieldLabel label='Your Name' required />
                   <Controller

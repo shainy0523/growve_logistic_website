@@ -1,10 +1,10 @@
-import MarketplaceHero from './MarketplaceHero'
-import GrowveAdvantageSection from './GrowveAdvantageSection'
-import OpsVolumeDarkSection from './OpsVolumeDarkSection'
-import OpsMiniCardsSection from './OpsMiniCardsSection'
-import MarketplaceTestimonialSection from './MarketplaceTestimonialSection'
-import CompareCourierSection from './CompareCourierSection'
-import TrackingGridSection from './TrackingGridSection'
+import MarketplaceHero from '@/components/landing/sections/services/marketplace-integrations/MarketplaceHero'
+import GrowveAdvantageSection from '@/components/landing/sections/services/marketplace-integrations/GrowveAdvantageSection'
+import OpsVolumeDarkSection from '@/components/landing/sections/services/marketplace-integrations/OpsVolumeDarkSection'
+import OpsMiniCardsSection from '@/components/landing/sections/services/marketplace-integrations/OpsMiniCardsSection'
+import MarketplaceTestimonialSection from '@/components/landing/sections/services/marketplace-integrations/MarketplaceTestimonialSection'
+import CompareCourierSection from '@/components/landing/sections/services/marketplace-integrations/CompareCourierSection'
+import TrackingGridSection from '@/components/landing/sections/services/marketplace-integrations/TrackingGridSection'
 import EverythingSection from '@/components/landing/sections/problems-section/EverythingSection'
 
 const MarketplaceIntegrationsView = () => {

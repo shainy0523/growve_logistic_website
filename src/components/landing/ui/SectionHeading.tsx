@@ -82,9 +82,10 @@ export default function SectionHeading({
         <Typography
           component='p'
           sx={{
+            whiteSpace: 'pre-line',
             mt: 3,
             color: subtitleColor,
-            maxWidth: 620,
+            maxWidth: 700,
             lineHeight:1.5,
             mx: align === 'center' ? 'auto' : 0,
           }}
