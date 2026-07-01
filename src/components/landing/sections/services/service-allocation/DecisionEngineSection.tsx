@@ -7,19 +7,19 @@ const body = 'Nunito Sans, sans-serif'
 
 const CARDS = [
     {
-        icon: 'material-symbols:location-on-outline',
+        icon: 'material-symbols:pin-drop-outline',
         title: 'Serviceability-first',
         description:
             "Every decision starts with who can actually deliver to the pincode — COD, fragile, oversized — so you never allocate to a courier that can't service the destination.",
     },
     {
-        icon: 'material-symbols:sell-outline',
+        icon: 'material-symbols:balance-rounded',
         title: 'Rate intelligence',
         description:
             'Pre-negotiated rates across all couriers, compared per weight slab and zone, so you always ship on the cheapest option that still clears your quality bar.',
     },
     {
-        icon: 'material-symbols:keyboard-return',
+        icon: 'material-symbols:trending-down',
         title: 'RTO-aware scoring',
         description:
             'The engine weighs return-to-origin risk by lane, courier and payment mode — because the cheapest courier is worthless if the order comes back.',
