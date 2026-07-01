@@ -56,6 +56,7 @@ export default function FaqSection() {
 
           <Typography
             sx={{
+              whiteSpace: 'pre-line',
               maxWidth: 720,
               color: '#6D6B77',
               fontSize: 16,
