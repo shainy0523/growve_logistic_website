@@ -1,6 +1,7 @@
 'use client'
 
 import { Box, Typography } from '@mui/material'
+import LazyBackgroundImage from '@/components/common/LazyBackgroundImage'
 
 const display = 'var(--font-dai-banna), sans-serif'
 const body = 'Nunito Sans, sans-serif'
@@ -14,15 +15,15 @@ export default function IntelligentSelectionBanner() {
         height: { xs: 'auto', md: 580 },
         py: { xs: '60px', md: '100px' },
         background: '#000',
-        backgroundImage: 'url(/images/smart_allocation/smart_alloc_banner.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'flex-start',
       }}
     >
+      {/* lazy-loaded background image */}
+      <LazyBackgroundImage src="/images/smart_allocation/smart_alloc_banner.png" />
+
       {/* left-to-transparent gradient for text legibility */}
       <Box
         sx={{

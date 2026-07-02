@@ -1,5 +1,6 @@
 import SectionHeading from '@/components/landing/ui/SectionHeading'
 import Box from '@mui/material/Box'
+import LazyBackgroundImage from '@/components/common/LazyBackgroundImage'
 
 export default function AIRecoverySection() {
   return (
@@ -25,12 +26,15 @@ export default function AIRecoverySection() {
           xs: 10,
           md: '100px',
         },
-
-        backgroundImage: `url('/images/ndrbg.jpg')`,
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'right bottom',
       }}
     >
+      {/* lazy-loaded background image */}
+      <LazyBackgroundImage
+        src="/images/ndrbg.jpg"
+        objectFit="fill"
+        objectPosition="right bottom"
+      />
+
       {/* Gradient Overlay */}
       <Box
         sx={{
