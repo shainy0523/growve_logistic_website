@@ -22,6 +22,7 @@ interface FeatureSplitSectionProps {
   title: string;
   accent?: string;
   features: SplitFeature[];
+  variant?: 'light' | 'dark'
   reverse?: boolean;
   bgcolor?: string;
 }
@@ -31,8 +32,10 @@ export default function FeatureSplitSection({
   title,
   accent,
   features,
+  variant = 'light',
   bgcolor = "#FFF",
 }: FeatureSplitSectionProps) {
+  const accentColor = variant === 'dark' ? '#9191A8' : '#B5B0BC'
   return (
     <Box
       sx={{
@@ -64,7 +67,7 @@ export default function FeatureSplitSection({
           <Typography
           component={"div"}
             sx={{
-              fontFamily: "Dai Banna SIL, serif",
+              fontFamily: "var(--font-dai-banna), sans-serif",
               fontSize: {
                 xs: "34px",
                 md: "48px",
@@ -72,18 +75,17 @@ export default function FeatureSplitSection({
               lineHeight: 1.1,
               fontWeight: 500,
               color: "#000",
+              whiteSpace:'pre-line',
             }}
           >
             {title}{" "}
             {accent && (
-              <Box
-                component="div"
-                sx={{
-                  color: "#8D8A94",
-                }}
-              >
-                <span style={{ color: "#000" }}>keeps</span> {accent}
-              </Box>
+              <>
+            {' '}
+            <Box component='span' sx={{ color: accentColor }}>
+              {accent}
+            </Box>
+          </>
             )}
           </Typography>
 
