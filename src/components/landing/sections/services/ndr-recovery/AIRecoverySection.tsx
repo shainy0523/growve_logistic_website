@@ -30,7 +30,7 @@ export default function AIRecoverySection() {
     >
       {/* lazy-loaded background image */}
       <LazyBackgroundImage
-        src="/images/ndrbg.jpg"
+        src="/images/ndr/ndrbg.jpg"
         objectFit="fill"
         objectPosition="right bottom"
       />
