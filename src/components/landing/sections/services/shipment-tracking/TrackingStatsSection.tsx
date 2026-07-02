@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import SectionHeading from "@/components/landing/ui/SectionHeading";
 
 const STATS = [
   {
@@ -38,65 +39,15 @@ export default function TrackingStatsSection() {
     >
       <Box className="landing-container">
         {/* Heading */}
-        <Box
-          sx={{
-            maxWidth: 1000,
-            mx: "auto",
-            textAlign: "center",
-            mb: 6,
-          }}
-        >
-          <Typography
-            sx={{
-              color: "#9191A8",
-              fontSize: "12px",
-              fontWeight: 600,
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
-              mb: 2.5,
-            }}
-          >
-            TRACKING WITHOUT BLIND SPOTS
-          </Typography>
-
-          <Typography
-            sx={{
-              fontFamily: "Dai Banna SIL, serif",
-              fontSize: {
-                xs: "34px",
-                md: "48px",
-              },
-              lineHeight: 1.1,
-              fontWeight: 500,
-              color: "#FFF",
-            }}
-          >
-            Most tracking tools show status.
-            <br />
-            <Box
-              component="span"
-              sx={{
-                color: "#9191A8",
-              }}
-            >
-              Growve shows what needs action.
-            </Box>
-          </Typography>
-
-          <Typography
-            sx={{
-              mt: 3,
-              maxWidth: 760,
-              mx: "auto",
-              fontSize: "16px",
-              lineHeight: "23px",
-              color: "#ACABC1",
-            }}
-          >
-            See every shipment, delay, and delivery exception in real time. Stop
-            chasing courier portals and get complete visibility from pickup to
-            doorstep.
-          </Typography>
+        <Box sx={{ maxWidth: 1000, mx: "auto", mb: 6 }}>
+          <SectionHeading
+            variant="dark"
+            align="center"
+            eyebrow="TRACKING WITHOUT BLIND SPOTS"
+            title={"Most tracking tools show status.\nGrowve shows"}
+            accent=" what needs action."
+            subtitle="See every shipment, delay, and delivery exception in real time. Stop chasing courier portals and get complete visibility from pickup to doorstep."
+          />
         </Box>
 
         {/* Cards */}

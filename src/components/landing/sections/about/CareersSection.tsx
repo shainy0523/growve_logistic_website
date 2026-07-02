@@ -28,8 +28,8 @@ const CareersSection = () => {
                 {/* LEFT — image card with badge */}
                 <Box
                     sx={{
-                        flex: '1 1 0',
-                        height: '445px',
+                        flex: { xs: '0 0 auto', md: '1 1 0' },
+                        height: { xs: '260px', sm: '340px', md: '445px' },
                         px: '20px',
                         py: '24px',
                         position: 'relative',
