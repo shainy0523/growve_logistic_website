@@ -2,75 +2,54 @@
 
 import { Box } from '@mui/material'
 import SectionHeading from '@/components/landing/ui/SectionHeading'
+import LazyBackgroundImage from '@/components/common/LazyBackgroundImage'
 
 export default function LiveTrackingMapSection() {
   return (
     <Box
       sx={{
         position: 'relative',
-        height: 580,
-        bgcolor: '#000',
         overflow: 'hidden',
-
-        backgroundImage: 'url(/images/services/rise-up.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center 90%',
-        backgroundRepeat: 'no-repeat',
-
+        height: { xs: 'auto', md: 580 },
+        py: { xs: '60px', md: '100px' },
+        background: '#000',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'flex-start',
-
-        px: {
-          xs: 3,
-          md: '194px',
-        },
-
-        py: '100px',
-        gap: 6,
       }}
     >
+      {/* lazy-loaded background image */}
+      <LazyBackgroundImage
+        src="/images/services/rise-up.png"
+        objectPosition="center 90%"
+      />
 
-      {/* Gradient overlay */}
+      {/* left-to-transparent gradient for text legibility */}
       <Box
         sx={{
           position: 'absolute',
-          left: 0,
-          top: 0,
-          width: {
-            xs: '100%',
-            md: '1246px',
-          },
-          height: 600,
+          inset: 0,
+          width: { xs: '100%', md: 745 },
           background:
-            'linear-gradient(270deg, rgba(0,0,0,0) 0%, #000 100%)',
+            'linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000000 80%)',
+          pointerEvents: 'none',
         }}
       />
 
-
-      {/* Content */}
-      <Box
-        sx={{
-          position: 'relative',
-          zIndex: 1,
-          width: {
-            xs: '100%',
-            md: 465,
-          },
-        }}
-      >
-        <SectionHeading
-          eyebrow="Tracking Without Blind Spots"
-          title="Know where every shipment is."
-          accent="The moment it moves."
-          subtitle="Growve continuously monitors shipment movement across carriers. Get live status updates, delivery milestones, and exception alerts from pickup to doorstep delivery."
-          variant="dark"
-          size="md"
-          align="left"
-        />
+      <Box className="landing-container" sx={{ position: 'relative' }}>
+        <Box sx={{ width: '100%', maxWidth: 465 }}>
+          <SectionHeading
+            variant="dark"
+            align="left"
+            size="md"
+            eyebrow="Tracking Without Blind Spots"
+            title="Know where every shipment is."
+            accent="The moment it moves."
+            subtitle="Growve continuously monitors shipment movement across carriers. Get live status updates, delivery milestones, and exception alerts from pickup to doorstep delivery."
+          />
+        </Box>
       </Box>
-
     </Box>
   )
 }

@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import SectionHeading from '@/components/landing/ui/SectionHeading'
+import LazyBackgroundImage from '@/components/common/LazyBackgroundImage'
 
 export default function ProactiveBandSection() {
   return (
@@ -15,13 +16,15 @@ export default function ProactiveBandSection() {
         alignItems: 'flex-start',
         px: { xs: 3, md: '194px' },
         py: { xs: 5, md: '100px' },
-        backgroundImage: 'url(/images/services/proactive-band.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: { xs: 'center', md: 'center right' },
-        backgroundRepeat: 'no-repeat',
         backgroundColor: '#0B0B0F',
       }}
     >
+      {/* lazy-loaded background image */}
+      <LazyBackgroundImage
+        src="/images/services/proactive-band.png"
+        objectPosition="center right"
+      />
+
       {/* Readability overlay — darkens the side the copy sits on */}
       <Box
         sx={{

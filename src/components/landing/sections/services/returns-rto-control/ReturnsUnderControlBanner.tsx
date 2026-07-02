@@ -2,6 +2,7 @@
 
 import { Box } from '@mui/material'
 import SectionHeading from '@/components/landing/ui/SectionHeading'
+import LazyBackgroundImage from '@/components/common/LazyBackgroundImage'
 
 export default function ReturnsUnderControlBanner() {
   return (
@@ -12,15 +13,18 @@ export default function ReturnsUnderControlBanner() {
         height: { xs: 'auto', md: 580 },
         py: { xs: '60px', md: '100px' },
         background: '#000',
-        backgroundImage: 'url(/images/return_rto/rto_banner.jpg)',
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'center',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'flex-start',
       }}
     >
+      {/* lazy-loaded background image */}
+      <LazyBackgroundImage
+        src="/images/return_rto/rto_banner.jpg"
+        objectFit="fill"
+      />
+
       {/* left-to-transparent gradient for text legibility */}
       <Box
         sx={{

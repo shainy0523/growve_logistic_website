@@ -3,6 +3,7 @@ import { Box, Button } from '@mui/material'
 import React from 'react'
 import SectionHeading from '@/components/landing/ui/SectionHeading'
 import PrimaryCta from '@/components/landing/ui/PrimaryCta'
+import LazyBackgroundImage from '@/components/common/LazyBackgroundImage'
 
 const tags = ['Engineering', 'Operations', 'Product', 'Support', 'Design']
 
@@ -36,10 +37,15 @@ const CareersSection = () => {
                         borderRadius: '12px',
                         outline: '1px solid #EAEAEC',
                         outlineOffset: '-1px',
-                        background:
-                            'lightgray url(/images/about/about_containers.png) 50% / cover no-repeat',
+                        background: 'lightgray',
                     }}
                 >
+                    {/* lazy-loaded background image */}
+                    <LazyBackgroundImage
+                        src="/images/about/about_containers.png"
+                        sizes="(max-width: 900px) 100vw, 50vw"
+                    />
+
                     {/* dark gradient overlay bottom for badge legibility */}
                     <Box
                         sx={{

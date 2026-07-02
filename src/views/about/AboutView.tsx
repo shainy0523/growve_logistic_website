@@ -106,9 +106,19 @@ const AboutView = () => {
                                 sx={{
                                     position: "relative",
                                     display: "inline-flex",
-                                    justifyContent: "flex-start",
+                                    justifyContent: {
+                                        md: "flex-start",
+                                        xs: "center",
+                                    },
                                     alignItems: "flex-start",
-                                    gap: "12px",
+                                    flexWrap: {
+                                        md: "nowrap",
+                                        xs: "wrap",
+                                    },
+                                    gap: {
+                                        md: "12px",
+                                        xs: "8px",
+                                    }
                                 }}
                             >
                                 {["Built in Mumbai", "Shipping across India", "Founded 2026"].map(

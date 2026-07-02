@@ -3,6 +3,7 @@
 import { Box } from '@mui/material'
 import React, { useState } from 'react'
 import SectionHeading from '@/components/landing/ui/SectionHeading'
+import LazyBackgroundImage from '@/components/common/LazyBackgroundImage'
 
 const principles = [
     {
@@ -79,6 +80,7 @@ const HowWeWork = () => {
                             display: 'flex',
                             flexDirection: 'column',
                             gap: '20px',
+                            order: { xs: 2, md: 1 },
                         }}
                     >
                         {principles.map((principle, index) => {
@@ -142,19 +144,27 @@ const HowWeWork = () => {
                     {/* RIGHT — image card */}
                     <Box
                         sx={{
-                            flex: '1 1 0',
+                            flex: { xs: '1 1 auto', md: '1 1 0' },
+                            flexShrink: { xs: 0, md: 1 },
                             width: '100%',
-                            height: '445px',
+                            height: { xs: '280px', sm: '360px', md: '445px' },
+                            minHeight: { xs: '280px', sm: '360px', md: '445px' },
                             p: '20px',
                             position: 'relative',
                             overflow: 'hidden',
                             borderRadius: '12px',
                             outline: '1px solid #EAEAEC',
                             outlineOffset: '-1px',
-                            background:
-                                'lightgray url(/images/about/about_how_we_work.jpg) 50% / cover no-repeat',
+                            background: 'lightgray',
+                            order: { xs: 1, md: 2 },
                         }}
                     >
+                        {/* lazy-loaded background image */}
+                        <LazyBackgroundImage
+                            src="/images/about/about_how_we_work.jpg"
+                            sizes="(max-width: 900px) 100vw, 50vw"
+                        />
+
                         {/* dark gradient overlay for caption legibility */}
                         <Box
                             sx={{

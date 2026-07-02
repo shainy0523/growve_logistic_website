@@ -137,7 +137,6 @@ export default function RecoverCard2() {
                                   width={19}
                                   height={19}
                                   style={{ objectFit: 'contain' }}
-                                  priority
                                 />
                     </Box>
                     <Box sx={{ minWidth: 0 }}>

@@ -286,6 +286,8 @@ export default function LogisticsHero() {
                     <img
                         src="/images/map.png"
                         alt="India Map"
+                        loading="lazy"
+                        decoding="async"
                         style={{
                             position: "absolute",
                             inset: 0,
