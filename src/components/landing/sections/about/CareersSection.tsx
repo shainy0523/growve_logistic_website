@@ -42,7 +42,8 @@ const CareersSection = () => {
                 >
                     {/* lazy-loaded background image */}
                     <LazyBackgroundImage
-                        src="/images/about/about_containers.png"
+                        src="/images/about/about_containers.jpg"
+                        objectPosition="center 40%"
                         sizes="(max-width: 900px) 100vw, 50vw"
                     />
 
@@ -52,7 +53,7 @@ const CareersSection = () => {
                             position: 'absolute',
                             inset: 0,
                             background:
-                                'linear-gradient(203deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.6) 100%)',
+                                'linear-gradient(203deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.2) 100%)',
                             pointerEvents: 'none',
                         }}
                     />
