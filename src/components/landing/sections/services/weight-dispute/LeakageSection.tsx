@@ -46,7 +46,6 @@ export default function LeakageSection() {
             className="landing-container"
             sx={{
                 py: { xs: 10, md: '100px' },
-                px: { xs: 3, md: 12 },
             }}
         >
             {/* Heading */}

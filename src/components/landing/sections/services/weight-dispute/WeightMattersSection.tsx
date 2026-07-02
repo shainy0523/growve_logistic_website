@@ -1,69 +1,54 @@
-import SectionHeading from '@/components/landing/ui/SectionHeading'
+'use client'
+
 import { Box } from '@mui/material'
+import SectionHeading from '@/components/landing/ui/SectionHeading'
 import LazyBackgroundImage from '@/components/common/LazyBackgroundImage'
 
 export default function WeightMattersSection() {
-    return (
+  return (
+    <Box
+      sx={{
+        position: 'relative',
+        overflow: 'hidden',
+        height: { xs: 'auto', md: 580 },
+        py: { xs: '60px', md: '100px' },
+        background: '#000',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+      }}
+    >
+      {/* lazy-loaded background image */}
+      <LazyBackgroundImage
+        src="/images/weight_dispute/weight_dispute_banner.png"
+        objectFit="fill"
+      />
+
+      {/* left-to-transparent gradient for text legibility */}
       <Box
-            sx={{
-              position: 'relative',
-              overflow: 'hidden',
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          width: { xs: '100%', md: 745 },
+          background:
+            'linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000000 50%)',
+          pointerEvents: 'none',
+        }}
+      />
 
-              minHeight: {
-                xs: 500,
-                md: 580,
-              },
-
-              display: 'flex',
-              alignItems: 'center',
-
-              pl: {
-                xs: 3,
-                sm: 5,
-                md:6,
-                lg: '305px',
-              },
-
-              py: {
-                xs: 10,
-                md: '100px',
-              },
-            }}
-          >
-            {/* lazy-loaded background image */}
-            <LazyBackgroundImage src="/images/weight_dispute/weight_dispute_banner.png" />
-
-            {/* Gradient overlay for text legibility */}
-            <Box
-              sx={{
-                position: 'absolute',
-                inset: 0,
-                zIndex: 1,
-                background:
-                  'linear-gradient(270deg, rgba(0, 0, 0, 0.00) 0%, #000 70.75%)',
-                pointerEvents: 'none',
-              }}
-            />
-
-            {/* Content */}
-            <Box
-              sx={{
-                position: 'relative',
-                zIndex: 2,
-      
-                width: '100%',
-                maxWidth: '465px',
-              }}
-            >
-              <SectionHeading
-                variant="dark"
-                align="left"
-                eyebrow="RECOVERY IN THE AGE OF AI"
-                title="Your recovery engine gets smarter with every NDR."
-                subtitle="Growve continuously learns from recovery outcomes. It identifies which channels, timings, and messages work best for different NDR reasons and prioritizes actions that maximize successful deliveries."
-              //   subtitleWidth={465}
-              />
-            </Box>
-          </Box>
-    )
+      <Box className="landing-container" sx={{ position: 'relative' }}>
+        <Box sx={{ width: '100%', maxWidth: 465 }}>
+          <SectionHeading
+            variant="dark"
+            align="left"
+            size="md"
+            eyebrow="Revenue recovery automated"
+            title={'Every overcharge leaves a trail. Growve finds it automatically.'}
+            subtitle="Capture actual shipment weight at source, compare it against courier billing, and flag discrepancies before they eat into your margins. Every mismatch is detected, documented, and ready for dispute."
+          />
+        </Box>
+      </Box>
+    </Box>
+  )
 }

@@ -1,5 +1,7 @@
+'use client'
+
+import { Box } from '@mui/material'
 import SectionHeading from '@/components/landing/ui/SectionHeading'
-import Box from '@mui/material/Box'
 import LazyBackgroundImage from '@/components/common/LazyBackgroundImage'
 
 export default function AIRecoverySection() {
@@ -8,24 +10,13 @@ export default function AIRecoverySection() {
       sx={{
         position: 'relative',
         overflow: 'hidden',
-
-        minHeight: {
-          xs: 500,
-          md: 580,
-        },
-
+        height: { xs: 'auto', md: 580 },
+        py: { xs: '60px', md: '100px' },
+        background: '#000',
         display: 'flex',
-        alignItems: 'center',
-
-        px: {
-          xs: 3,
-          md: '304px',
-        },
-
-        py: {
-          xs: 10,
-          md: '100px',
-        },
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
       }}
     >
       {/* lazy-loaded background image */}
@@ -35,37 +26,29 @@ export default function AIRecoverySection() {
         objectPosition="right bottom"
       />
 
-      {/* Gradient Overlay */}
+      {/* left-to-transparent gradient for text legibility */}
       <Box
         sx={{
           position: 'absolute',
           inset: 0,
-
+          width: { xs: '100%', md: 745 },
           background:
-            'linear-gradient(270deg, rgba(0,0,0,0) 0%, #000 100%)',
-
-          zIndex: 1,
+            'linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000000 80%)',
+          pointerEvents: 'none',
         }}
       />
 
-      {/* Content */}
-      <Box
-        sx={{
-          position: 'relative',
-          zIndex: 2,
-
-          width: '100%',
-          maxWidth: '465px',
-        }}
-      >
-        <SectionHeading
-          variant="dark"
-          align="left"
-          eyebrow="RECOVERY IN THE AGE OF AI"
-          title="Your recovery engine gets smarter with every NDR."
-          subtitle="Growve continuously learns from recovery outcomes. It identifies which channels, timings, and messages work best for different NDR reasons and prioritizes actions that maximize successful deliveries."
-        //   subtitleWidth={465}
-        />
+      <Box className="landing-container" sx={{ position: 'relative' }}>
+        <Box sx={{ width: '100%', maxWidth: 465 }}>
+          <SectionHeading
+            variant="dark"
+            align="left"
+            size="md"
+            eyebrow="Recovery in the age of AI"
+            title={'Your recovery engine gets\nsmarter with every NDR.'}
+            subtitle="Growve continuously learns from recovery outcomes. It identifies which channels, timings, and messages work best for different NDR reasons and prioritizes actions that maximize successful deliveries."
+          />
+        </Box>
       </Box>
     </Box>
   )
