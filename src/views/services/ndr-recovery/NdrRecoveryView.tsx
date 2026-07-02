@@ -57,7 +57,7 @@ const NdrRecoveryAutomationView = () => {
             }}
           >
             <Image
-              src="/images/Ndr_hero.svg"
+              src="/images/ndr/Ndr_hero.svg"
               alt="NDR Dashboard"
               width={900}
               height={204}
